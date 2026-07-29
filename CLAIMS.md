@@ -88,6 +88,19 @@ No hard algebra/sign/exponent error found in any note. Per-note statuses:
 | C41 | polynomial-carrier-ledger | Polynomial carrier K_j=j^A with M_j≍j²/log j keeps e^{-cj²} flatness; relocates difficulty to solvability depth | VERIFIED-CROSS on Stirling ledger; caveat: Gevrey-in-j modulation gives only e^{-cj} (must be exact) |
 | C42 | Program-level: three-coordinate convergence on one open object (endpoint submersion ≡ invariant graph ≡ cylinder wake + annular transition) | cross-note | Reviewed; recorded as the program's single target |
 
+## 2026-07-29 late batch (21 further notes, 11 checker scripts)
+
+All eleven `checks/*.py` scripts run clean in the audit sandbox
+(2026-07-29). Priority statuses:
+
+| ID | Note | Headline | Status |
+|----|------|----------|--------|
+| C43 | gavrilov-dss-wake-construction | **The cylinder-wake existence problem (C29 target) is solved exactly**: disjoint dilated Gavrilov bubbles give an exact stationary Euler wake with U(rx)=r^{−γ}U(x), nonaxisymmetric, zero helicity per cell, all five fluxes zero, finite energy + divergent L³ + summable turnovers exactly on 1<γ<3/2 | VERIFIED-CROSS on the full assembly (scaling identity (2.2), disjointness, homogeneity (2.6), reflected-pair helicity (3.2)–(3.3), ledger (4.2), weak-solution removability at the origin via L²-convergence). Open sub-items: seed zero-angular-momentum modulation (deferred to transition ledger); packed-bubble carrier bookkeeping. Supersedes the auditor's Newton–Krylov search proposal — withdrawn with pleasure. |
+| C44 | helical-quasitrapping-flux-counterexample (+checker) | Advertised universal bound \|Π(K)\| ≤ C E_{>K}^{1/2}E^{1/2}/K is false: flux is cubic in amplitude, RHS quadratic; explicit triad violates by arbitrary factor | VERIFIED-CROSS (homogeneity argument immediate; checker reproduces N·A³ vs A²/N scaling). This is C25's artifact — C25 closed. |
+| C45 | critical-return-cell-escape-boundary | Compact globally-L³-tight critical return cell excluded via backward-DSS nonexistence; surviving critical object is a non-tight persistent wake (order-one L³ per completed stage) | Reviewed at claim level; consistent with C43's wake picture; source-theorem check pending |
+| C46 | cdp-time-reversal-borel-no-range | Time-reversed CDP import has exact defect force −2νΔv; anti-diffusive correction needs Θ=νΛ²τ→0 while CDP Prop 5.1 requires the opposite range | −2νΔv identity trivially verified; range quotation from CDP source pending |
+| C47 | remaining late-batch notes (single-carrier propagator/sideband, pressure parametrix/multipole, near-identity ledgers, two-colour rank, four-sideband chart, Gavrilov transition ledger + viscous-endpoint jet, Glass control, Chen–Hou smooth-background, Cheverry gate, Beltrami sideband star, CDP transition import) | various | REGISTERED; checkers pass; per-note audit pending — priority: gavrilov-active-transition-ledger (now the program's sole open front) |
+
 ## Audit queue (priority order)
 
 1. C12 (CMZ-retrofit no-go) — short, load-bearing for the strategic pivot.
