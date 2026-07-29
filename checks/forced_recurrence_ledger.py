@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Exact/algebraic checks for the July 2026 breakdown checkpoint.
 
-This script verifies scaling inequalities only.  It does not construct a
-Navier--Stokes solution, localize the affine Kelvin amplifier, or prove a
-nonlinear renormalized return map.
+This script verifies scaling identities and inequalities only.  The packed
+bath identities refer to disjoint, rescaled compact steady Euler seeds, so
+their leading Euler defect is exactly zero.  The script does not construct a
+Navier--Stokes solution or prove a time-dependent transition/return map.
 """
 
 from __future__ import annotations
@@ -217,6 +218,76 @@ def polynomial_carrier_refinement() -> dict[str, object]:
     }
 
 
+def exact_packed_gavrilov_bath() -> dict[str, object]:
+    """Verify the carrier ledger realized by a disjoint microbubble packing.
+
+    In an annulus of outer scale ell, pack N~K^3 bubbles of diameter
+    delta=ell/K and amplitude a=ell^(-gamma) K^gamma.  Additivity of
+    disjoint supports gives every line below.  The zero Euler defect uses the
+    compact joint velocity-pressure support of Gavrilov's steady seed; it is
+    a mathematical input, not something established numerically here.
+    """
+    gamma = Fraction(5, 4)
+
+    # Store powers as (power of ell, power of K).  Multiplication is vector
+    # addition, which lets the checker verify the identities without
+    # floating-point arithmetic.
+    number = (Fraction(0), Fraction(3))
+    diameter = (Fraction(1), Fraction(-1))
+    amplitude = (-gamma, gamma)
+    stage_time = (1 + gamma, -gamma)
+
+    def add(*terms: tuple[Fraction, Fraction]) -> tuple[Fraction, Fraction]:
+        return (
+            sum((term[0] for term in terms), Fraction(0)),
+            sum((term[1] for term in terms), Fraction(0)),
+        )
+
+    def multiple(
+        coefficient: int,
+        term: tuple[Fraction, Fraction],
+    ) -> tuple[Fraction, Fraction]:
+        return (coefficient * term[0], coefficient * term[1])
+
+    l2_squared = add(number, multiple(2, amplitude), multiple(3, diameter))
+    l3_cubed = add(number, multiple(3, amplitude), multiple(3, diameter))
+    grad_l2_squared = add(
+        number,
+        multiple(2, amplitude),
+        diameter,
+    )
+    carrier_reynolds = add(amplitude, diameter)
+    viscous_stage_loss = add(stage_time, grad_l2_squared)
+
+    assert l2_squared == (3 - 2 * gamma, 2 * gamma)
+    assert l3_cubed == (3 - 3 * gamma, 3 * gamma)
+    assert grad_l2_squared == (1 - 2 * gamma, 2 * gamma + 2)
+    assert carrier_reynolds == (1 - gamma, gamma - 1)
+    assert viscous_stage_loss == (2 - gamma, gamma + 2)
+
+    return {
+        "exact_stationary_euler_bath": "PASS",
+        "constructs_time_dependent_transition": False,
+        "gamma": str(gamma),
+        "bubble_count": "N_j asymptotic to K_j^3",
+        "bubble_diameter": "delta_j=ell_j/K_j",
+        "bubble_amplitude": "a_j=ell_j^(-gamma)*K_j^gamma",
+        "carrier_frequency": "k_j asymptotic to K_j/ell_j",
+        "L2_squared_powers_ell_K": [str(x) for x in l2_squared],
+        "L3_cubed_powers_ell_K": [str(x) for x in l3_cubed],
+        "grad_L2_squared_powers_ell_K":
+            [str(x) for x in grad_l2_squared],
+        "carrier_Re_powers_ell_K":
+            [str(x) for x in carrier_reynolds],
+        "viscous_stage_loss_powers_ell_K":
+            [str(x) for x in viscous_stage_loss],
+        "leading_euler_defect":
+            "exactly zero by joint-support disjointness of steady seeds",
+        "remaining":
+            "dynamically create the child bath and close viscosity/seams",
+    }
+
+
 def main() -> None:
     result = {
         "scope": {
@@ -230,13 +301,14 @@ def main() -> None:
         "bounded_ratio_spectral_route": bounded_ratio_spectral_ladder(),
         "localized_wake_cascade": localized_wake_cascade(),
         "polynomial_carrier_refinement": polynomial_carrier_refinement(),
+        "exact_packed_gavrilov_bath": exact_packed_gavrilov_bath(),
         "decision": {
             "killed":
                 "direct CMZ material retrofit and clean global fixed-profile return",
             "survives":
-                "localized Kelvin/Reynolds wake cascade with polynomial carrier",
+                "localized Kelvin/Reynolds cascade with an exact static packed carrier",
             "single_missing_object":
-                "finite-energy localized return cell plus tame one-carrier inverse",
+                "active finite-band annular transition with viscous endpoint jets",
         },
     }
     print(json.dumps(result, indent=2, sort_keys=True))
