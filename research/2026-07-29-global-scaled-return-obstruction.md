@@ -1,4 +1,4 @@
-# Bloch amplifier versus an isotropically scaled return
+# Global scaled-return obstruction for a periodic Bloch amplifier
 
 Date: 2026-07-29
 
