@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Exact/algebraic checks for the July 2026 forced-recurrence checkpoint.
+"""Exact/algebraic checks for the July 2026 breakdown checkpoint.
 
 This script verifies scaling inequalities only.  It does not construct a
-Navier--Stokes solution, prove an unstable compact mode, or prove a nonlinear
-renormalized return map.
+Navier--Stokes solution, localize the affine Kelvin amplifier, or prove a
+nonlinear renormalized return map.
 """
 
 from __future__ import annotations
@@ -93,6 +93,9 @@ def bounded_ratio_spectral_ladder() -> dict[str, object]:
 
     return {
         "algebraic_ledger": "PASS",
+        "global_fixed_profile_return": "CLOSED_BY_RETURN_NO_GO",
+        "interpretation":
+            "a scalar-compatible ledger, not an admissible global recurrence",
         "nonlinear_return_theorem": "OPEN",
         "r": int(r),
         "mu": int(mu),
@@ -110,24 +113,71 @@ def bounded_ratio_spectral_ladder() -> dict[str, object]:
     }
 
 
+def localized_wake_cascade() -> dict[str, object]:
+    """Check one exact point in the surviving 1 < gamma < 3/2 window."""
+    r = Fraction(2, 1)
+    gamma = Fraction(5, 4)
+
+    time_ratio = float(r) ** -float(1 + gamma)
+    reynolds_ratio = float(r) ** float(gamma - 1)
+    energy_ratio = float(r) ** float(2 * gamma - 3)
+    dissipation_ratio = float(r) ** -float(2 - gamma)
+    viscosity_ratio = float(r) ** -float(gamma - 1)
+    gradient_ratio = float(r) ** float(gamma + 1)
+    helicity_scale_ratio = float(r) ** float(2 * gamma - 2)
+    circulation_scale_ratio = reynolds_ratio
+
+    assert 1 < gamma < Fraction(3, 2)
+    assert 0 < time_ratio < 1
+    assert reynolds_ratio > 1
+    assert 0 < energy_ratio < 1
+    assert 0 < dissipation_ratio < 1
+    assert 0 < viscosity_ratio < 1
+    assert gradient_ratio > 1
+    assert helicity_scale_ratio > 1
+    assert circulation_scale_ratio > 1
+
+    return {
+        "formal_ledger": "PASS",
+        "existence_of_localized_return_cell": "OPEN",
+        "r": int(r),
+        "gamma": str(gamma),
+        "time_ratio": time_ratio,
+        "reynolds_ratio": reynolds_ratio,
+        "active_energy_ratio": energy_ratio,
+        "stage_dissipation_ratio": dissipation_ratio,
+        "normalized_viscosity_ratio": viscosity_ratio,
+        "gradient_ratio": gradient_ratio,
+        "helicity_scale_ratio": helicity_scale_ratio,
+        "circulation_scale_ratio": circulation_scale_ratio,
+        "required_helicity_design":
+            "exact zero net helicity or an equally leading bihelical companion",
+        "required_topology":
+            "non-tubular strain cell or proved multi-strand aggregation",
+        "all_order_remainder":
+            "epsilon_j^(kappa*j) times Gevrey growth = exp(-c*j^2+O(j*log(j)))",
+    }
+
+
 def main() -> None:
     result = {
         "scope": {
             "proves_navier_stokes_blowup": False,
             "proves_clay_alternative_D": False,
-            "proves_compact_unstable_mode": False,
+            "proves_localized_kelvin_reynolds_cell": False,
             "proves_nonlinear_return_map": False,
             "checks": "scaling inequalities and principal-frequency obstruction",
         },
         "superexponential_material_route": superexponential_retrofit(),
         "bounded_ratio_spectral_route": bounded_ratio_spectral_ladder(),
+        "localized_wake_cascade": localized_wake_cascade(),
         "decision": {
             "killed":
-                "direct Palasek dormant seed in a CMZ material hyperbolic packet",
+                "direct CMZ material retrofit and clean global fixed-profile return",
             "survives":
-                "bounded-ratio dormant spectral recurrence with exact/all-order closure",
+                "localized Kelvin-amplify/rank-one-reset wake cascade",
             "single_missing_object":
-                "compact renormalized unstable-manifold return cell",
+                "finite-energy localized return cell plus tame all-order right inverse",
         },
     }
     print(json.dumps(result, indent=2, sort_keys=True))
