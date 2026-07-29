@@ -12,7 +12,9 @@ and verifies two facts through degree six:
 * finitely many point/orientation atoms span every harmonic pressure
   moment of degrees 2,...,M; and
 * the atom list has an explicit strictly positive null combination,
-  obtained from orthogonal orientation triples.
+  obtained from orthogonal orientation triples; and
+* two distinct shell radii separate exterior multipoles from interior
+  harmonic pressure jets in every angular degree.
 
 The point atoms are the zero-radius limits of compact divergence-free curl
 packets.  This finite-dimensional calculation is not a construction of a
@@ -261,10 +263,26 @@ def check_single_carrier_no_go() -> None:
     print("exactly transverse single-carrier bath cannot be quadrupole-dark")
 
 
+def check_two_shell_radial_chart(maximum_degree: int = 20) -> None:
+    # In angular degree m, the regular solid harmonic Hessian scales as
+    # R^(m-2), while the Hessian of its Kelvin transform scales as
+    # R^(-m-3).  At radii R and sigma*R the normalized 2-by-2 determinant
+    # is sigma^(-m-3)-sigma^(m-2), hence never zero for sigma>1.
+    sigma = Q(2)
+    for degree in range(2, maximum_degree + 1):
+        determinant = sigma ** (-(degree + 3)) - sigma ** (degree - 2)
+        assert determinant
+    print(
+        f"two-shell exterior/interior radial chart: "
+        f"nonzero through degree {maximum_degree}"
+    )
+
+
 def main() -> None:
     check_moment_chart()
     check_quadrupole_energy_bound()
     check_single_carrier_no_go()
+    check_two_shell_radial_chart()
     print("all exact pressure-multipole checks passed")
 
 
