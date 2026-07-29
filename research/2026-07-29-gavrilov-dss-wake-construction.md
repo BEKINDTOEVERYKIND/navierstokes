@@ -180,6 +180,18 @@ seeds gives the same conclusion without relying on this geometric
 description.
 
 Exact helicity cancellation can be imposed without creating interactions.
+For compatibility with a later componentwise compact anti-divergence, first
+choose the Gavrilov pressure modulation so that the individual seed has
+zero angular momentum,
+\[
+ \int_{\mathbb R^3}x\times W(x)\,dx=0.
+\]
+The sign-changing modulation that achieves this is constructed in
+[`2026-07-29-gavrilov-active-transition-ledger.md`](2026-07-29-gavrilov-active-transition-ledger.md).
+This extra choice is not needed for the stationary Euler equation, but it
+prevents a future transition stress from being forced to bridge two
+disjoint reflected supports.
+
 Let \(R\) be an orientation-reversing orthogonal map, choose the first
 seed's support disjoint from its reflected image, and put
 
