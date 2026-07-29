@@ -155,7 +155,65 @@ def localized_wake_cascade() -> dict[str, object]:
         "required_topology":
             "non-tubular strain cell or proved multi-strand aggregation",
         "all_order_remainder":
-            "epsilon_j^(kappa*j) times Gevrey growth = exp(-c*j^2+O(j*log(j)))",
+            "requires a Gevrey-tame WKB/viscous hierarchy and matched wake",
+    }
+
+
+def polynomial_carrier_refinement() -> dict[str, object]:
+    """Check one conditional Gevrey ledger for K_j=j^A."""
+    r = 2.0
+    gamma = 1.25
+    gevrey_order = 2.0
+    carrier_power = 6.0
+    eta = 0.1
+    coefficient_constant = 10.0
+
+    assert 1.0 < gamma < 1.5
+    assert carrier_power > 2.0 * gevrey_order
+
+    worst_wkb_rate = -math.inf
+    worst_heat_log = -math.inf
+    for j in range(300, 1001):
+        log_j = math.log(j)
+        truncation = max(
+            1,
+            int(eta * j * j / math.log(math.e + j)),
+        )
+        log_carrier = carrier_power * log_j
+
+        log_wkb_remainder = (
+            truncation * math.log(coefficient_constant)
+            + gevrey_order * math.lgamma(truncation + 1)
+            - truncation * log_carrier
+        )
+        worst_wkb_rate = max(worst_wkb_rate, log_wkb_remainder / (j * j))
+
+        # epsilon_j K_j^2 for the exact Kelvin-compatible amplitude
+        # a_j=ell_j^{-gamma} K_j^gamma.
+        log_heat_parameter = (
+            -(gamma - 1.0) * math.log(r) * j
+            + (2.0 - gamma) * log_carrier
+        )
+        worst_heat_log = max(worst_heat_log, log_heat_parameter)
+
+        assert log_wkb_remainder < -0.25 * j * j
+        assert log_heat_parameter < 0.0
+
+    return {
+        "conditional_scalar_ledger": "PASS",
+        "constructs_all_order_cell": False,
+        "r": r,
+        "gamma": gamma,
+        "gevrey_order_sigma": gevrey_order,
+        "carrier": "K_j=j^6",
+        "truncation": "M_j=floor(0.1*j^2/log(e+j))",
+        "gevrey_gate": "A>2*sigma",
+        "worst_checked_log_wkb_remainder_over_j2": worst_wkb_rate,
+        "worst_checked_log_heat_parameter": worst_heat_log,
+        "carrier_handoff":
+            "K_(j+1)/K_j=1+A/j+O(j^-2), incorporated exactly",
+        "missing":
+            "Gevrey-tame one-carrier cell inverse and matched viscous endpoint jets",
     }
 
 
@@ -171,13 +229,14 @@ def main() -> None:
         "superexponential_material_route": superexponential_retrofit(),
         "bounded_ratio_spectral_route": bounded_ratio_spectral_ladder(),
         "localized_wake_cascade": localized_wake_cascade(),
+        "polynomial_carrier_refinement": polynomial_carrier_refinement(),
         "decision": {
             "killed":
                 "direct CMZ material retrofit and clean global fixed-profile return",
             "survives":
-                "localized Kelvin-amplify/rank-one-reset wake cascade",
+                "localized Kelvin/Reynolds wake cascade with polynomial carrier",
             "single_missing_object":
-                "finite-energy localized return cell plus tame all-order right inverse",
+                "finite-energy localized return cell plus tame one-carrier inverse",
         },
     }
     print(json.dumps(result, indent=2, sort_keys=True))
