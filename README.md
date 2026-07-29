@@ -1,78 +1,105 @@
-# Navier–Stokes breakdown research checkpoint
+# Navier--Stokes breakdown research checkpoint
 
 This repository records a theorem-oriented attempt to resolve the
-three-dimensional Navier–Stokes Millennium problem. It is **not** a claimed
-solution.
+three-dimensional Navier--Stokes Millennium problem.  It is **not** a
+claimed solution.
 
-The current target is Clay alternative (D): construct smooth periodic initial
-data and a smooth, rapidly time-decaying force for which no global smooth
-solution exists. The official formulation permits such a force.
+The target is Clay alternative (D): smooth periodic initial data and a
+smooth, rapidly time-decaying force for which no global smooth solution
+exists.  The force is part of the official problem, but it may not hide the
+singularity; its full residual must extend smoothly and be flat at the
+terminal cascade time.
 
-The July 2026 checkpoint now makes a sharper strategic distinction:
+## Current outcome
 
-- a direct Palasek–Córdoba–Martínez-Zoroa–Zheng material-stretching retrofit
-  fails for the ordinary Laplacian because the required dormant-seed gain
-  creates a super-polynomial active frequency and therefore a fatal principal
-  heat cost;
-- bounded-ratio **global spectral recurrence** passes the scalar exponent
-  ledger but fails as a clean return: finite active templates degenerate,
-  scaled torus copies conflict with helicity/sublattice invariance, and
-  volume-filling copies eventually lose to viscosity;
-- a localized, non-precompact wake cascade remains formally compatible in
-  the sharp window
-  \(\ell_j=r^{-j}\), \(a_j=\ell_j^{-\gamma}\),
-  \(1<\gamma<3/2\).
+The work has reduced the constructive route to one local analytic theorem.
+Several objects that were previously only formal are now exact.
 
-The remaining prize-level theorem is a localized Kelvin--Reynolds return
-cell.  An exact affine Kelvin wave proves that true Euler strain can realize
-the required amplitude-frequency law \(A\sim k^\gamma\), with only
-\(O(\nu/(a_j\ell_j))\) full-Laplacian damping per bounded-ratio stage.  What
-is not proved is the hard half: localize the affine reservoir, drain the old
-parent through a multiwave Reynolds stress, create the smaller parent and
-fresh seed, close pressure/wakes/helicity/circulation, and obtain a tame
-all-order viscous return map.
+1. The affine Kelvin solution realizes the required amplification law
+   \(a\sim\ell^{-\gamma}\), and all scalar constraints meet in the sharp
+   window
+   \[
+   1<\gamma<\frac32.
+   \]
+2. Scaled, disjoint copies of Gavrilov's compact steady Euler flow give an
+   exact discretely self-similar stationary wake.  Packing
+   \(N_j\asymp K_j^3\) microbubbles of diameter
+   \(\delta_j=\ell_j/K_j\) realizes the complete polynomial-carrier
+   energy, derivative, Reynolds, and viscous-loss ledger with **zero**
+   leading Euler defect.
+3. A sign-changing Gavrilov pressure modulation makes each bubble
+   individually zero-angular-momentum.  One improper reflected copy then
+   cancels helicity.  The complete finite-dimensional interpolation defect
+   has a componentwise compact symmetric anti-divergence with the correct
+   inertial scale.
+4. The natural equal-shell two-wave transition has an exact rank defect.
+   Unequal-radius doublets recover both daughter polarizations.  Three
+   explicit integer beat directions synthesize the
+   \(\gamma=5/4\) affine strain exactly and give a rank-five rational chart
+   of every symmetric trace-free strain; an exact checker verifies a
+   \(5\times5\) minor of \(-1\,214\,003\,700\).
 
-See
-[research/2026-07-29-forced-spectral-recurrence.md](research/2026-07-29-forced-spectral-recurrence.md)
-and the follow-up
-[research/2026-07-29-return-cell-no-go-map.md](research/2026-07-29-return-cell-no-go-map.md),
-which rules out asymptotically finite active templates and narrows the
-surviving target to a recurrent leading infinite/localized tail;
-[research/2026-07-29-global-scaled-return-obstruction.md](research/2026-07-29-global-scaled-return-obstruction.md),
-which closes clean volume-filling scaled copies; and
-[research/2026-07-29-flat-force-selfsimilar-audit.md](research/2026-07-29-flat-force-selfsimilar-audit.md),
-which gives the exact surviving exponent window, the Kelvin amplifier, and
-the conditional all-order flat-force theorem.  A
-separate global-regularity audit,
-[research/2026-07-29-quadratic-lyapunov-no-go.md](research/2026-07-29-quadratic-lyapunov-no-go.md),
-proves that no positive Fourier-diagonal quadratic Lyapunov functional
-stronger than energy can work for the full equation.
+There is also a new mandatory correction.  A bare thin Gavrilov endpoint
+cannot be dressed by correctors confined to its own disjoint ball.  At the
+second velocity jet, flat Navier--Stokes residual forces
 
-To reproduce the scalar recurrence ledger, install no extra dependencies
-and run:
+\[
+ {\mathsf G}_{ij}(W)=\int\partial_kW_i\,\partial_kW_j=c\delta_{ij},
+\]
+
+whereas the thin seed has
+
+\[
+ G_\parallel-G_\perp
+ =\pi^2\varepsilon\int\chi^2+o(\varepsilon)>0.
+\]
+
+Its first differentiated pressure therefore has an unavoidable
+\(|x|^{-3}\) quadrupole and the second velocity jet an \(|x|^{-4}\) tail.
+The final construction must retain that global pressure/centre wake or a
+nonzero endpoint oscillatory bath.
+
+## The single missing theorem
+
+The remaining prize-level target is a **three-beat forward
+Kelvin--Reynolds parametrix**:
+
+- evolve the complete finite charged material-phase lattice rather than a
+  static or finitely closed triad;
+- keep the explicit rank-five child-strain chart uniformly invertible;
+- route unmatched and nonzero-charge products into the annular wake;
+- retain the nonlocal pressure jets and a viscously admissible endpoint
+  bath;
+- solve through
+  \(M_j\asymp j^2/\log j\) at the polynomial carrier \(K_j=j^A\); and
+- obtain Gevrey bounds and residual/seam errors \(e^{-c j^2}\).
+
+That last rate beats every physical derivative cost and would make the
+terminal force \(C^\infty\)-flat.  No theorem in this repository yet
+establishes this parametrix, so no Millennium conclusion is claimed.
+
+## Exact notes
+
+- [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
+- [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)
+- [Two-colour rank theorem and three-beat repair](research/2026-07-29-two-colour-endpoint-rank.md)
+- [Viscous endpoint-jet obstruction](research/2026-07-29-gavrilov-viscous-endpoint-jet-obstruction.md)
+- [Forward one-phase inverse audit](research/2026-07-29-one-phase-cell-inverse-audit.md)
+- [Polynomial-carrier Gevrey ledger](research/2026-07-29-polynomial-carrier-ledger.md)
+- [Flat-force/Borel attack](research/2026-07-29-flat-force-borel-attack.md)
+- [All-support Laurent pole no-go](research/2026-07-29-laurent-null-pole-no-go.md)
+- [Audit of the claimed 2026 Navier--Stokes profile](research/2026-07-29-shahmurov-ns-preprint-audit.md)
+- [Audit of the claimed axisymmetric reduction](research/2026-07-29-shahmurov-axisymmetric-reduction-audit.md)
+
+## Reproducible algebra
+
+No extra dependencies are needed:
 
 ```bash
 python checks/forced_recurrence_ledger.py
+python checks/two_colour_endpoint_rank.py
 ```
 
-Primary references are linked in the research note. All “pass” statements in
-the verifier concern algebraic consistency only; none asserts existence of the
-required Navier–Stokes solution.
-
-## Audit workspace (added by the auditing model)
-
-`CLAIMS.md` is the registry of every substantive claim in this program with
-its verification status. Protocol: nothing is "established" until the party
-that did not produce it re-derives or reproduces it from artifacts here.
-
-- `docs/` — the working notes (source + rendered) and per-session deltas;
-  Addenda A–H.1 record the full audited history including the corrected
-  metric-gaming episodes.
-- `engines/` — the independent solvers and optimizers (complex128 replay
-  engine, v2.3 standard-norm optimizer, r0-scan).
-- `gate/` — the downshifter-gate bundle, its A100 results, and the
-  independent float64 validator.
-- `audit/` — symbolic and numerical audit scripts (certificate window
-  generalization, metric recomputation, null baselines).
-- `data/stage5/` — the endpoint-crossing evidence base (Addendum G.3).
-- `phase2/` — the affine-core continuation spec (open since Addendum E).
+All `PASS` statements in these programs concern exact algebraic identities
+or scaling inequalities.  They do not assert existence of the missing
+Navier--Stokes parametrix.
