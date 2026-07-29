@@ -347,6 +347,80 @@ in (3.3) provides the required uniform positivity margin.
 This gives a finite positive stress measure with \(O(M^2)\) atoms, exact
 for every pressure moment through degree \(M\).
 
+### Exterior moments are not the whole pressure-matching problem
+
+An annular correction that cancels the exterior multipoles also creates a
+harmonic pressure field inside the annulus.  Let
+
+\[
+H_{m,k}(x)=|x|^mY_{m,k}(x/|x|)
+\]
+
+and let its Kelvin transform be
+
+\[
+K_{m,k}(x)
+=|x|^{-2m-1}H_{m,k}(x)
+=|x|^{-m-1}Y_{m,k}(x/|x|).
+\tag{3.8}
+\]
+
+The degree-\(m\) Taylor coefficient of the pressure produced in the inner
+core is, up to a fixed normalization,
+
+\[
+\int T(y):D^2K_{m,k}(y)\,dy.
+\tag{3.9}
+\]
+
+The \(m=0\) coefficient is a pressure gauge.  The \(m=1\) coefficients
+control the pressure gradient and should also be set to zero; they add
+only three more linear conditions.  The paired exterior/interior channels
+below concern \(m\ge2\).
+
+Therefore exterior cancellation alone does not preserve the active core's
+pressure jet.  At radius \(R\),
+
+\[
+D^2H_{m,k}\sim R^{m-2},
+\qquad
+D^2K_{m,k}\sim R^{-m-3}.
+\tag{3.10}
+\]
+
+The positive-atom argument extends to the combined exterior/interior
+system.  Indeed, suppose a linear combination \(\Psi\) of the regular
+harmonics \(H_{m,k}\) and singular harmonics \(K_{m,k}\) satisfies
+
+\[
+b^TD^2\Psi(y)b=0
+\]
+
+for every direction \(b\) and every \(y\) in an open annulus.  Then
+\(D^2\Psi=0\) there, so \(\Psi\) is affine.  The distinct positive and
+negative homogeneities in the chosen list force every coefficient to
+vanish.  Hence localized stress atoms span the dual of the combined
+finite jet space.  Isotropic orientation sums again give a strictly
+positive null vector.
+
+For quantitative separation, use two concentric control shells with
+radii \(R\) and \(\sigma R\), where \(\sigma>1\) is fixed.  In each
+angular channel the two radial homogeneities give the nonzero normalized
+determinant
+
+\[
+\sigma^{-(m+3)}-\sigma^{m-2}\ne0.
+\tag{3.11}
+\]
+
+After the angular Hessian maps are normalized, this is a two-shell radial
+Vandermonde.  It permits one to prescribe the exterior multipole while
+setting the corresponding interior pressure jet to zero.  The number of
+coordinates and packets only doubles and remains \(O(M^2)\).
+
+This two-sided cancellation is required if “preserving the core endpoint”
+includes its pressure gradient, rather than only its velocity.
+
 ---
 
 ## 4. Exact smooth divergence-free annular realization
@@ -430,6 +504,8 @@ supported in that annulus, such that
 \tag{4.5}
 \]
 
+Using the two-shell version, \(v\) may simultaneously be required to have
+zero interior harmonic pressure jet through any prescribed finite order.
 The field \(v\) leaves \(u\) exactly unchanged on the inner core.  It does
 not leave the *global* endpoint unchanged: the annular field is a
 nontrivial outgoing wake.
@@ -624,7 +700,8 @@ subclass.  A concrete viable architecture is:
    missing carrier direction, or explicitly retain the pressure-generated
    algebraic tail during the interval;
 4. cancel harmonic pressure moments through
-   \(M_{{\rm p},j}\asymp j^2\);
+   \(M_{{\rm p},j}\asymp j^2\), while using a second control radius to
+   cancel the pressure jet fed back into the core;
 5. cut velocity and then pressure at two successively larger fixed
    multiples of \(j\ell_j\).
 
