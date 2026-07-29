@@ -219,13 +219,15 @@ construction.
 For a physical wake localized inside an outer scale, use only \(j\ge0\):
 
 \[
- U_+(x)=\sum_{j=0}^{\infty}W_j(x).
+ U_+(x)=\sum_{j=0}^{\infty}W_j(x),
+ \qquad
+ \Pi_+(x)=\sum_{j=0}^{\infty}P_j(x).
 \tag{4.1}
 \]
 
-This is compactly supported, smooth away from the accumulation point
-\(x=0\), and stationary Euler on the punctured space.  Its cell quantities
-are exact:
+The pair is supported in a bounded ball, is smooth away from the
+accumulation point \(x=0\), and solves stationary Euler on the punctured
+space.  Its cell quantities are exact:
 
 \[
 \begin{aligned}
@@ -255,9 +257,9 @@ number, divergent \(L^3\) strength, and summable turnover times.  This is
 exactly the sharp scalar window found independently in the cascade
 ledger.
 
-Disjointness also permits the polynomial-carrier refinement without
-creating an Euler error.  For any positive sequence \(K_j\), replace
-(2.1) on the one-sided lattice by
+Disjointness also permits an exact polynomial **amplitude** modulation
+without creating an Euler error.  For any positive sequence \(K_j\),
+replace (2.1) on the one-sided lattice by
 
 \[
  W_j^{K}(x)=r^{\gamma j}K_j^\gamma W(r^jx),
@@ -266,15 +268,87 @@ creating an Euler error.  For any positive sequence \(K_j\), replace
 \tag{4.4}
 \]
 
-Each pair is still a scaled steady Euler solution, and cross terms still
-vanish.  Taking \(K_j=j^A\) gives the slowly modulated amplitudes used in
-the flat-force ledger; the additional polynomial factors do not disturb
-energy or time summability.  Exact discrete homogeneity is then replaced
-by an exact nonautonomous bubble lattice, which is the form needed by the
-proposed Navier--Stokes stages.
+Each pair is still an amplitude-scaled steady Euler solution, and cross
+terms still vanish.  Taking \(K_j=(j+1)^A\) gives the same polynomial
+amplitude factor as in the flat-force ledger; the additional polynomial
+factors do not disturb energy or time summability.  Exact discrete
+homogeneity is then replaced by an exact nonautonomous bubble lattice.
 
-For the DSS amplitudes, and also for \(K_j=j^A\), the pressure has the
-corresponding summable local \(L^1\) scaling.  Hence the partial sums
+This observation does **not** realize the ledger's internal carrier
+\(k_j=K_j/\ell_j\).  The bubble's spatial derivative scale remains
+\(\ell_j^{-1}\), not \(K_j/\ell_j\), and its viscous cost therefore lacks
+the carrier factor \(K_j^2\).  An oscillatory microstructure or a
+Gevrey-tame carrier corrector is still needed for that part of the proposed
+Navier--Stokes stage.
+
+There is, however, an exact **packed-bubble carrier**.  Let
+\(\ell_j=r^{-j}\), let \(K_j\) be a positive integer, and put
+\[
+ \delta_j=c_0\frac{\ell_j}{K_j},
+ \qquad
+ a_j=\ell_j^{-\gamma}K_j^\gamma .
+\tag{4.5}
+\]
+A fixed subannulus of diameter comparable to \(\ell_j\) contains
+\(N_j\asymp K_j^3\) disjoint balls of radius comparable to \(\delta_j\).
+Translate a spatially \(\delta_j\)-scaled copy of the joint
+velocity-pressure support into each ball and set
+\[
+\begin{aligned}
+ {\mathcal W}_{j,m}(x)
+ &=a_j W\!\left(\frac{x-x_{j,m}}{\delta_j}\right),\\
+ {\mathcal P}_{j,m}(x)
+ &=a_j^2 P\!\left(\frac{x-x_{j,m}}{\delta_j}\right).
+\end{aligned}
+\tag{4.6}
+\]
+Every pair in (4.6) solves stationary Euler, all cross terms vanish, and
+different annuli remain disjoint.  If
+\({\mathcal W}_j=\sum_{m=1}^{N_j}{\mathcal W}_{j,m}\), then
+\[
+\begin{aligned}
+ \|{\mathcal W}_j\|_2^2
+ &\asymp \ell_j^{3-2\gamma}K_j^{2\gamma},\\
+ \|{\mathcal W}_j\|_3^3
+ &\asymp \ell_j^{3-3\gamma}K_j^{3\gamma},\\
+ \|\nabla{\mathcal W}_j\|_2^2
+ &\asymp \ell_j^{1-2\gamma}K_j^{2\gamma+2},\\
+ k_j&\asymp K_j/\ell_j,\\
+ \operatorname{Re}_{j,\mathrm{carrier}}
+ &\asymp \nu^{-1}\ell_j^{1-\gamma}K_j^{\gamma-1}.
+\end{aligned}
+\tag{4.7}
+\]
+Thus the leading Euler carrier bath and all scalar derivative counts are
+exact, not asymptotic.  Over the ledger stage time
+\[
+ \tau_j=\ell_j^{1+\gamma}K_j^{-\gamma},
+\]
+its nominal viscous loss is
+\[
+ \nu\tau_j\|\nabla{\mathcal W}_j\|_2^2
+ \asymp
+ \nu\ell_j^{2-\gamma}K_j^{\gamma+2},
+\tag{4.8}
+\]
+exactly the polynomial-carrier scaling.  For
+\(K_j=(j+1)^A\), the exponential factors in \(\ell_j\) still give finite
+energy and divergent carrier-scale Reynolds number throughout
+\(1<\gamma<3/2\).
+
+The bath is not an active cascade: its bubbles do not interact and each
+has zero external flux.  Formulae (4.5)--(4.8) remove the *static leading
+Euler carrier* obstruction, but not the time-dependent creation,
+low-mode-strain coupling, viscous endpoint jets, or all-order seam
+matching.
+
+For the DSS amplitudes,
+\[
+ \|P_j\|_1=r^{(2\gamma-3)j}\|P\|_1.
+\]
+The same geometric factor times a polynomial occurs for
+\(K_j=(j+1)^A\), so the pressure remains summable in local \(L^1\).  Hence
+the partial sums
 converge in
 \[
  U_+^{(N)}\longrightarrow U_+\quad\hbox{in }L^2,
@@ -282,11 +356,21 @@ converge in
  U_+^{(N)}\otimes U_+^{(N)}+\Pi_+^{(N)}I
  \longrightarrow U_+\otimes U_++\Pi_+I\quad\hbox{in }L^1.
 \]
-Passing to distributions shows that \(U_+\) is a finite-energy weak
-stationary Euler solution even across \(x=0\).  It is unbounded there and
-is not a smooth Navier--Stokes state at the accumulation point.  At each
-preterminal time, a proposed cascade would contain only finitely many
-active cells, hence a smooth velocity.
+For every compactly supported smooth vector test function \(\varphi\),
+each finite partial sum obeys
+\[
+ \int_{\mathbb R^3}
+ \big(U_+^{(N)}\otimes U_+^{(N)}+\Pi_+^{(N)}I\big):
+ \nabla\varphi\,dx=0.
+\]
+The \(L^1\) stress convergence passes this identity to the limit.  The
+\(L^2\) convergence likewise passes
+\(\int U_+^{(N)}\cdot\nabla\psi\,dx=0\) to the limit for every scalar test
+\(\psi\).  Thus no point source is hidden at the accumulation point:
+\((U_+,\Pi_+)\) is a finite-energy weak stationary Euler solution on all
+of \(\mathbb R^3\).  It is unbounded at \(x=0\) and is not a smooth
+Navier--Stokes state there.  At each preterminal time, a proposed cascade
+would contain only finitely many active cells, hence a smooth velocity.
 
 ## 5. What remains
 
