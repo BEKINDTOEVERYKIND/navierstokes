@@ -65,15 +65,28 @@ entry asserts a Navier–Stokes singularity.
 | C25 | Refutation of the Zenodo July-2026 helical quasi-trapping flux theorem (six-mode counterexample) | NO-ARTIFACT |
 | C26 | Separated-wake pressure estimate (support-gap, cross-stress, periodic-image caveats) | NO-ARTIFACT |
 
-## Registered 2026-07-29 (second batch, unaudited)
+## 2026-07-29 corpus review (fourteen further notes; see audit/REVIEW-2026-07-29-full-corpus.md)
 
-Eight further research notes landed after the registry was drafted; each is
-registered here pending audit: `chen-euler-profile-ns-audit`,
-`flat-force-selfsimilar-audit`, `forward-corrector-invariant-graph`,
-`global-scaled-return-obstruction`, `kelvin-reynolds-return-cell-audit`,
-`localized-stress-work-compatibility`, `quadratic-lyapunov-no-go`,
-`shahmurov-preprint-audit` (collectively C27; statuses to be split out as
-they are audited).
+Four independent readers; adversarial recomputation of numbered equations.
+No hard algebra/sign/exponent error found in any note. Per-note statuses:
+
+| ID | Note | Headline | Status |
+|----|------|----------|--------|
+| C28 | kelvin-reynolds-return-cell-audit | Exact amplifier/drain/parity/circulation algebra; two-endpoint cokernel correction; projected endpoint-submersion target | VERIFIED-CROSS on all exact computations (line-by-line); flag: affine-germ pressure gauge (§2.1) is convention at germ level |
+| C29 | log-periodic-wake-equation | Cylinder system on S²×T_L; pressure operator invertible on 1<γ<3/2; five zero fluxes; no linear bifurcation from zero | VERIFIED-CROSS on multiplier algebra, flux exponents, window; constructive target open |
+| C30 | flat-force-borel-attack | Reduction of flat-force design to Targets A (Gevrey one-carrier cell) and B (pole collision); seam identity; cell cokernel obstruction | VERIFIED-CROSS on (8.1),(7.4)-(7.8),(10.10)-(10.12),(10.19)-(10.20); conditional structure honest |
+| C31 | flat-force-selfsimilar-audit | One-profile SS/DSS phase diagram closed; survivor cascade 1<γ<3/2; exact affine Kelvin law | VERIFIED-CROSS on §1-§5,§7 ledgers and exact solution; survivor rests on unproven Hyp A-E (stated) |
+| C32 | chen-euler-profile-ns-audit | Chen Euler-II profile cannot bridge to NS (super-parabolic c≫1) | VERIFIED-SELF+structure reviewed; flags: c>1/2 needed across full α-range; "standard energy identity" overstates open D^{1,2} Liouville; B=2/5 sign-convention note |
+| C33 | chen-hou-boundary-ns-bridge | Chen–Hou boundary Euler cannot bridge (β≈2.9206; reflection; non-isometry) | VERIFIED-SELF; arithmetic consistent; flag: pivot s≍C_ω asserted, needs derivation from source (2.6)-(2.12) |
+| C34 | shahmurov-preprint-audit | Sign inconsistency C'=-σC vs required D⁺C≥cQC in Euler-II preprint | VERIFIED-CROSS on the sign chain; conditional on λ-isotropy textual reading (anchor requested) |
+| C35 | shahmurov-ns-preprint-audit | 5D-lifted NS preprint solves a different reduced system (3/r incompressibility; omitted ω^θ/r evolution) | VERIFIED-CROSS on ground-truth identities; conditional on eq-(5)/(8) textual readings (anchor requested) |
+| C36 | forward-corrector-invariant-graph | Unstructured forward-corrector route killed (e^{CK_j} vs e^{-cj²}); invariant-graph resolvent reformulation | VERIFIED-CROSS on kill inequality and window; near-circularity of graph machinery flagged (and acknowledged in note) |
+| C37 | global-scaled-return-obstruction | Global Bloch/lattice return killed by helicity covering factor det(O)·r; localization case established | VERIFIED-CROSS on (2.2)-(2.5),(4.5) |
+| C38 | localized-stress-work-compatibility | Six-ray positive stress dictionary; duality identity; mandatory work-carrying wake (7.3) | VERIFIED-CROSS on (1.1),(3.3)-(3.6),(5.2),(7.1)-(7.3); five-ray minimality sub-claim under-justified (non-load-bearing) |
+| C39 | quadratic-lyapunov-no-go | Only energy+helicity survive as curl-diagonal quadratic invariants; no positive scalar-multiplier Lyapunov | VERIFIED-CROSS (full Walsh expansion re-derived; instantaneous-conservation reading sound) |
+| C40 | laurent-null-pole-no-go | No irreducible Laurent q divides Σ(D_jq)²; four-monomial pole route closed | VERIFIED-CROSS (steps 1-4 re-derived; d·d=0 over Z³ impossible) |
+| C41 | polynomial-carrier-ledger | Polynomial carrier K_j=j^A with M_j≍j²/log j keeps e^{-cj²} flatness; relocates difficulty to solvability depth | VERIFIED-CROSS on Stirling ledger; caveat: Gevrey-in-j modulation gives only e^{-cj} (must be exact) |
+| C42 | Program-level: three-coordinate convergence on one open object (endpoint submersion ≡ invariant graph ≡ cylinder wake + annular transition) | cross-note | Reviewed; recorded as the program's single target |
 
 ## Audit queue (priority order)
 
