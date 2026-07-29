@@ -500,11 +500,12 @@ character map \(z\mapsto(z^a,z^b)\) is surjective onto
 
 where the dot is the complex bilinear extension of the Euclidean
 integer-lattice form.  As \(A\) varies, its leading coefficient is
-\(|a-b|^2>0\), so it cannot vanish identically.  Therefore the smallest
-unresolved irreducible characteristic denominator has at least four
-Laurent monomials.  Classifying finite-support solutions of (7.5), and
-then imposing the next pole equations, is a finite exact
-computer-algebra program.
+\(|a-b|^2>0\), so it cannot vanish identically.  At this stage of the
+audit, the smallest unresolved irreducible characteristic denominator had
+at least four Laurent monomials.  The subsequent note
+[`2026-07-29-laurent-null-pole-no-go.md`](2026-07-29-laurent-null-pole-no-go.md)
+closes the remaining finite-support search: no nonunit irreducible Laurent
+polynomial with any number of monomials can satisfy (7.5).
 
 This calculation does not prove that a pole collision is possible.
 Rather, it turns the rational route into a sharp algebraic search:
@@ -519,10 +520,10 @@ Rather, it turns the rational route into a sharp algebraic search:
 5. avoid the shear/generalized-Beltrami reductions, which revert to a
    linear heat equation.
 
-This is the only ansatz in the present audit that is not already reduced
-to the previously identified packet-plus-wake return problem.  Because it
-is an exact symbolic pole-closure question, computer algebra rather than
-GPU evolution is the appropriate first test.
+After that all-support Laurent no-go, the uncovered pole variants are
+coupled divisors with same-order tangential cancellations, higher-order
+pole hierarchies, or non-Laurent essential singularities.  None currently
+has a closed residue system or an energy-dissipation ledger.
 
 ## 8. Exact all-order seam identity
 
@@ -587,18 +588,14 @@ Then Proposition 1 and (8.1) prove Clay alternative (D).  For the current
 Kelvin--Reynolds program, (8.2) is the exact analytic form of the
 increasing-order endpoint return requirement.
 
-### Target B: complex-null rational closure
+### Target B: coupled or higher-order complex poles
 
-Find a finite symbolic dictionary of conjugate pole hypersurfaces
-satisfying (7.2)--(7.4) for which substitution into projected
-Navier--Stokes closes the pole dynamics and produces a bounded-energy pole
-collision.  If no such dictionary exists up to a meaningful pole/order
-class, prove the corresponding algebraic no-go.
-
-Target B is the more genuinely separate long shot.  It should be attacked
-first by exact symbolic elimination of leading and next-order pole
-coefficients.  A GPU run has no useful role until a closed pole system or a
-concrete stage endpoint map exists.
+The single reduced finite-Laurent simple-pole target is now closed by the
+all-support no-go cited after (7.8).  A separate pole attack would first
+have to derive a new leading system in which coupled divisors cancel the
+tangential viscous pole, or in which a higher-order residue hierarchy
+precedes the null-normal condition.  Without such a system there is no
+meaningful symbolic or GPU search.
 
 ## 10. Highest-priority bypass: Gavrilov bubbles plus one-carrier Euler--Reynolds WKB
 
