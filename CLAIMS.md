@@ -43,11 +43,11 @@ entry asserts a Navier–Stokes singularity.
 | ID | Claim | Artifacts | Status |
 |----|-------|-----------|--------|
 | C10 | Palasek formal full-Laplacian window (2.1): 1<b<a/2, 2b<β<a≤5/2; dormancy flatness θ=β(b−1)/b² | `research/...forced-spectral-recurrence.md` §2; `checks/forced_recurrence_ledger.py` | VERIFIED-CROSS (consistent with H audit and the paper's stated hypotheses) |
-| C11 | CMZ locking q/R=d, threshold d<(22−8√7)/9 | §3 | UNAUDITED (citation real: arXiv 2407.06776; exponents to be checked against the paper) |
-| C12 | CMZ-retrofit principal-heat no-go: (3.2)+(3.3) ⇒ polynomial K_k, contradicting required exp(cN_k^θ) gain; WKB order cannot repair | §3, (3.1)–(3.5) | UNAUDITED — priority audit target (short algebra, conditional on CMZ support/cutoff scalings) |
+| C11 | CMZ locking q/R=d, threshold d<(22−8√7)/9 | §3 | THRESHOLD VERIFIED at source (arXiv 2407.06776 abstract states blowup for α∈[0,(22−8√7)/9)); locking internally consistent (√(2d/7)/√(2/(7d))=d); paper-body ansatz check pending |
+| C12 | CMZ-retrofit principal-heat no-go: (3.2)+(3.3) ⇒ polynomial K_k, contradicting required exp(cN_k^θ) gain; WKB order cannot repair | §3, (3.1)–(3.5) | VERIFIED-CROSS (deductive chain re-derived by hand 2026-07-29: K²≲N_k/N_{k−1}⇒K≲N_k^{(b−1)/2b}; (KL)²≪A_{k−1}⇒K≪N_k^{(β−2)/4b}; hyperbolic support/cutoff premises are generic pullback facts), conditional on C11 paper-body check |
 | C13 | Bounded-ratio ladder rows (5.4) and window (5.5); dyadic design point r=32, μ=2048, q=2 → E×1/4, D×1/8, Re×2, R×1/16, L³↑ | §5; ledger script | ARITH-CHECKED (design point exact; rows consistent with slender-vortex scaling E~S²a⁴R, D~rate×τ, ‖u‖₃~Sa(a²R)^{1/3}); derivations pending |
 | C14 | Asymptotically-finite active cell no-go via Kishimoto–Yoneda compactness (conditional on lattice compatibility + strong normalized bounds) | `research/...return-cell-no-go-map.md` §1 | UNAUDITED — priority audit target |
-| C15 | Pairwise reality-sideband obstruction (2.3): |p|≠|q|, P_{p−q}T_−=0 ⇒ T_+=0 | §2 | UNAUDITED (planned: direct sympy check) |
+| C15 | Pairwise reality-sideband obstruction (2.3): |p|≠|q|, P_{p−q}T_−=0 ⇒ T_+=0 | §2; `audit/sideband_obstruction_check.py` | VERIFIED-CROSS (full hand re-derivation of (2.1)–(2.3) incl. the mode algebra and both orthogonality identities, plus 3929 randomized numeric trials, 2026-07-29) |
 | C16 | Same-eigenvalue Beltrami darkness P[(B·∇)V+(V·∇)B]=0; cross-eigenvalue = (λ−μ)P(B×V) | §4, (4.1)–(4.2) | VERIFIED-CROSS (re-derived: ∇(B·V) identity; in-session) |
 | C17 | Additive-closure rank trichotomy; det[p,q1,q2]=−384 for the tested chain ⇒ volume-filling; single-diagonal branch is rank-2 (2D3C) | §3 | VERIFIED-CROSS for the determinant and rank facts (in-session); trichotomy is standard |
 | C18 | Growing-ratio schedule exponents (5.1)–(5.2); chain (5.3) forces r_j→∞ | §5 | UNAUDITED |
@@ -64,6 +64,16 @@ entry asserts a Navier–Stokes singularity.
 | C24 | Chae–Wolf closes the finite-energy bounded-gradient β=2/5 periodic Euler-profile route | NO-ARTIFACT (citation real: arXiv 1706.02020) |
 | C25 | Refutation of the Zenodo July-2026 helical quasi-trapping flux theorem (six-mode counterexample) | NO-ARTIFACT |
 | C26 | Separated-wake pressure estimate (support-gap, cross-stress, periodic-image caveats) | NO-ARTIFACT |
+
+## Registered 2026-07-29 (second batch, unaudited)
+
+Eight further research notes landed after the registry was drafted; each is
+registered here pending audit: `chen-euler-profile-ns-audit`,
+`flat-force-selfsimilar-audit`, `forward-corrector-invariant-graph`,
+`global-scaled-return-obstruction`, `kelvin-reynolds-return-cell-audit`,
+`localized-stress-work-compatibility`, `quadratic-lyapunov-no-go`,
+`shahmurov-preprint-audit` (collectively C27; statuses to be split out as
+they are audited).
 
 ## Audit queue (priority order)
 
