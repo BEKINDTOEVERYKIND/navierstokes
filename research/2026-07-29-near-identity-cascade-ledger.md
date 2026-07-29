@@ -129,7 +129,8 @@ properties on a packet class \({\cal A}_{\rho_*}\):
 
 1. its endpoint map has a right inverse bounded uniformly in \(j\) on
    the five-dimensional strain target after division by the fixed
-   factor \(T_0\);
+   factor \(T_0^2\) when the low strain is generated from zero (or by
+   \(T_0\) for an entry-strain return);
 2. its analytic-radius loss satisfies
    \[
    \rho(T_0)\geq \rho(0)-C_*T_0
@@ -143,7 +144,15 @@ enough for a quantitative analytic inverse theorem at every stage.
 The required controls are \(O(\sigma_j)\), and the analytic radius
 remaining at the endpoint is bounded below independently of \(j\).
 
-This is a conditional reduction, not a proof of either property.  Its
+For an infinitely repeated analytic construction, the endpoint radius
+must also obey the rescaled reset inequality
+\[
+ r\bigl(\rho_{\rm in}-C_*T_0\bigr)\geq\rho_{\rm in}.
+\]
+The detailed time-power and reset audit is in
+`2026-07-29-near-identity-endpoint-time-audit.md`.
+
+This is a conditional reduction, not a proof of these properties.  Its
 point is that no parameter in the desired endpoint theorem now
 deteriorates merely because \(j\) increases.
 
@@ -324,4 +333,3 @@ The exact rank-five instantaneous chart, the all-generation
 the companion notes are the principal-symbol ingredients for this
 theorem.  What remains is the nonlinear analytic endpoint construction
 and its localization/wake coupling.
-
