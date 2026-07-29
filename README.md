@@ -7,8 +7,10 @@ claimed solution.
 The target is Clay alternative (D): smooth periodic initial data and a
 smooth, rapidly time-decaying force for which no global smooth solution
 exists.  The force is part of the official problem, but it may not hide the
-singularity; its full residual must extend smoothly and be flat at the
-terminal cascade time.
+singularity: the residual must extend smoothly through the terminal cascade
+time.  We impose the stronger convenient design that, after subtracting a
+fixed smooth terminal background, the shrinking-scale tail is flat there;
+it can then be extended with rapid future decay.
 
 ## Current outcome
 
