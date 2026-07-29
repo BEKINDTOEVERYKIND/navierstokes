@@ -25,6 +25,10 @@ class with a strictly super-parabolic strain gain.
 
 See
 [research/2026-07-29-forced-spectral-recurrence.md](research/2026-07-29-forced-spectral-recurrence.md)
+and the follow-up
+[research/2026-07-29-return-cell-no-go-map.md](research/2026-07-29-return-cell-no-go-map.md),
+which rules out asymptotically finite active templates and narrows the
+surviving target to a recurrent leading infinite/localized tail,
 and run:
 
 ```bash
