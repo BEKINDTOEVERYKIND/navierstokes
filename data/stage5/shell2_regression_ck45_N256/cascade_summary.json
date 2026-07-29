@@ -1,0 +1,299 @@
+{
+  "cuda_available": true,
+  "cuda_device": "NVIDIA L4",
+  "input_resolution": 32,
+  "interpretation": {
+    "critical_fraction": "C_j(t)/C_0(0), where C=sum |k||u_hat|^2",
+    "critical_strength_ratio": "sqrt(C_j/C_0), the homogeneous H^(1/2) norm ratio",
+    "local_reynolds_ratio": "[u_max,j/(nu*N_j)]/[u_max,0/(nu*N_0)]; self-similar local recurrence would require order one",
+    "q_p_ratio": "[||P_j u||_p/||P_0 u(0)||_p]/[N_j/N_0]^(1-3/p); self-similar recurrence would require order one",
+    "status": "finite-resolution diagnostic only; not a proof or numerical certificate"
+  },
+  "runs": [
+    {
+      "device": "cuda",
+      "dtau": 0.0025,
+      "initial_amplitude_urms": 10.213848833926896,
+      "initial_local_reynolds": 447.9494383511754,
+      "initial_mean_wavenumber": 6.809232555951264,
+      "initial_spatial": {
+        "concentration": 14.931647945039199,
+        "l16": 82.57203239537351,
+        "l3": 17.386879568198754,
+        "l4": 25.582395864825173,
+        "l8": 52.68997219154384,
+        "max_velocity": 152.50959495204538,
+        "rms_velocity": 10.213848833926884
+      },
+      "integrator": "ck45_2n",
+      "lp_exponents": [
+        3.0,
+        8.0,
+        16.0
+      ],
+      "max_cuda_memory_allocated_gib": 6.3125,
+      "max_cuda_memory_reserved_gib": 6.603515625,
+      "nonlinear_energy_rate_at_t0": 0.0,
+      "nonlinear_helicity_rate_at_t0": 0.0,
+      "peaks": {
+        "shell0": {
+          "concentration": 14.931647945039199,
+          "concentration_scaling_efficiency": 1.0,
+          "critical_fraction": 1.0,
+          "critical_strength_ratio": 1.0,
+          "energy_fraction": 1.0,
+          "l16": 82.57203239537351,
+          "l3": 17.386879568198754,
+          "l3_ratio": 1.0,
+          "l4": 25.582395864825173,
+          "l8": 52.68997219154384,
+          "local_reynolds": 447.9494383511754,
+          "local_reynolds_ratio": 1.0,
+          "max_velocity": 152.50959495204538,
+          "mean_wavenumber": 6.809232555951264,
+          "minority_share": 0.4027224442593372,
+          "q16_ratio": 1.0,
+          "q3_ratio": 1.0,
+          "q8_ratio": 1.0,
+          "rms_velocity": 10.213848833926884,
+          "scale_ratio": 1.0,
+          "tau": 0.0
+        },
+        "shell1": {
+          "concentration": 26.465118414719424,
+          "concentration_scaling_efficiency": 0.9195669988608849,
+          "critical_fraction": 0.7770730879704596,
+          "critical_strength_ratio": 0.8815174915850845,
+          "energy_fraction": 0.5017338320681285,
+          "l16": 92.03496561755219,
+          "l3": 15.025431732581227,
+          "l3_ratio": 0.8641821940299913,
+          "l4": 23.594552123442874,
+          "l8": 53.70868431258021,
+          "local_reynolds": 363.1142625924314,
+          "local_reynolds_ratio": 0.8106143941802725,
+          "max_velocity": 191.4696576666374,
+          "mean_wavenumber": 10.545972846103695,
+          "minority_share": 0.42429802088682667,
+          "q16_ratio": 0.7811856170877265,
+          "q3_ratio": 0.8641821940299913,
+          "q8_ratio": 0.775485609597229,
+          "rms_velocity": 7.234793159290963,
+          "scale_ratio": 1.5487755425369518,
+          "tau": 0.805
+        },
+        "shell2": {
+          "concentration": 37.539793816552546,
+          "concentration_scaling_efficiency": 0.4469149617659853,
+          "critical_fraction": 0.39121522639195744,
+          "critical_strength_ratio": 0.6254720028841878,
+          "energy_fraction": 0.12368287868001684,
+          "l16": 56.64956594515765,
+          "l3": 7.71322034505163,
+          "l3_ratio": 0.44362303855600377,
+          "l4": 12.264800273957231,
+          "l8": 29.83089919067432,
+          "local_reynolds": 125.21655908301807,
+          "local_reynolds_ratio": 0.27953279625468136,
+          "max_velocity": 134.84538926380878,
+          "mean_wavenumber": 21.537948375407254,
+          "minority_share": 0.48606695002141614,
+          "q16_ratio": 0.26917043320007417,
+          "q3_ratio": 0.44362303855600377,
+          "q8_ratio": 0.2756589021188671,
+          "rms_velocity": 3.5920652607407493,
+          "scale_ratio": 3.163050784127369,
+          "tau": 1.365
+        }
+      },
+      "physical_dt": 3.594615277737011e-05,
+      "precision": "float64",
+      "r0": 30.0,
+      "recurrence_peaks": {
+        "shell0": {
+          "C0_fraction": {
+            "critical_fraction": 1.0,
+            "local_reynolds_ratio": 1.0,
+            "q16_ratio": 1.0,
+            "q3_ratio": 1.0,
+            "q8_ratio": 1.0,
+            "scale_ratio": 1.0,
+            "tau": 0.0,
+            "value": 1.0
+          },
+          "Q16_0": {
+            "critical_fraction": 0.9720403021055087,
+            "local_reynolds_ratio": 1.005554930378914,
+            "q16_ratio": 1.0147933872681718,
+            "q3_ratio": 0.9964397915252909,
+            "q8_ratio": 1.012381466091698,
+            "scale_ratio": 0.9978025074902727,
+            "tau": 0.075,
+            "value": 1.0147933872681718
+          },
+          "Q3_0": {
+            "critical_fraction": 0.9945587685126888,
+            "local_reynolds_ratio": 1.0010222139437828,
+            "q16_ratio": 1.0089528552756133,
+            "q3_ratio": 1.0017410574131,
+            "q8_ratio": 1.0082925168548067,
+            "scale_ratio": 0.9992485120526859,
+            "tau": 0.0275,
+            "value": 1.0017410574131
+          },
+          "Q8_0": {
+            "critical_fraction": 0.9766512981555238,
+            "local_reynolds_ratio": 1.0038550508204298,
+            "q16_ratio": 1.0146365154846568,
+            "q3_ratio": 0.9979643373274103,
+            "q8_ratio": 1.0125808090865218,
+            "scale_ratio": 0.9980402734768075,
+            "tau": 0.0675,
+            "value": 1.0125808090865218
+          },
+          "Rinf0": {
+            "critical_fraction": 0.9370405968621239,
+            "local_reynolds_ratio": 1.0101799033759082,
+            "q16_ratio": 1.0102756019224337,
+            "q3_ratio": 0.9822532214660205,
+            "q8_ratio": 1.0049934736162607,
+            "scale_ratio": 0.9963349500676278,
+            "tau": 0.12,
+            "value": 1.0101799033759082
+          }
+        },
+        "shell1": {
+          "C1_fraction": {
+            "critical_fraction": 0.7770730879704596,
+            "local_reynolds_ratio": 0.8106143941802726,
+            "q16_ratio": 0.7811856170877265,
+            "q3_ratio": 0.8641821940299913,
+            "q8_ratio": 0.775485609597229,
+            "scale_ratio": 1.5487755425369518,
+            "tau": 0.805,
+            "value": 0.7770730879704596
+          },
+          "Q16_1": {
+            "critical_fraction": 0.7179613876038067,
+            "local_reynolds_ratio": 0.8514648728884271,
+            "q16_ratio": 0.8148044312921864,
+            "q3_ratio": 0.8518881442956475,
+            "q8_ratio": 0.7938966444161905,
+            "scale_ratio": 1.522618539097636,
+            "tau": 0.6275000000000001,
+            "value": 0.8148044312921864
+          },
+          "Q3_1": {
+            "critical_fraction": 0.7704928491854809,
+            "local_reynolds_ratio": 0.8294251684445607,
+            "q16_ratio": 0.7987784284396074,
+            "q3_ratio": 0.8681167985853255,
+            "q8_ratio": 0.7886185548462015,
+            "scale_ratio": 1.5403189458481092,
+            "tau": 0.7475,
+            "value": 0.8681167985853255
+          },
+          "Q8_1": {
+            "critical_fraction": 0.7397416265279381,
+            "local_reynolds_ratio": 0.8461370892954209,
+            "q16_ratio": 0.813055767852645,
+            "q3_ratio": 0.8604310614427131,
+            "q8_ratio": 0.7955291112924672,
+            "scale_ratio": 1.5280892434871587,
+            "tau": 0.665,
+            "value": 0.7955291112924672
+          },
+          "Rinf1": {
+            "critical_fraction": 0.7026377288192068,
+            "local_reynolds_ratio": 0.8529689344820703,
+            "q16_ratio": 0.8142313876259234,
+            "q3_ratio": 0.8452399497215223,
+            "q8_ratio": 0.7913732532810128,
+            "scale_ratio": 1.519354301938758,
+            "tau": 0.605,
+            "value": 0.8529689344820703
+          }
+        },
+        "shell2": {
+          "C2_fraction": {
+            "critical_fraction": 0.39121522639195744,
+            "local_reynolds_ratio": 0.27953279625468136,
+            "q16_ratio": 0.26917043320007417,
+            "q3_ratio": 0.44362303855600377,
+            "q8_ratio": 0.2756589021188671,
+            "scale_ratio": 3.163050784127369,
+            "tau": 1.365,
+            "value": 0.39121522639195744
+          },
+          "Q16_2": {
+            "critical_fraction": 0.3630680396589304,
+            "local_reynolds_ratio": 0.3301049096445057,
+            "q16_ratio": 0.30621892821712504,
+            "q3_ratio": 0.4382651905797595,
+            "q8_ratio": 0.29606704233744685,
+            "scale_ratio": 3.132314155921488,
+            "tau": 1.1875,
+            "value": 0.30621892821712504
+          },
+          "Q3_2": {
+            "critical_fraction": 0.3875184971560461,
+            "local_reynolds_ratio": 0.2837948622314524,
+            "q16_ratio": 0.2803166880625174,
+            "q3_ratio": 0.44558337399958586,
+            "q8_ratio": 0.2846966346676197,
+            "scale_ratio": 3.1513644431951793,
+            "tau": 1.2975,
+            "value": 0.44558337399958586
+          },
+          "Q8_2": {
+            "critical_fraction": 0.36479406629735855,
+            "local_reynolds_ratio": 0.33006798711883295,
+            "q16_ratio": 0.30609632790628866,
+            "q3_ratio": 0.4390289124981754,
+            "q8_ratio": 0.29611106585388214,
+            "scale_ratio": 3.133423036857115,
+            "tau": 1.1925000000000001,
+            "value": 0.29611106585388214
+          },
+          "Rinf2": {
+            "critical_fraction": 0.36393914353900303,
+            "local_reynolds_ratio": 0.33013616849819444,
+            "q16_ratio": 0.30617909606504173,
+            "q3_ratio": 0.43865364887759756,
+            "q8_ratio": 0.29610107318478157,
+            "scale_ratio": 3.1328732819886658,
+            "tau": 1.19,
+            "value": 0.33013616849819444
+          }
+        }
+      },
+      "resolution": 256,
+      "tau_max": 1.6,
+      "viscosity": 0.05,
+      "wall_seconds": 1113.828327178955
+    }
+  ],
+  "seed_audit": {
+    "coefficient_energy": 1.0000001707802877,
+    "critical_weighted_unit_shell_fractions": [
+      0.07015728297114975,
+      0.09194491318844472,
+      0.13978303182982219,
+      0.6981147720105834
+    ],
+    "energy_outside_source_shell": 0.0,
+    "mean_wavenumber": 6.809232555951264,
+    "relative_divergence": 2.1908544054691843e-08,
+    "relative_reality_defect": 1.0327884307367782e-07
+  },
+  "shell_edges": [
+    4.0,
+    8.0,
+    16.0,
+    32.0
+  ],
+  "spectrum": "q3_shell2_96.npz",
+  "spectrum_array_key": "u0_hat",
+  "spectrum_sha256": "a9f71439e85120eb1ba01e7aac729bc0ddcf81dbb73f8ba51ed69b7bc26b6e1f",
+  "torch_version": "2.11.0+cu128"
+}

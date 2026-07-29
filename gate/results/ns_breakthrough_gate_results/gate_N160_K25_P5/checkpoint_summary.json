@@ -1,0 +1,43 @@
+{
+  "best": {
+    "child_l4": 1.6756591796875,
+    "child_linf": 9.98393440246582,
+    "iteration": 350,
+    "leakage_norm": 0.3942645788192749,
+    "leakage_ratio": 0.11503306031227112,
+    "loss": -2.1625356674194336,
+    "order2_scaled_ratio": 2.875826597213745,
+    "parent_fraction": 0.9869401454925537,
+    "parent_linf": 16.412626266479492,
+    "parent_mean_wavenumber": 6.738239288330078,
+    "parent_norm": 3.4274022579193115,
+    "parent_strength": 0.06131123751401901,
+    "restart": 0,
+    "total_norm": 3.4500045776367188,
+    "wall_seconds": 77.28069519996643
+  },
+  "configuration": {
+    "carrier": 25,
+    "checkpoint_every": 10,
+    "child_halfwidth": 4.0,
+    "device": "auto",
+    "envelope_order": 1,
+    "iterations": 350,
+    "learning_rate": 0.015,
+    "min_parent_strength": 0.01,
+    "output_dir": "/content/drive/MyDrive/ns_breakthrough_gate_results/gate_N160_K25_P5",
+    "parent_high_factor": 2.0,
+    "parent_low_factor": 0.5,
+    "parent_scale": 5.0,
+    "precision": "single",
+    "report_every": 10,
+    "resolution": 160,
+    "restarts": 3,
+    "seed": 20260724,
+    "strength_penalty": 8.0
+  },
+  "interpretation": {
+    "candidate_second_order_scaling": "leakage_ratio ~ (parent/carrier)^2",
+    "success_indicator": "order2_scaled_ratio stays bounded or falls as carrier/parent grows, at comparable parent_strength"
+  }
+}

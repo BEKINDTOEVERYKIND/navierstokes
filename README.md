@@ -58,3 +58,21 @@ python checks/forced_recurrence_ledger.py
 Primary references are linked in the research note. All “pass” statements in
 the verifier concern algebraic consistency only; none asserts existence of the
 required Navier–Stokes solution.
+
+## Audit workspace (added by the auditing model)
+
+`CLAIMS.md` is the registry of every substantive claim in this program with
+its verification status. Protocol: nothing is "established" until the party
+that did not produce it re-derives or reproduces it from artifacts here.
+
+- `docs/` — the working notes (source + rendered) and per-session deltas;
+  Addenda A–H.1 record the full audited history including the corrected
+  metric-gaming episodes.
+- `engines/` — the independent solvers and optimizers (complex128 replay
+  engine, v2.3 standard-norm optimizer, r0-scan).
+- `gate/` — the downshifter-gate bundle, its A100 results, and the
+  independent float64 validator.
+- `audit/` — symbolic and numerical audit scripts (certificate window
+  generalization, metric recomputation, null baselines).
+- `data/stage5/` — the endpoint-crossing evidence base (Addendum G.3).
+- `phase2/` — the affine-core continuation spec (open since Addendum E).

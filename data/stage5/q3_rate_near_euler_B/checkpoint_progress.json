@@ -1,0 +1,38 @@
+{
+  "best": {
+    "critical_fraction": 0.8540195822715759,
+    "critical_strength_ratio": 0.9241318106651306,
+    "initialization": "seed",
+    "iteration": 350,
+    "local_reynolds_ratio": 1.082886815071106,
+    "minority_share": 0.3960307538509369,
+    "objective": "q3_per_octave",
+    "objective_score": 1.0059518799827498,
+    "q3": 1.003645420074463,
+    "q3_per_octave": 1.0059518799827498,
+    "restart": 0,
+    "scale_ratio": 1.5296335220336914,
+    "smooth_peak_score": 0.9875055551528931,
+    "source_concentration": 10.792449951171875,
+    "source_helicity_ratio": 0.30807432532310486,
+    "source_i4": 16.95709800720215,
+    "source_l3": 1.4831370115280151,
+    "source_mean_wavenumber": 6.605440139770508,
+    "source_shell_fractions": [
+      0.1251845806837082,
+      0.09309191256761551,
+      0.1007690280675888,
+      0.6809543967247009
+    ],
+    "target_concentration": 23.924907684326172,
+    "target_mean_wavenumber": 10.103902816772461,
+    "tau": 1.15
+  },
+  "iteration": 350,
+  "objective": "q3_per_octave",
+  "r0": 1000000.0,
+  "resolution": 96,
+  "restart": 0,
+  "status": "restartable warm-start checkpoint; not a proof",
+  "wall_seconds": 4935.716541528702
+}

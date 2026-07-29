@@ -1,0 +1,51 @@
+{
+  "best": {
+    "child_l4": 1.6801297664642334,
+    "child_linf": 5.6670966148376465,
+    "iteration": 406,
+    "leakage_norm": 0.06301995366811752,
+    "leakage_ratio": 0.0439356192946434,
+    "loss": -3.125030040740967,
+    "order2_scaled_ratio": 2.8118796348571777,
+    "parent_fraction": 0.9980734586715698,
+    "parent_linf": 5.999570369720459,
+    "parent_mean_wavenumber": 3.5426015853881836,
+    "parent_norm": 1.4343703985214233,
+    "parent_strength": 0.04482407495379448,
+    "restart": 0,
+    "total_norm": 1.4357540607452393,
+    "wall_seconds": 168.0653760433197
+  },
+  "configuration": {
+    "carrier": 32,
+    "carrier_parent_ratio": 8.0,
+    "checkpoint_every": 10,
+    "child_halfwidth": 3.0,
+    "child_mode_count": 77810,
+    "device": "auto",
+    "device_resolved": "cuda",
+    "dtype_resolved": "torch.float32",
+    "envelope_order": 1,
+    "iterations": 450,
+    "learning_rate": 0.015,
+    "min_parent_strength": 0.01,
+    "output_dir": "/content/drive/MyDrive/ns_breakthrough_gate_results/gate_N192_K32_P4",
+    "parent_high_factor": 2.0,
+    "parent_low_factor": 0.5,
+    "parent_mode_count": 2082,
+    "parent_scale": 4.0,
+    "precision": "single",
+    "report_every": 10,
+    "resolution": 192,
+    "restarts": 3,
+    "seed": 20260724,
+    "strength_penalty": 8.0
+  },
+  "decision_metrics": {
+    "carrier_parent_ratio": 8.0,
+    "leakage_ratio": 0.0439356192946434,
+    "order2_scaled_ratio": 2.8118796348571777,
+    "parent_strength": 0.04482407495379448
+  },
+  "warning": "This is a finite-resolution numerical gate, not a Navier--Stokes regularity or blow-up proof."
+}

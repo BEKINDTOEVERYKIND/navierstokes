@@ -1,0 +1,43 @@
+{
+  "best": {
+    "child_l4": 1.7472264766693115,
+    "child_linf": 5.177428722381592,
+    "iteration": 0,
+    "leakage_norm": 0.030604474246501923,
+    "leakage_ratio": 0.036320216953754425,
+    "loss": -3.315380811691284,
+    "order2_scaled_ratio": 0.7354844212532043,
+    "parent_fraction": 0.9986826181411743,
+    "parent_linf": 5.756206035614014,
+    "parent_mean_wavenumber": 2.155104875564575,
+    "parent_norm": 0.8426291942596436,
+    "parent_strength": 0.14895720779895782,
+    "restart": 0,
+    "total_norm": 0.843184769153595,
+    "wall_seconds": 3.2636940479278564
+  },
+  "configuration": {
+    "carrier": 9,
+    "checkpoint_every": 5,
+    "child_halfwidth": 2.0,
+    "device": "auto",
+    "envelope_order": 1,
+    "iterations": 20,
+    "learning_rate": 0.02,
+    "min_parent_strength": 0.01,
+    "output_dir": "/content/drive/MyDrive/ns_breakthrough_gate_results/smoke_rho4p5",
+    "parent_high_factor": 2.0,
+    "parent_low_factor": 0.5,
+    "parent_scale": 2.0,
+    "precision": "single",
+    "report_every": 5,
+    "resolution": 48,
+    "restarts": 1,
+    "seed": 20260724,
+    "strength_penalty": 8.0
+  },
+  "interpretation": {
+    "candidate_second_order_scaling": "leakage_ratio ~ (parent/carrier)^2",
+    "success_indicator": "order2_scaled_ratio stays bounded or falls as carrier/parent grows, at comparable parent_strength"
+  }
+}

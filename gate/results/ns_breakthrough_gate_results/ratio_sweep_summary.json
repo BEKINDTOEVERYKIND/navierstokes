@@ -1,0 +1,23 @@
+[
+  {
+    "leakage_ratio": 0.08888082951307297,
+    "parent_strength": 0.07050847262144089,
+    "rho": 4.0,
+    "rho2_scaled": 1.4220932722091675,
+    "run": "gate_N128_K20_P5"
+  },
+  {
+    "leakage_ratio": 0.11503306031227112,
+    "parent_strength": 0.06131123751401901,
+    "rho": 5.0,
+    "rho2_scaled": 2.875826597213745,
+    "run": "gate_N160_K25_P5"
+  },
+  {
+    "leakage_ratio": 0.0439356192946434,
+    "parent_strength": 0.04482407495379448,
+    "rho": 8.0,
+    "rho2_scaled": 2.8118796348571777,
+    "run": "gate_N192_K32_P4"
+  }
+]

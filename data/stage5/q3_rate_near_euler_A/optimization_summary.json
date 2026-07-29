@@ -1,0 +1,127 @@
+{
+  "baseline": {
+    "critical_fraction": 0.8556159138679504,
+    "critical_strength_ratio": 0.9249950647354126,
+    "local_reynolds_ratio": 0.9177594780921936,
+    "minority_share": 0.4086139500141144,
+    "objective": "q3_per_octave",
+    "objective_score": 0.9642712290908754,
+    "q3": 0.9762474894523621,
+    "q3_per_octave": 0.9642712290908754,
+    "scale_ratio": 1.580883264541626,
+    "smooth_peak_score": 0.9341985583305359,
+    "source_concentration": 12.199268341064453,
+    "source_helicity_ratio": 0.2637579143047333,
+    "source_i4": 22.012174606323242,
+    "source_l3": 1.5413464307785034,
+    "source_mean_wavenumber": 6.4654860496521,
+    "source_shell_fractions": [
+      0.15442027151584625,
+      0.08847101032733917,
+      0.11196503788232803,
+      0.6451437473297119
+    ],
+    "target_concentration": 24.058746337890625,
+    "target_mean_wavenumber": 10.221179008483887,
+    "tau": 0.95
+  },
+  "best": {
+    "critical_fraction": 0.8586372137069702,
+    "critical_strength_ratio": 0.9266268014907837,
+    "initialization": "seed",
+    "iteration": 500,
+    "local_reynolds_ratio": 1.011192798614502,
+    "minority_share": 0.39352157711982727,
+    "objective": "q3_per_octave",
+    "objective_score": 0.9988837132741571,
+    "q3": 0.9993027448654175,
+    "q3_per_octave": 0.9988837132741571,
+    "restart": 0,
+    "scale_ratio": 1.5416648387908936,
+    "smooth_peak_score": 0.9660412669181824,
+    "source_concentration": 11.10438346862793,
+    "source_helicity_ratio": 0.306145042181015,
+    "source_i4": 17.92817497253418,
+    "source_l3": 1.4959548711776733,
+    "source_mean_wavenumber": 6.571854591369629,
+    "source_shell_fractions": [
+      0.13254623115062714,
+      0.09298447519540787,
+      0.1014392301440239,
+      0.6730300784111023
+    ],
+    "target_concentration": 23.195758819580078,
+    "target_mean_wavenumber": 10.131597518920898,
+    "tau": 1.125
+  },
+  "checkpoint_every": 25,
+  "constraints": {
+    "min_critical_fraction": 0.0,
+    "min_scale_ratio": 1.2,
+    "source_concentration_multiplier": 0.0,
+    "source_i4_multiplier": 0.0
+  },
+  "cuda_device": "NVIDIA L4",
+  "device": "cuda",
+  "dtau": 0.005,
+  "history": "optimization_history.csv",
+  "improvement_factor": 1.0358949672447604,
+  "iterations": 500,
+  "objective": "q3_per_octave",
+  "output_spectrum": "optimized_q3_peak_u0_hat.npz",
+  "peak_beta": 40.0,
+  "precision": "single",
+  "r0": 1000000.0,
+  "resolution": 96,
+  "restart_mode": "local",
+  "restart_summaries": [
+    {
+      "critical_fraction": 0.8586372137069702,
+      "critical_strength_ratio": 0.9266268014907837,
+      "initialization": "seed",
+      "iteration": 500,
+      "local_reynolds_ratio": 1.011192798614502,
+      "minority_share": 0.39352157711982727,
+      "objective": "q3_per_octave",
+      "objective_score": 0.9988837132741571,
+      "q3": 0.9993027448654175,
+      "q3_per_octave": 0.9988837132741571,
+      "restart": 0,
+      "scale_ratio": 1.5416648387908936,
+      "smooth_peak_score": 0.9660412669181824,
+      "source_concentration": 11.10438346862793,
+      "source_helicity_ratio": 0.306145042181015,
+      "source_i4": 17.92817497253418,
+      "source_l3": 1.4959548711776733,
+      "source_mean_wavenumber": 6.571854591369629,
+      "source_shell_fractions": [
+        0.13254623115062714,
+        0.09298447519540787,
+        0.1014392301440239,
+        0.6730300784111023
+      ],
+      "target_concentration": 23.195758819580078,
+      "target_mean_wavenumber": 10.131597518920898,
+      "tau": 1.125
+    }
+  ],
+  "restarts": 1,
+  "sample_dtau": 0.025,
+  "source_shell": [
+    4.0,
+    8.0
+  ],
+  "spectrum": "q3_rate_r1280.npz",
+  "spectrum_array_key": "u0_hat",
+  "status": "finite-dimensional adversarial numerical search; not a proof",
+  "target_shell": [
+    8.0,
+    16.0
+  ],
+  "tau_window": [
+    0.5,
+    1.2
+  ],
+  "torch_version": "2.11.0+cu128",
+  "wall_seconds": 7066.345495462418
+}
