@@ -85,6 +85,12 @@ def check_capture_numerically():
     if math.sqrt(max(0.0, D)) >= alpha:
         raise AssertionError((p, D, alpha))
 
+    # Integrated imbalance estimate behind the zero-mode chirp defect.
+    q = (2 * delta / ((1 + rho) * (2 - 3 * delta))) ** 2
+    imbalance_constant = 4 * math.sqrt(q) / (1 - q)
+    if imbalance_constant >= 0.48:
+        raise AssertionError(imbalance_constant)
+
 
 def check_chirped_pair_algebra():
     rng = random.Random(904117)
