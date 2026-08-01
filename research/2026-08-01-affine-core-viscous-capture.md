@@ -447,3 +447,48 @@ viscous seam errors.  A Bogovskii correction restores divergence but does not
 make those errors small.  Sequential pulses additionally require redesigning
 the next carrier at the newly created strain scale.  None of these claims is
 settled by the finite-dimensional capture lemma.
+
+## 8. Audit of the global-periodic-ridge shortcut
+
+Working on the periodic Clay formulation removes endcaps, and a global ridge
+`u=A h f(Qs)` is indeed an exact steady Euler shear.  It does not, however,
+meet the finite-energy scale ledger.  A next-stage strain of size `Q^beta`
+requires
+
+\[
+ A\asymp Q^{\beta-1}.
+\]
+
+For a nonintermittent ridge on a fixed torus this is also its `L2` size, which
+diverges.  A straight exact shear can be intermittent in at most the two
+directions perpendicular to `h`; it must remain invariant along `h`.  If its
+effective transverse bandwidth is `Q`, the two-dimensional Bernstein estimate
+gives
+
+\[
+ \|\nabla u\|_\infty\lesssim Q^2\|u\|_2,
+ \qquad
+ \|u\|_2\gtrsim Q^{\beta-2}.                         \tag{37}
+\]
+
+The BAS/viscous window under consideration has `beta>2`, so even an optimally
+thin straight tube has diverging energy.  Making the tube thinner merely
+changes the effective bandwidth and reproduces (37).  Full three-dimensional
+intermittency is therefore essential; it requires a curved/compact Euler
+geometry or a cutoff with a genuinely controlled seam.  The global periodic
+ridge is a useful local model but not a finite-energy cascade workaround.
+
+The cleaner next *cell* lemma is instead a phase-localized quadratic chirp:
+
+* `psi(s)=a s^2` on the child core;
+* `psi` is smoothly constant outside a slightly larger interval;
+* no amplitude cutoff is made in the `s` direction.
+
+It combines the `O(chi^2)` affine accuracy in (34)--(35) with a purely
+Galilean zero-mode defect on the exact inner core.  All `psi'''` and
+nonconstant zero-mode strain are confined to the phase-transition buffer.
+This is analytically cleaner than the exact arcsine profile.  By itself it
+still produces a slab-like child and leaves the carrier nonintermittent in the
+other directions, so it is not yet a finite-energy construction.  Its proper
+use would be inside an independently localized BAS/Gavrilov block, followed by
+a quantitative buffer estimate.
