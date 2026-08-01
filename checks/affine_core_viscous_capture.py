@@ -1,0 +1,153 @@
+#!/usr/bin/env python3
+"""Dependency-free checks for affine_core_viscous_capture.md."""
+
+from __future__ import annotations
+
+import cmath
+import math
+import random
+
+
+def close(a, b, tol=2e-11):
+    scale = max(1.0, abs(a), abs(b))
+    if abs(a - b) > tol * scale:
+        raise AssertionError((a, b, abs(a - b)))
+
+
+def rhs(z, alpha, rho):
+    U, V, p, IU = z
+    return (
+        ((1.0 + rho) * p - 1.0 - alpha) * U + p * V,
+        -p * U + (1.0 - (1.0 + rho) * p - alpha) * V,
+        V * V - U * U,
+        U * U,
+    )
+
+
+def check_algebra():
+    rng = random.Random(731904)
+    for _ in range(100):
+        alpha = rng.uniform(0.05, 0.98)
+        rho = rng.uniform(0.0, 0.2)
+        U = rng.uniform(-1.0, 1.0)
+        V = rng.uniform(-1.0, 1.0)
+        p = rng.uniform(0.0, 1.0)
+        dU, dV, dp, _ = rhs((U, V, p, 0.0), alpha, rho)
+        Jdot = 2 * U * dU + 2 * V * dV + (2 * (1 + rho) * p - 2) * dp
+        close(Jdot, -2 * alpha * (U * U + V * V))
+
+        # K=UV-p^2/2 obeys K'=-2 alpha UV, independently of rho.
+        Kdot = dU * V + U * dV - p * dp
+        close(Kdot, -2 * alpha * U * V)
+
+
+def rk4_step(z, h, alpha, rho):
+    k1 = rhs(z, alpha, rho)
+    z2 = tuple(z[i] + 0.5 * h * k1[i] for i in range(4))
+    k2 = rhs(z2, alpha, rho)
+    z3 = tuple(z[i] + 0.5 * h * k2[i] for i in range(4))
+    k3 = rhs(z3, alpha, rho)
+    z4 = tuple(z[i] + h * k3[i] for i in range(4))
+    k4 = rhs(z4, alpha, rho)
+    return tuple(
+        z[i] + h * (k1[i] + 2 * k2[i] + 2 * k3[i] + k4[i]) / 6
+        for i in range(4)
+    )
+
+
+def check_capture_numerically():
+    alpha = 0.9
+    delta = 1.0 - alpha
+    rho = 0.01
+    v = 1.0e-6
+    p = v * v / (2 * delta)
+    U = v**3 / (4 * delta * (2 - alpha))
+    z = (U, v, p, 0.0)
+
+    h = 0.01
+    # The seed needs about log(1/v)/delta dimensionless time to emerge.
+    for _ in range(60000):
+        z = rk4_step(z, h, alpha, rho)
+
+    U, V, p, IU = z
+    q = (2 * delta / ((1 + rho) * (2 - 3 * delta))) ** 2
+    lower = (2 * delta - 4 * alpha * q / (1 - q)) / (1 + rho)
+    upper = 2 * delta / (1 + rho)
+    if not (lower < p < upper):
+        raise AssertionError((lower, p, upper))
+    if abs(U) + abs(V) > 1e-8:
+        raise AssertionError((U, V))
+
+    identity = (1 + rho) * p * p - 2 * delta * p + 4 * alpha * IU
+    close(identity, 0.0, 3e-7)
+
+    D = 1 - 2 * (1 + rho) * p + rho * (2 + rho) * p * p
+    if math.sqrt(max(0.0, D)) >= alpha:
+        raise AssertionError((p, D, alpha))
+
+
+def check_chirped_pair_algebra():
+    rng = random.Random(904117)
+    for sigma in (-1.0, 1.0):
+        for _ in range(50):
+            lam = rng.uniform(10.0, 100.0)
+            psi1 = rng.uniform(-3.0, 3.0)
+            psi2 = rng.uniform(-4.0, 4.0)
+            d = psi1 / (2 * lam)
+            dp = psi2 / (2 * lam)
+
+            # Coordinates are (r,t,h), with a_sigma=(1,-sigma*d,H).
+            H = rng.uniform(-2.0, 2.0)
+            a = (1.0, -sigma * d, H)
+            gradphi = (sigma * psi1 / 2, lam, 0.0)
+            close(sum(a[i] * gradphi[i] for i in range(3)), 0.0)
+
+            # The self ordered pair has only -sigma*d' in the t direction.
+            self_t = -sigma * dp
+            close(self_t, -sigma * psi2 / (2 * lam))
+
+    # Cross high ordered-pair sum: derivative terms cancel and the two
+    # phase terms leave -i psi'^2/Lambda in the t direction.
+    for _ in range(100):
+        lam = rng.uniform(10.0, 100.0)
+        psi1 = rng.uniform(-3.0, 3.0)
+        psi2 = rng.uniform(-4.0, 4.0)
+        d = psi1 / (2 * lam)
+        dp = psi2 / (2 * lam)
+        # (+,-)
+        t_pm = dp - 1j * psi1 * d
+        # (-,+)
+        t_mp = -dp - 1j * psi1 * d
+        close(t_pm + t_mp, -1j * psi1 * psi1 / lam)
+
+        # Leading Leray radial coefficient i F'/k.
+        C = complex(rng.uniform(-2, 2), rng.uniform(-2, 2))
+        Fprime = -1j * C * 2 * psi1 * psi2 / lam
+        leading = 1j * Fprime / (2 * lam)
+        close(leading, C * psi1 * psi2 / (lam * lam))
+
+    # The self projection necessarily contains psi'''.
+    lam = 37.0
+    sigma = -1.0
+    A = 1.2 - 0.4j
+    psi1, psi2, psi3 = 0.7, -1.1, 2.3
+    Gprime = (
+        -sigma
+        * A**2
+        / (2 * lam)
+        * (psi3 + 1j * sigma * psi1 * psi2)
+    )
+    leading = 1j * Gprime / (2 * lam)
+    expected = A**2 * (psi1 * psi2 - 1j * sigma * psi3) / (4 * lam**2)
+    close(leading, expected)
+
+
+def main():
+    check_algebra()
+    check_capture_numerically()
+    check_chirped_pair_algebra()
+    print("PASS: affine-core viscous capture and corrected chirped residual")
+
+
+if __name__ == "__main__":
+    main()
