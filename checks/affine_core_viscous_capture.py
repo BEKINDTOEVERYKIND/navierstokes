@@ -24,6 +24,18 @@ def rhs(z, alpha, rho):
     )
 
 
+def perturbed_rhs(z, alpha, rho, e):
+    """Four-dimensional system without imposing the affine invariant."""
+    U, V, p, q = z
+    eU, eV, ep, eq = e
+    return (
+        (q + rho * p - 1.0 - alpha) * U + q * V + eU,
+        -q * U + (1.0 - alpha - rho * p - q) * V + eV,
+        V * V - U * U + ep,
+        V * V - U * U + eq,
+    )
+
+
 def check_algebra():
     rng = random.Random(731904)
     for _ in range(100):
@@ -39,6 +51,65 @@ def check_algebra():
         # K=UV-p^2/2 obeys K'=-2 alpha UV, independently of rho.
         Kdot = dU * V + U * dV - p * dp
         close(Kdot, -2 * alpha * U * V)
+
+
+def check_robust_algebra():
+    rng = random.Random(619427)
+    alpha = 0.9
+    for _ in range(200):
+        rho = rng.uniform(0.0, 0.01)
+        U = rng.uniform(-0.5, 0.5)
+        V = rng.uniform(-0.5, 0.5)
+        p = rng.uniform(0.13, 0.22)
+        qchild = rng.uniform(0.13, 0.22)
+        e = tuple(rng.uniform(-0.02, 0.02) for _ in range(4))
+        dU, dV, dp, dq = perturbed_rhs(
+            (U, V, p, qchild), alpha, rho, e
+        )
+
+        # The affine defect a=q-p is driven only by the error mismatch.
+        close(dq - dp, e[3] - e[2])
+
+        # Terminal-box carrier dissipation before additive forcing.
+        dU0, dV0, _, _ = perturbed_rhs(
+            (U, V, p, qchild), alpha, rho, (0.0, 0.0, 0.0, 0.0)
+        )
+        half_R2_dot = U * dU0 + V * dV0
+        if half_R2_dot > -0.03 * (U * U + V * V) + 2e-14:
+            raise AssertionError((rho, U, V, p, qchild, half_R2_dot))
+
+        # If eq=ep and q=p, the perturbed exact identity has only the
+        # displayed forcing terms on its right-hand side.
+        eU, eV, ep, _ = e
+        dU, dV, dp, dq = perturbed_rhs(
+            (U, V, p, p), alpha, rho, (eU, eV, ep, ep)
+        )
+        identity_dot = (
+            2 * U * dU
+            + 2 * V * dV
+            + (2 * (1 + rho) * p - 0.2) * dp
+            + 3.6 * U * U
+        )
+        forcing = 2 * U * eU + 2 * V * eV + (
+            2 * (1 + rho) * p - 0.2
+        ) * ep
+        close(identity_dot, forcing)
+
+        # Physical-to-normalized invariant-breaking error conversion.
+        r = rng.uniform(10.0, 100.0)
+        dscale = rng.uniform(0.4, 3.0)
+        P0 = rng.uniform(0.2, 2.0)
+        EP = rng.uniform(-1e-3, 1e-3)
+        EZ = rng.uniform(-1e-3, 1e-3)
+        ep_phys = -r * r * EP / (dscale * P0 * P0)
+        eq_phys = r * EZ / (dscale * P0 * P0)
+        expected = r * (EZ + r * EP) / (dscale * P0 * P0)
+        close(eq_phys - ep_phys, expected)
+
+        # Conservative child-to-parent ratio on the terminal box.
+        ratio_times_r = qchild / (1.0 - rho * p)
+        if not (0.12 <= ratio_times_r <= 0.23):
+            raise AssertionError((rho, p, qchild, ratio_times_r))
 
 
 def rk4_step(z, h, alpha, rho):
@@ -150,6 +221,7 @@ def check_chirped_pair_algebra():
 
 def main():
     check_algebra()
+    check_robust_algebra()
     check_capture_numerically()
     check_chirped_pair_algebra()
     print("PASS: affine-core viscous capture and corrected chirped residual")
