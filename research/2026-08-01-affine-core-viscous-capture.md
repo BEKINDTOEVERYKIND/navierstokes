@@ -226,9 +226,30 @@ has the leading system
 \]
 
 Its vanishing-seed separatrix satisfies `W^2=P(2-P)` and ends at `P=2`.
-Thus `p_infinity=2 delta+O(delta^2)`; numerically the next coefficient is
-`-4/3`, consistent with the explicit lower bound above.  This asymptotic is
-explanatory only; (15) is the rigorous estimate.
+Thus `p_infinity=2 delta+O(delta^2)`.  The first correction can also be
+computed.  At `rho=0`, the fast variable is `R=PW/2+O(delta)`, while
+
+\[
+ W_T=(1-P)W-\delta PR+O(\delta^2),\qquad
+ P_T=W^2+O(\delta^2).
+\]
+
+For `H_slow=W^2+P^2-2P`, this gives
+
+\[
+ (H_{\rm slow})_T=-\delta P^2W^2+O(\delta^2).
+\]
+
+Along the leading separatrix,
+`integral P^2 W^2 dT=integral_0^2 P^2 dP=8/3`.  Comparing the terminal
+value of `H_slow` yields the formal expansion
+
+\[
+ p_\infty=2\delta-\frac43\delta^2+O(\delta^3).
+\]
+
+This explains the numerical endpoint; (15), rather than the formal
+expansion, is the rigorous estimate.
 
 ## 5. Exact low ridge from a nonlinear relative phase
 
@@ -335,18 +356,77 @@ radial residual
 Thus a formula retaining only `psi' psi''` is incomplete unless
 `psi'''=0` on the exact core.
 
+There is also a lower-frequency term which is absent from a complex-wave-only
+calculation.  Pairing each wave with its real conjugate gives
+
+\[
+ N_{\rm zero}
+ =\bigl(|A_-|^2-|A_+|^2\bigr)\frac{\psi''}{\Lambda}
+ t.                                                        \tag{29}
+\]
+
+It cancels for equal carrier magnitudes.  The reciprocal child feedback,
+however, does not preserve `A_-=-A_+`: in (4), it creates the stable component
+`U`.  If `A_+=x,A_-=y`, then
+
+\[
+ y^2-x^2=-\frac{P_0^2}{r^2}UV,\qquad
+ xy=-\frac{P_0^2}{4r^2}p'.                              \tag{30}
+\]
+
+Using (13)--(14),
+
+\[
+ \int |UV|\le\frac{\sqrt q}{1-q}p_\infty .             \tag{31}
+\]
+
+Consequently the time-integrated zero-mode defect, relative to the desired
+cross beat, is bounded by
+
+\[
+ \frac{4\sqrt q}{1-q}\frac Q\Lambda .                  \tag{32}
+\]
+
+For `alpha=0.9,r>=10` the constant before `Q/Lambda` is below `0.48`.  This
+is one order larger than the high-band chirp residual.  If `psi` is exactly
+quadratic, `psi''` is constant and (29) is merely a spatially uniform
+Galilean acceleration; its strain vanishes.  The exact arcsine profile in
+(23) has nonconstant `psi''`, so its induced strain must be budgeted at
+order `Q/Lambda`.
+
+A useful compromise is therefore
+
+\[
+ \psi(s)=a s^2,\qquad \chi=|a|R^2\ll1.              \tag{33}
+\]
+
+On `|s|<=R`, its written ridge is
+
+\[
+ 8Hca\,s\cos(as^2)=\gamma s\,[1+O(\chi^2)],
+ \qquad \gamma=8Hca.                                \tag{34}
+\]
+
+It loses exact affinity but removes the larger zero-mode strain defect.
+Taking `G chi^2 -> 0` makes the nonlinear child-gradient error perturbative
+over gain action `G`.  At fixed `gamma,R`, the required carrier product is
+`c=gamma R^2/(8H chi)`, so choosing, for example, `chi=G^-1` costs only a
+polylogarithmic factor while giving `G chi^2=G^-1`.  A rigorous PDE use still
+needs a robustness estimate for (4), but the terminal gap in (19) provides a
+fixed margin for such an estimate.
+
 If each carrier has size `A`, the desired low force has size `A^2 Q`, while
 (26) and (28) have size
 
 \[
  A^2\frac{Q^3}{\Lambda^2}
-   =A^2Q\left(\frac Q\Lambda\right)^2.              \tag{29}
+   =A^2Q\left(\frac Q\Lambda\right)^2.              \tag{35}
 \]
 
 In the power-law ledger `Q=N^b`, `Lambda=N^(beta/2)`, this relative error is
 
 \[
- (Q/\Lambda)^2=N^{-(\beta-2b)}.                    \tag{30}
+ (Q/\Lambda)^2=N^{-(\beta-2b)}.                    \tag{36}
 \]
 
 It remains negligible over a gain interval `G` provided
