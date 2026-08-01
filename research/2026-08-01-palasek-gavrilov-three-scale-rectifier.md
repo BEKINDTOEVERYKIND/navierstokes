@@ -2,6 +2,23 @@
 
 Date: 2026-08-01
 
+
+## Audit correction: finite rectifier superseded
+
+The geometric scale match and the strict thin-column centrifugal sign below
+remain valid.  The finite-dimensional rectifier proposed in Sections 4--6
+does **not** survive exact real Euler feedback.  The child forces the
+complementary BAS polarization and, because reality supplies both child
+frequencies, an unbounded material-resonant sideband ladder.  The projected
+scalar heteroclinic is therefore a diagnostic normal form, not an invariant
+PDE subsystem.  In particular, neither its weak-depletion branch nor its
+sign-flip branch may be cited as an exact transition.
+
+The complete calculation, finite-support no-go, Bloch spectrum, and the only
+remaining approximate multi-colour/Gevrey-envelope target are recorded in
+[`2026-08-01-reality-sideband-bloch-audit.md`](2026-08-01-reality-sideband-bloch-audit.md).
+The audit checker is `checks/exact_l0_sideband_audit.py`.
+
 ## Result and claim boundary
 
 This note records a promising route and two exact obstructions. It does **not** construct a Navier–Stokes singularity.
