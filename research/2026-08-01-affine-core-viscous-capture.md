@@ -1,0 +1,369 @@
+# Affine-core viscous capture and the chirped-cell residual
+
+## Status
+
+This note isolates two statements that can be checked without any localization or
+asymptotic argument.
+
+1.  The spatially affine core model has a genuinely captured viscous orbit.  For
+    a fixed viscosity-to-growth ratio one obtains a quantitative nonzero child,
+    only quadratic parent depletion, and eventual decay of both carrier
+    polarizations.
+2.  The nonlinear relative-phase cell writes its low ridge exactly, but its
+    common high sum is not exactly pressure unless the phase slope is constant.
+    The surviving high residual is nevertheless quadratically small in
+    `phase scale / carrier frequency`.
+
+Neither result localizes the affine core, transports it through a curved column,
+or closes an infinite Navier--Stokes cascade.  Those remain separate PDE gaps.
+
+## 1. Closed affine-core ODE
+
+Assume the exact core reduction
+
+\[
+ \dot P=4dxy,\qquad
+ \dot x=-dPy-\kappa x,\qquad
+ \dot y=(-dP+cZ)x-\kappa y,\qquad
+ \dot Z=-2cxy.                                      \tag{1}
+\]
+
+Here `P` is the parent strain amplitude, `x,y` are the two full carrier
+polarizations, and `Z` is the affine child.  The scalar truncation `y=-x` is
+not invariant after `Z` becomes nonzero; retaining both `x,y` is essential.
+
+There is an exact affine relation
+
+\[
+ Z+\frac{c}{2d}(P-P_0)=0.                            \tag{2}
+\]
+
+Put
+
+\[
+ r=\frac{c}{2d},\quad \rho=r^{-2},\quad
+ \tau=dP_0t,\quad \alpha=\frac{\kappa}{dP_0},
+\]
+\[
+ p=r^2\left(1-\frac P{P_0}\right),\qquad
+ U=\frac r{P_0}(x+y),\qquad
+ V=\frac r{P_0}(x-y).                               \tag{3}
+\]
+
+Then (1) is exactly
+
+\[
+\begin{aligned}
+ U'&=((1+\rho)p-1-\alpha)U+pV,\\
+ V'&=-pU+(1-(1+\rho)p-\alpha)V,\\
+ p'&=V^2-U^2 .                                      \tag{4}
+\end{aligned}
+\]
+
+The equilibrium at the origin has eigenvalues `-1-alpha`, `1-alpha`, and
+`0`.  For `0<alpha<1`, choose the positive branch of its one-dimensional
+unstable manifold.  As `tau -> -infinity`,
+
+\[
+ V\sim e^{(1-\alpha)\tau},\qquad
+ p=\frac{V^2}{2(1-\alpha)}+O(V^4),\qquad
+ U=\frac{V^3}{4(1-\alpha)(2-\alpha)}+O(V^5).        \tag{5}
+\]
+
+Thus this orbit is the vanishing-seed limit; changing the tiny seed only
+translates time.
+
+## 2. Exact confinement and convergence
+
+Let
+
+\[
+ J_\rho=U^2+V^2+(1+\rho)p^2-2p .                   \tag{6}
+\]
+
+Direct differentiation in (4) gives
+
+\[
+ J_\rho'=-2\alpha(U^2+V^2).                        \tag{7}
+\]
+
+Set `delta=1-alpha` and
+
+\[
+ I_U(\tau)=\int_{-\infty}^{\tau}U(s)^2\,ds .
+\]
+
+Since `p'=V^2-U^2`, integration of (7) from the zero equilibrium gives the
+stronger pointwise identity
+
+\[
+ U^2+V^2+(1+\rho)p^2-2\delta p+4\alpha I_U=0.      \tag{8}
+\]
+
+The nontrivial branch can never return to `p=0`; (8) would force the whole
+past orbit to vanish.  Consequently
+
+\[
+ 0<p(\tau)\le \frac{2\delta}{1+\rho}               \tag{9}
+\]
+
+for every finite `tau`.  This proves global boundedness.  Equation (7) gives
+`U,V in L^2`; (4) gives uniform continuity, hence `U,V -> 0`.  Moreover
+`p' in L^1`, so `p -> p_infinity`.  At the endpoint,
+
+\[
+ p_\infty\bigl(2\delta-(1+\rho)p_\infty\bigr)
+       =4\alpha I_U(\infty).                        \tag{10}
+\]
+
+Nonzero dissipation already implies `0<p_infinity<2 delta/(1+rho)`.  The next
+estimate makes the lower bound explicit.
+
+## 3. Quantitative capture
+
+Rewrite the first equation of (4) as
+
+\[
+ U'+a(\tau)U=pV,\qquad
+ a=1+\alpha-(1+\rho)p .                             \tag{11}
+\]
+
+By (9),
+
+\[
+ a(\tau)\ge a_0:=2-3\delta .                        \tag{12}
+\]
+
+Assume `delta<2/3`.  Multiply (11) by `U`, integrate over the complete orbit,
+and use `U(-infinity)=U(+infinity)=0`:
+
+\[
+ a_0 I_U
+ \le \int p|UV|
+ \le \frac{2\delta}{1+\rho}\sqrt{I_UI_V}.
+\]
+
+Therefore
+
+\[
+ I_U\le q I_V,\qquad
+ q=\left[\frac{2\delta}{(1+\rho)(2-3\delta)}\right]^2.       \tag{13}
+\]
+
+Also `I_V-I_U=p_infinity`.  If `q<1`, then
+
+\[
+ I_U\le\frac q{1-q}p_\infty .                      \tag{14}
+\]
+
+Substitution in (10) proves
+
+\[
+ \boxed{
+ p_\infty\ge
+ \frac{2\delta-4\alpha q/(1-q)}{1+\rho}}
+                                                               \tag{15}
+\]
+
+whenever the numerator is positive.  Thus
+
+\[
+ \frac{Z_\infty}{P_0}=\frac{p_\infty}{r},\qquad
+ 1-\frac{P_\infty}{P_0}=\frac{p_\infty}{r^2}.       \tag{16}
+\]
+
+This is the desired weak-depletion geometry: a child of order `r^-1` costs
+only order `r^-2` of the parent.
+
+A convenient fully quantitative choice is
+
+\[
+ \alpha=0.9,\qquad r\ge10.
+\]
+
+Then (15) gives
+
+\[
+ 0.1489<p_\infty<0.1981.                            \tag{17}
+\]
+
+For comparison, direct integration at `rho=0` gives
+`p_infinity approximately 0.18643`; the numerical value is not used in the
+proof.
+
+## 4. Terminal carrier damping
+
+At a terminal point `(0,0,p)`, the carrier matrix in (4) has eigenvalues
+
+\[
+ \lambda_\pm=-\alpha\pm\sqrt{D_\rho(p)},\qquad
+ D_\rho(p)=1-2(1+\rho)p+\rho(2+\rho)p^2.            \tag{18}
+\]
+
+For `alpha=0.9`, `r>=10`, and the interval (17), `D_rho` is decreasing in
+`p` and
+
+\[
+ \sqrt{D_\rho(p_\infty)}<0.839<0.9.                 \tag{19}
+\]
+
+Both polarizations therefore decay with a certified dimensionless rate at
+least `0.061`.  Initial growth has rate `1-alpha=0.1`.  A seed `e^-G` needs
+dimensionless plateau length about `10G`; after capture, carrier cleanup occurs
+on the same `O(1/(delta dP0))` scale.
+
+For `delta -> 0`, the slow rescaling
+
+\[
+ p=\delta P,\qquad V=\delta W,\qquad U=\delta^2R,
+ \qquad T=\delta\tau
+\]
+
+has the leading system
+
+\[
+ R=PW/2,\qquad P_T=W^2,\qquad W_T=(1-P)W.           \tag{20}
+\]
+
+Its vanishing-seed separatrix satisfies `W^2=P(2-P)` and ends at `P=2`.
+Thus `p_infinity=2 delta+O(delta^2)`; numerically the next coefficient is
+`-4/3`, consistent with the explicit lower bound above.  This asymptotic is
+explanatory only; (15) is the rigorous estimate.
+
+## 5. Exact low ridge from a nonlinear relative phase
+
+Fix an orthonormal frame `(r,t,h)`, write `s=r dot x`, and set
+
+\[
+ w=r+Hh,\qquad
+ \phi_\sigma=\Lambda t\cdot x+\sigma\psi(s)/2,
+ \qquad
+ a_\sigma=w-\sigma\frac{\psi'(s)}{2\Lambda}t,
+ \quad \sigma=\pm1.                                \tag{21}
+\]
+
+Each complex wave `u_sigma=A_sigma a_sigma exp(i phi_sigma)` is exactly
+divergence-free.  Indeed `div(a_sigma)=0` and
+`a_sigma dot grad(phi_sigma)=0`.
+
+The ordered low interaction of `u_+` with the conjugate of `u_-`, plus its
+transpose, is
+
+\[
+ 2iA_+\overline{A_-}\psi'(s)(r+Hh)e^{i\psi(s)}.
+\]
+
+Its radial part is a gradient.  With the Euler sign, the projected complex
+force is exactly
+
+\[
+ -2iH A_+\overline{A_-}\psi'e^{i\psi}h.             \tag{22}
+\]
+
+Taking `A_+ conjugate(A_-)=ic`, adding the real conjugate, and choosing
+
+\[
+ \sin\psi(s)=\frac1{4Hc}\int_0^s f(q)\,dq          \tag{23}
+\]
+
+writes the real ridge `f(s)h` exactly.  In particular `f(s)=gamma s` is
+obtained from `sin(psi)=gamma s^2/(8Hc)` on any core where the right side
+stays uniformly away from `+/-1`.
+
+## 6. Correction: the common high sum is not exactly pressure
+
+Let `delta_phase=psi'/(2 Lambda)`.  A direct ordered-pair calculation gives
+
+\[
+ (u_+\cdot\nabla)u_-+(u_-\cdot\nabla)u_+
+ =-iA_+A_-\frac{(\psi')^2}{\Lambda}
+       t\,e^{i2\Lambda t\cdot x}.                  \tag{24}
+\]
+
+The polarization-derivative terms do cancel, but the coefficient in (24)
+depends on the transverse variable `s`.  It is a gradient only when
+`psi'` is constant.
+
+For an exact formula put `k=2 Lambda`,
+
+\[
+ F(s)=-iA_+A_-\frac{(\psi')^2}{\Lambda},\qquad
+ L_k=(\partial_s^2-k^2)^{-1}.
+\]
+
+On the whole line (or mode by mode in a periodic core),
+
+\[
+ \mathbb P\{F(s)t e^{iky}\}
+ =\{-ik(L_kF)'r+(L_kF)''t\}e^{iky}.                 \tag{25}
+\]
+
+For transverse frequencies much smaller than `k`,
+
+\[
+ \mathbb P N_{+,-}^{\rm high}
+ =A_+A_-\frac{\psi'\psi''}{\Lambda^2}
+       r\,e^{i2\Lambda y}
+ +O\!\left(\frac{|A_+A_-|Q^4}{\Lambda^3}
+             +\frac{|A_+A_-|Q^5}{\Lambda^4}\right),           \tag{26}
+\]
+
+where `|partial^m psi| <= C_m Q^m`.  The first displayed remainder is the
+longitudinal component; the second is the next radial term.
+
+The self interaction is
+
+\[
+ (u_\sigma\cdot\nabla)u_\sigma
+ =-\sigma A_\sigma^2\frac{\psi''}{2\Lambda}
+ t\,e^{i(2\Lambda y+\sigma\psi)}.                  \tag{27}
+\]
+
+Applying (25) with
+`F_sigma=-sigma A_sigma^2 psi'' exp(i sigma psi)/(2 Lambda)` gives the leading
+radial residual
+
+\[
+ \mathbb P N_{\sigma,\sigma}
+ =\frac{A_\sigma^2}{4\Lambda^2}
+   \bigl(\psi'\psi''-i\sigma\psi'''\bigr)
+   r\,e^{i(2\Lambda y+\sigma\psi)}
+ +O\!\left(\frac{|A_\sigma|^2Q^4}{\Lambda^3}
+             +\frac{|A_\sigma|^2Q^5}{\Lambda^4}\right).      \tag{28}
+\]
+
+Thus a formula retaining only `psi' psi''` is incomplete unless
+`psi'''=0` on the exact core.
+
+If each carrier has size `A`, the desired low force has size `A^2 Q`, while
+(26) and (28) have size
+
+\[
+ A^2\frac{Q^3}{\Lambda^2}
+   =A^2Q\left(\frac Q\Lambda\right)^2.              \tag{29}
+\]
+
+In the power-law ledger `Q=N^b`, `Lambda=N^(beta/2)`, this relative error is
+
+\[
+ (Q/\Lambda)^2=N^{-(\beta-2b)}.                    \tag{30}
+\]
+
+It remains negligible over a gain interval `G` provided
+`G N^{-(beta-2b)} -> 0` and the `2 Lambda` bands do not have their own
+resonant instability.  If `nu Lambda^2` is comparable to the parent growth
+rate, those bands instead see about four times the viscous damping.
+
+## 7. What this does and does not resolve
+
+The exact affine core has no phase ladder: `U_child=Z(t)s h` has constant
+gradient, `U_child dot grad` annihilates carriers independent of `h`, and
+`u_carrier dot grad(U_child)` stays at the same carrier phase.  Its reciprocal
+feedback is precisely the closed two-polarization system (1).
+
+The remaining obstruction is localization.  A cutoff makes the child gradient
+nonconstant in the buffer, introduces new sidebands, and creates Euler and
+viscous seam errors.  A Bogovskii correction restores divergence but does not
+make those errors small.  Sequential pulses additionally require redesigning
+the next carrier at the newly created strain scale.  None of these claims is
+settled by the finite-dimensional capture lemma.
