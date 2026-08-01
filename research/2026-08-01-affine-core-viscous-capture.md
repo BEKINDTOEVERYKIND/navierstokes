@@ -251,6 +251,130 @@ value of `H_slow` yields the formal expansion
 This explains the numerical endpoint; (15), rather than the formal
 expansion, is the rigorous estimate.
 
+## 4A. Robust capture, affine defect, and the seed qualification
+
+The exact affine relation (2) must not be silently assumed after localization.
+Introduce the independently normalized child variable
+
+\[
+ q=\frac{rZ}{P_0}.
+\]
+
+Allowing additive normalized errors, the four-dimensional system is
+
+\[
+\begin{aligned}
+ U'&=(q+\rho p-1-\alpha)U+qV+e_U,\\
+ V'&=-qU+(1-\alpha-\rho p-q)V+e_V,\\
+ p'&=V^2-U^2+e_p,\\
+ q'&=V^2-U^2+e_q.
+\end{aligned}                                                   \tag{R1}
+\]
+
+The affine defect `a=q-p` obeys the exact identity
+
+\[
+ a'=e_q-e_p.                                                   \tag{R2}
+\]
+
+If the physical `P,Z` equations have errors `E_P,E_Z`, then
+
+\[
+ e_p=-\frac{r^2E_P}{dP_0^2},\qquad
+ e_q=\frac{rE_Z}{dP_0^2},\qquad
+ a'=\frac{r(E_Z+rE_P)}{dP_0^2}.                               \tag{R3}
+\]
+
+Thus a parent-equation error is amplified by `r^2` in the invariant-breaking
+norm.  A residual estimate that controls only the unweighted physical error
+can miss the dangerous component.
+
+There is a uniform robust-capture statement, but it starts at a fixed incoming
+section rather than at an exponentially small seed.  For `alpha=0.9` and
+`0<=rho<=0.01`, choose a compact incoming section of the exact unstable orbit
+before its nonlinear turn.  Ordinary `L1` continuous dependence on the fixed
+transition segment gives constants `eta_0,T_*>0`, independent of `rho`, such
+that data within `eta_0` of that section and
+
+\[
+ \int_{\tau_{\rm in}}^{\tau_{\rm in}+T_*}|e|\,d\tau\le\eta_0,
+ \qquad
+ |a(\tau_{\rm in})|+\int|e_q-e_p|\,d\tau\le\eta_0             \tag{R4}
+\]
+
+reach a terminal section with small carrier radius
+`R=(U^2+V^2)^(1/2)` and
+
+\[
+ 0.13\le p,q\le0.22.                                          \tag{R5}
+\]
+
+This step is a finite-time ODE theorem: take a fixed tubular neighborhood of
+the exact compact transition, a Lipschitz bound `L_*` for its vector field,
+and a positive margin `m` to the boundary of (21e).  Gronwall gives the claim
+whenever the incoming displacement plus `||e||_1` is less than
+`m exp(-L_*T_*)`.  No asymptotic PDE input is hidden here.
+
+On the terminal box, the carrier has a direct Lyapunov estimate:
+
+\[
+ \frac12(R^2)'
+ =(q+\rho p-1.9)U^2+(0.1-\rho p-q)V^2+Ue_U+Ve_V
+ \le-0.03R^2+R|e_c|,                                         \tag{R6}
+\]
+
+where `e_c=(e_U,e_V)`.  Consequently
+
+\[
+ R(\tau)\le e^{-0.03(\tau-\tau_c)}R_c
+ +\int_{\tau_c}^{\tau}e^{-0.03(\tau-s)}|e_c(s)|\,ds.          \tag{R7}
+\]
+
+Moreover,
+
+\[
+ |\Delta p|,|\Delta q|
+ \le\int_{\tau_c}^{\tau}R^2\,ds+\|e_p\|_1+\|e_q\|_1.        \tag{R8}
+\]
+
+Small fixed tail norms therefore retain the terminal box, and there
+
+\[
+ \boxed{\frac{0.12}{r}\le\frac ZP
+ =\frac{q}{r(1-\rho p)}\le\frac{0.23}{r}}.                    \tag{R9}
+\]
+
+For a cleanup interval of length `G/0.03`, (21g) yields
+
+\[
+ R_{\rm out}\le R_ce^{-G}
+ +\int e^{-0.03(\tau_{\rm out}-s)}|e_c(s)|\,ds.               \tag{R10}
+\]
+
+The carrier therefore exits exponentially small only if the residual is
+switched off before cleanup or its backward-weighted tail is exponentially
+small.  An unweighted `o(1)` residual gives only an `o(1)` exit.
+
+There is an equally important qualification during the gain phase.  No
+theorem allowing arbitrary additive `o(1)` error can preserve an `e^{-G}`
+seed: an additive impulse of mass `e^{-G}` in the unstable polarization can
+cancel it exactly.  Any PDE transition must instead provide at least one of:
+
+1. a theorem beginning at the fixed incoming section;
+2. multiplicative carrier error `e_c=B(\tau)(U,V)` with
+   `integral ||B|| << 1`; or
+3. a backward-weighted unstable forcing smaller than the seed,
+   \[
+   \left|\int_{\tau_-}^{\tau_{\rm in}}
+   e^{-0.1(s-\tau_-)}\ell_u\cdot e_c(s)\,ds\right|
+   \le\theta e^{-G},\qquad\theta<1.                           \tag{R11}
+   \]
+
+Under one of these seed-survival hypotheses, gain takes `10G+O(1)`
+dimensionless time and cleanup takes at most `G/0.03`.  The full capture still
+fits in a `C G` action window.  This is the robustness target that a localized
+PDE block must meet; a bare small-residual statement is insufficient.
+
 ## 5. Exact low ridge from a nonlinear relative phase
 
 Fix an orthonormal frame `(r,t,h)`, write `s=r dot x`, and set
