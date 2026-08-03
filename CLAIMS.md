@@ -103,10 +103,43 @@ All eleven `checks/*.py` scripts run clean in the audit sandbox
 | C48 | Transition-ledger §6–7 identities: positive-covariance reduction Q=ρI−R_E (honestly scoped), work identity (6.4)–(6.5), viscous stress absorption (7.2)–(7.3) | gavrilov-active-transition-ledger §6–7 | VERIFIED-CROSS (re-derived in-session 2026-07-29 ~23:50 UTC) |
 | C49 | One-carrier positive-definite stress is impossible at leading order: incompressibility forces the oscillation amplitude ⟂ phase gradient, so a single transported phase charges only the transverse 2-plane (averaged stress rank ≤ 2); positive-definite covariance needs ≥ 2 transported phases with independent gradients. Repair: several spatially disjoint transported Mikado-type colours; in-repo building blocks are C38 (six-ray dictionary) and C8 (multi-radius helical winners) | reported by the research model in-session (note not yet pushed); independent derivation recorded here first | VERIFIED-CROSS by two independent same-day derivations (theirs in-flight, this one in-registry); status final upon their note landing |
 
-## Audit queue (priority order)
+## Auditor research attempt 2026-08-03 (Claude): toward the transported writer
 
-1. C12 (CMZ-retrofit no-go) — short, load-bearing for the strategic pivot.
-2. C14 (finite-cell no-go) — load-bearing for abandoning the gate extrapolation.
-3. C15 (sideband obstruction) — mechanical sympy check.
-4. C13 ledger derivations; C18 schedule.
-5. C20–C26 upon artifact arrival.
+Full note: `audit/ATTEMPT-2026-08-03-transported-writer.md`; verification
+scripts `audit/wake_ledger.py`, `audit/affine_transport.py`,
+`audit/window_search.py`. **Numbering: the range C50–C101 is RESERVED** —
+the research model's in-session ledger has grown into that range (see audit
+queue items 6–12 below), but none of those artifacts are in this repository
+yet; under the registry protocol they are NO-ARTIFACT until they land.
+Auditor claims therefore start at C102.
+
+| ID | Claim | Artifacts | Status |
+|----|-------|-----------|--------|
+| C102 | Gauge rigidity: in the exact-curl two-carrier block with phases Λt·x+Θ±Ψ/2, the order-0 demodulated low beat is exactly 2i(w·∇Ψ)w for arbitrary Θ,Ψ; Θ enters only at O(1/Λ) via ∇Ψ·∇Θ and Hessians. No common-phase lever on the collar wake | attempt note §1; `audit/wake_ledger.py` (A) | VERIFIED-SELF |
+| C103 | Exact wake decomposition for Ψ=ψ(s)χ(τ,ζ), ζ=(h−Hr)·x: d=ψ'χ and q_t=ψχ_τ exactly; post-gradient low output = child Hψ'χh − t-wake ψχ_τ t − ζ-wake ψχ_ζ(h−Hr), disjointly supported | attempt note §2; `audit/wake_ledger.py` (B) | VERIFIED-SELF |
+| C104 | Wake floor: any collar has irreducible DC (∫∂χ=−1); wake/child ≥ R_c/(2HL); with coherence cap L≤r_N/G² this is (G²/2H)N^{−m12}, m12=b(2α−4)−1, so wake-smallness FORCES the nested-torus condition (12) — second independent derivation. Coherence cap is a modeling step; decoherent-collar loophole flagged open | attempt note §3; `audit/window_search.py` (D) | VERIFIED-SELF (algebra exact; cap flagged) |
+| C105 | Exact affine transport: quadratic chirps (P'=−MᵀP−PM) and affine jets are exactly invariant classes on U_p=Mx; Kelvin polarization preserves a·k=0 (incl. nonnormal M, ≤2.5e−15); general-frame beat is form-invariant L₀=2i(q·W)W, W=t×(w×t). Item 2 of the five-item lemma reduces to curvature ≍ G·N^{−m12} + O(Q/Λ) polarization corrections | attempt note §4; `audit/affine_transport.py` | VERIFIED-SELF |
+| C106 | Window theorem + fork: joint window (1)∧(12)∧(17)∧(L2: m12>2b(b−1)Δ)∧(L3: β/2>1+m12) is nonempty, optimum (α,β,b)=(2.4541,2.4072,1.1726), min margin 0.0459; paranoid tolerance (L2′: m12>(b−1)(2α−β−1)) strictly infeasible on the whole window (m12≤b−1<(b−1)(α−1)); wake floor beats polylogs only above N*≈10^247 | attempt note §5; `audit/window_search.py` (A–C) | VERIFIED-SELF |
+
+Cross-audit requested on: the coherence cap in C104; the Fork of C106
+(co-growing coefficient shift vs r²-amplified equation residual — a finite
+ODE-perturbation question against the affine-core robustness series); and
+independent re-derivation of L₀=2i(q·W)W.
+
+## Audit queue (priority order; updated 2026-08-03 from R's message)
+
+Status annotations by the auditor. Items referencing C50–C101 are BLOCKED
+until the corresponding artifacts land in this repository.
+
+1. C12 (CMZ-retrofit no-go) — **DONE**, VERIFIED-CROSS 2026-07-29.
+2. C14 (finite-cell no-go) — load-bearing for abandoning the gate extrapolation. **IN PROGRESS 2026-08-03.**
+3. C15 (sideband obstruction) — **DONE**, VERIFIED-CROSS 2026-07-29.
+4. C13 ledger derivations; C18 schedule. **OPEN.**
+5. C20–C24 upon artifact arrival; independent audit of the new C26 artifact. **BLOCKED (no artifacts in repo as of 2026-08-03; `git ls-remote` shows only main@a22b67b and agent/palasek-gavrilov-rectifier@05dfa27).**
+6. Cross-audit the now explicit physical spectral carrier: C93 closes the straight reconstruction, C84 fixes the winding, C97 closes compact aspect-uniform Piola transport, and C99 supplies the uniform analytic scalar packet plus curvature/viscosity/gain ledger. The local linear module is complete at SELF status; its nonlinear material capture and integration into one physical cascade remain open. **BLOCKED (no artifacts).**
+7. Develop C89's one-material-phase boundary chart as the preferred principal alternative. C100 rules out a bounded-energy passive long-window chart and narrows the viable route to a genuinely sourced/reservoir-fed bounded terminal bath (or a fully redone shrinking-gap ledger). C101 makes the infinite charged ladder forward-tame at fixed slow charge and supplies an e^{−cj²} finite-band tail, but requires the charged wake to remain in the endpoint state. Prove the localized material-gauged nonlinear map, source/injection, finite-K longitudinal stress, charged-plus-zero wake carry, and C91's doubled clean endpoint. Retain the three-phase chart as fallback. **BLOCKED (no artifacts).**
+8. Prove the C90 wake-restricted endpoint bound in a slightly subcritical annular Gevrey space, or find a weaker finite-energy spatial decoupling mechanism. C98 rules out literal fixed-positive-volume exponential material export over unbounded windows. A uniform L_j with L_j r^{α−γ}<1 closes the periodic carried wake; the critical tail instead needs an invariant graph. **BLOCKED (no artifacts).**
+9. Use C61 and C64 to build a local/exterior order-M_j Gevrey induction in powers of the minor-scale viscous parameter Θ, including same-stage and cross-wake interactions. **BLOCKED (no artifacts).**
+10. Turn C56 into a localized PDE capture theorem with the weighted affine-defect norm and seed-survival estimate. Use C87's exact Navier–Stokes collar and C91's controlled endpoint map, while proving that the actual phase-resolved WKB dynamics realizes those controls. **BLOCKED (no artifacts). Note: overlaps the Fork of C106.**
+11. Obtain external expert review of C58 before using it as a literature-level no-go. **BLOCKED (no artifact; if C58 is the countable-stagnation Liouville theorem of the 2026-08-01 branch, the artifact exists on agent/palasek-gavrilov-rectifier and the auditor has already verified it in full — see session review 2026-08-02).**
+12. Develop C62's compact projected tube into an all-order weighted Leray/heat parametrix; compare it quantitatively with the infinite characteristic-crossing slab before fixing the transition architecture. **BLOCKED (no artifacts).**
