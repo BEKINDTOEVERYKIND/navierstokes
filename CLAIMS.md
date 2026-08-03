@@ -107,11 +107,15 @@ All eleven `checks/*.py` scripts run clean in the audit sandbox
 
 Full note: `audit/ATTEMPT-2026-08-03-transported-writer.md`; verification
 scripts `audit/wake_ledger.py`, `audit/affine_transport.py`,
-`audit/window_search.py`. **Numbering: the range C50–C101 is RESERVED** —
-the research model's in-session ledger has grown into that range (see audit
-queue items 6–12 below), but none of those artifacts are in this repository
-yet; under the registry protocol they are NO-ARTIFACT until they land.
-Auditor claims therefore start at C102.
+`audit/window_search.py`. **Numbering: the range C50–C136 is RESERVED** —
+the research model's in-session ledger has grown through C136 (C107–C136
+reported in-session 2026-08-03: transported-writer reconcile/C107, Clebsch,
+on-shell sideband, Weber, terminal triads C114–C117, pump depletion C118,
+three-leaf orbit C119, one-leaf ladder eigenmode C120 with rational
+enclosure, C121–C125, factorial schedule C126–C136), but none of those
+artifacts are in this repository yet; under the registry protocol they are
+NO-ARTIFACT until they land. Auditor claims occupy C102–C106 and continue
+at C137.
 
 | ID | Claim | Artifacts | Status |
 |----|-------|-----------|--------|
@@ -125,6 +129,19 @@ Cross-audit requested on: the coherence cap in C104; the Fork of C106
 (co-growing coefficient shift vs r²-amplified equation residual — a finite
 ODE-perturbation question against the affine-core robustness series); and
 independent re-derivation of L₀=2i(q·W)W.
+
+## Auditor wake-slaving results 2026-08-03 (partial resolution of the C107 fork)
+
+Full note: `audit/ATTEMPT-2026-08-03b-wake-slaving.md`; exact checks in
+`audit/wake_slaving.py`. These answer the research model's in-session
+objection that co-growth alone does not make the collar wake harmless.
+
+| ID | Claim | Artifacts | Status |
+|----|-------|-----------|--------|
+| C137 | Rank-one advection protection: B(V, γsh) = γ(V·r)h for ANY field V — the affine jet cannot be pushed off-direction at first order; plus t-wake double darkness: B(W_t,J)=0 identically, B(J,W_t) t-directed | note §1 (D5),(D1); `audit/wake_slaving.py` | VERIFIED-SELF |
+| C138 | Exact shear-pair: f(s)h+g(s)t+γsh is an exact steady Euler solution (zero-mode t-wake exactly dark to the child); ζ-wake ledger: only child-directed channel is −Hγφh (in-direction, relative δ), self-term δ²; Leray tilt of t-wake polarization = collar anisotropy R_c/L = O(δ) | note §1 (D2),(D3),(T2) | VERIFIED-SELF |
+| C139 | Fork partial resolution: every wake→child channel is in-direction at ≤δ (coefficient shift, Σδ_k<∞) or off-direction at ≤δ²; repaired paranoid condition δ²≤ρ_N² ⟺ m12≥(b−1)Δ is IMPLIED by (L2) since 2b>1 ⟹ benign resolution throughout the C106 window at frozen-plus-first-transport order. NOT proved: second-order closure, transported gain estimate, conversion exposure (wake–block interaction after item-4 conversion) | note §2–§3 | VERIFIED-SELF (partial; boundary stated) |
+
 
 ## Audit queue (priority order; updated 2026-08-03 from R's message)
 
