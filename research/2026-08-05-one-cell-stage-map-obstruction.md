@@ -227,16 +227,58 @@ and natural size
  \Theta(b_j^2)=\Theta((j+1)^{-4}).                            \tag{3.6}
 \]
 
-This exactly saturates the retained-wake allowance, but it is two powers
-too large to pass through a chart with condition number \(O(j^2)\) as an
+This exactly saturates the retained-wake allowance.  Under the earlier
+conservative pre-propagation reading, it would be two powers too large if
+passed directly through a chart with condition number \(O(j^2)\) as an
 active-coordinate error.  Hence the C107 fork and terminal leakage are the
 same one-cell issue: prove that (3.6) remains in a transported dark/exported
 wake channel, or gain another factor \(j^{-2}\) in its propagated return to
-the active chart.  Merely shortening the paired gate cannot supply that
-factor; the desired child and the second-Picard output scale as the first
-and second powers of the same gate time.
+the active chart.  Raw support and size counting alone did not determine
+whether the fixed-projector return gains that factor; the desired child
+and the second-Picard output scale as the first and second powers of the
+same gate time.
 
-## 4. The single unresolved estimate
+C140--C141 resolve this raw fixed-projector alternative exactly.  The
+second-Picard mode does not enter the six-root dynamics at order \(b_j^2\):
+relative to the retained six-root equation, its first active child return
+is the nonzero cubic term
+
+\[
+                  \Theta(b_j^3)=\Theta(n^{-6}).               \tag{3.7}
+\]
+
+The reason is structural, not an accidental cancellation.  The C116 datum
+and every descendant in the fixed \(A_2\) root lattice are 2D3C.  The
+planar pump evolves autonomously, while the child and wake are passive
+\(N=(1,1,1)\)-directed scalars.  This closes the homogeneous short-gate
+power count.  Within this split the passive scalar cannot deplete the
+autonomous planar pump or supply the active three-dimensional volume
+focus.  This does not refute the abstract C118/C119 normal form or its
+off-plane leaves \(q_m\pm Kr_i\), \(m\ne0\), which lie outside the fixed
+root lattice.
+
+Consequently the bare fixed-projector timing objection is resolved, and
+one necessary estimate is isolated at the exit from that invariant plane.
+For a moving active projector \(P_j(t)\), with
+\(Q_j=I-P_j\), the direct conversion exposure contains
+
+\[
+ \left(\dot P_jQ_j+P_jA_jQ_j\right)w_j,                       \tag{3.8}
+\]
+
+where \(A_j\) is the exact Leray-projected linearized conversion/focus
+generator and
+\(w_j=Q_ju_j\) is the \(O(n^{-4})\) wake.  The localized
+conversion-exposure estimate (LCE) is the requirement that the
+backward-weighted Duhamel response of (3.8) be \(O(n^{-6})\).  For fixed
+Fourier \(P\), the analogous \(P\leftarrow Q\) response first occurs
+through the extra parent--wake interaction just proved.  Localization,
+off-plane routing, pressure, and focus remain open.  LCE is a necessary
+subestimate, not a replacement for the full BAFL estimate below: newly
+generated leakage, nonlinear wake feedback, and closure of the
+entrance/wake state classes also remain to be controlled.
+
+## 4. The unresolved BAFL estimate
 
 For a candidate trajectory with the advertised pump, routing, activation,
 focus, and wake modules, the **BAFL estimate** is equivalently the pair

@@ -294,15 +294,27 @@ so that \(L_j\mathfrak L_j^{\rm act}=O(n^{-4})\).  Constructing the
 localized trajectory is part of the BAFL package; the displayed inequalities
 are the BAFL estimate on that trajectory.
 
-The split is load-bearing. For the fixed nondegenerate paired gate of C116,
-a child of size \(b_j=n^{-2}\) creates the first unavoidable
-second-Picard leak with nonzero leading coefficient at natural size
-\(b_j^2=n^{-4}\).
-That exactly fits the retained-wake allowance, but it is two powers too
-large if it returns through an active chart with worst-case \(n^2\) inverse
-loss. Thus the transported-writer fork and the unfolded terminal gate are
-the same problem: prove that the second-Picard mode remains dark/exported,
-or gain an additional \(n^{-2}\) in its backward-weighted active return.
+The split is load-bearing. C140--C141 now close the raw fixed-Fourier
+timing calculation.  The C116 gate is exactly 2D3C: its planar pump
+heat-decays autonomously and its written \(N=(1,1,1)\) component is a
+passive scalar.  A child of size \(b_j=n^{-2}\) creates a nonzero
+second-Picard wake of size \(b_j^2=n^{-4}\), but that wake first returns
+to the active child after one additional interaction, at
+\(b_j^3=n^{-6}\).  Phase tuning within the whole cancelled four-mode
+family cannot remove the cubic coefficient.
+
+Thus the homogeneous short gate matches the two raw powers reserved by
+BAFL.  It also exposes a necessary conversion problem: every evolution
+of smooth periodic data confined to the fixed planar \(A_2\) root lattice
+is globally regular 2D3C; within that split the passive scalar cannot
+deplete the autonomous planar pump or supply the scheduled
+three-dimensional volume focus.  This does not cover the intended
+off-plane C118/C119 leaves.  The localized conversion-exposure estimate
+(LCE) asks whether the construction can exit the passive-scalar plane and
+perform the active focus without directly promoting the \(O(n^{-4})\)
+wake into the active chart above \(O(n^{-6})\).  LCE does not replace full
+BAFL, which must also control newly generated leakage, nonlinear wake
+feedback, and closure of the entrance and retained-wake state classes.
 
 No localized BAFL trajectory is constructed here. Consequently there is no
 unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
@@ -316,6 +328,7 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Factorial one-cell schedule (reconstructed C126–C131)](research/2026-08-05-factorial-stage-schedule-c126-c131.md)
 - [Just-in-time active focus and BAFL (reconstructed C132–C136)](research/2026-08-05-active-focus-activation-c132-c136.md)
 - [One-cell BAFL reduction and explicit A2 leakage](research/2026-08-05-one-cell-stage-map-obstruction.md)
+- [Exact 2D3C paired gate and cubic wake return (C140–C141)](research/2026-08-05-paired-gate-passive-return-c140-c141.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)
