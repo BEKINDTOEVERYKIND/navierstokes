@@ -316,6 +316,37 @@ wake into the active chart above \(O(n^{-6})\).  LCE does not replace full
 BAFL, which must also control newly generated leakage, nonlinear wake
 feedback, and closure of the entrance and retained-wake state classes.
 
+The active-focus audit C142--C148 now rules out the material-envelope
+shortcut and identifies the precise failure of the generic stationary
+cutoff estimate.  A global
+affine Kelvin map can amplify the child by \(q^{3/2}\) while keeping the two
+named wake velocities bounded, but a transported three-dimensional
+envelope is heat-killed at action \(\asymp q^2\log n\); a stationary
+finite-energy cutoff instead has backward-focused parent/collar exposure
+\(O(\log h)\) under the direct product bound.  Slowing the strain changes
+neither the heat action nor that bound, but the latter is not a universal
+lower-bound no-go.  The affine branch survives only conditionally on a
+co-moving Lagrangian collar whose integrated wake-to-active block is
+\(O(b)\).
+
+There is an exact coherent packet with \(q^3\) conjugate pairs
+(\(2q^3\) nonzero Fourier wavevectors) on the existing
+\(\mathbb ZN+\mathbb Zk_1+\mathbb Zk_2\) lattice, but it repeats in every
+parent period cell and has order-one radial bandwidth.  The scheduled
+localized point focus needs \(\asymp(qK)^3\) Fourier degrees, whereas an
+exact or narrow C121 shell has only \(O((qK)^2)\).  Thus the next pump cannot
+be the exact global six-root orbit; it must be a localized C121-like core
+with a non-shell collar.  A direct quadratic collapse of the coherent
+packet also needs a macroscopically large gate/companion family.
+
+The surviving gain target is LBRG: a localized broad-band relative-gain
+theorem for the exact variable-fiber axial operator C148, including
+eikonal rephasing, a positive amplitude cocycle, packet edges, nonlinearity,
+and C125 relative to the \(n^{-28}\) growing seed.  The scalar
+microseed/reservoir factorization and conditional unfolded-gate exponent
+ledger are compatible with the budgets, but they do not prove LBRG or
+BAFL.
+
 No localized BAFL trajectory is constructed here. Consequently there is no
 unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 
@@ -329,6 +360,8 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Just-in-time active focus and BAFL (reconstructed C132–C136)](research/2026-08-05-active-focus-activation-c132-c136.md)
 - [One-cell BAFL reduction and explicit A2 leakage](research/2026-08-05-one-cell-stage-map-obstruction.md)
 - [Exact 2D3C paired gate and cubic wake return (C140–C141)](research/2026-08-05-paired-gate-passive-return-c140-c141.md)
+- [Affine child/wake selector and localization obstruction (C142–C143)](research/2026-08-05-affine-selector-localization-c142-c143.md)
+- [Coherent packet, shell endpoint no-go, and relative-gain gate (C144–C148)](research/2026-08-05-coherent-packet-relative-gain-c144-c148.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)

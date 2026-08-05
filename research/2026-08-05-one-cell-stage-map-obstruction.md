@@ -278,6 +278,87 @@ subestimate, not a replacement for the full BAFL estimate below: newly
 generated leakage, nonlinear wake feedback, and closure of the
 entrance/wake state classes also remain to be controlled.
 
+### 3.2 Active-focus audit: affine failure and the broad-band target
+
+C142--C148 test the active-focus step without changing the \(A_2\)
+geometry. The strongest global affine selector is explicit: with
+\(h=q^{3/2}\), it amplifies the intended child velocity by
+\(\asymp h\) while leaving the two named C117 wake velocities bounded.
+This does not survive generic localization. A materially transported
+three-dimensional envelope incurs the exact heat action
+
+\[
+ {4Lq^2\log n\,(h^2-1)\over3(h^2-h^{-2})}
+ \sim {4L\over3}q^2\log n,                                  \tag{3.9}
+\]
+
+whereas the direct product estimate for a stationary compact affine core
+has the strain-speed-independent backward-focused \(L^2\) scale
+
+\[
+                         O(\log h).                         \tag{3.10}
+\]
+
+Thus slowing the selector does not improve this estimate. Equation (3.10)
+is not a universal lower bound: an algebraic or Lagrangian cancellation
+could make the actual interaction smaller. The surviving form is
+conditional on a co-moving Lagrangian collar which cancels the leading
+parent transport and gives an integrated wake-to-active block \(O(b)\).
+The direct \(O(\log h)\) estimate does not place the retained
+\(b^2=n^{-4}\) wake below the \(b^3=n^{-6}\) active allowance; the ratio
+of its natural scale to that allowance is \(12n^2\log n\).
+
+The coherent alternative has an exact kinematic target but an exact
+endpoint obstruction. The existing lattice contains a divergence-free
+packet with \(q^3\) conjugate pairs (\(2q^3\) nonzero Fourier wavevectors)
+and point gain \(cq^{3/2}\) in every parent period cell. However, at the
+scheduled energy and point amplitude, one isolated child requires at
+least
+
+\[
+                         (qK)^3                             \tag{3.11}
+\]
+
+coherent Fourier degrees. An exact or relatively narrow C121 shell at
+radius \(O(qK)\) has only \(O((qK)^2)\). Consequently the focused endpoint
+cannot be the exact global six-root pump; it must be a localized
+C121-like core with a non-shell collar/wake. A one-step quadratic
+collapse of \(M\) coherent sources to six pump targets needs at least
+\(M/6\) oriented gate frequencies and has at least \(M/6\)
+support-allowed oriented companions before polarization cancellation
+(\(M/12\) if unoriented reality pairs are counted).
+
+Temporal unfolding remains arithmetically possible. If the per-gate
+target contributions are aligned with size \(\asymp b\theta\) and the
+wake/active returns obey \(O(b\theta^2)\), \(O(b\theta^3)\), then
+\(J=b^{-1}\) microgates of strength \(\theta=b\) give
+
+\[
+ \text{target}\asymp Jb\theta=b,\qquad
+ \text{wake}\lesssim Jb\theta^2=b^2,\qquad
+ \text{return}\lesssim Jb\theta^3=b^3.                       \tag{3.12}
+\]
+
+The unresolved issue is uniformity over the many simultaneous coherent
+channels.
+
+The reservoir variant moves that uniformity into C125. A point seed
+\(s=n^{-16}\) on child volume \(q^{-3}\) has growing-coordinate size
+\(\varepsilon=n^{-28}\); gain \(H=n^{26}\) reaches the scheduled point,
+\(L^2\), and energy targets. But a same-support writer term of size
+\(26n^{-20}\log n\) is larger than the seed by
+\(26n^8\log n\). Absolute summability therefore gives no retained gain.
+
+This isolates the **localized broad-band relative-gain theorem (LBRG)** as
+the active-focus/gain subproblem. The exact axial-layer linearization is
+the variable-fiber operator C148, not the finite C120 matrix and not a
+Toeplitz block. LBRG must construct an eikonal-rephased positive amplitude
+cocycle across \(m\asymp q\), tangential bandwidth \(q\), control packet
+edges and nonlinear descendants, and prove the C125 weighted defect
+relative to \(n^{-28}\). It must also feed the unfolded localized
+next-pump conversion while satisfying LCE. LBRG is a concrete component
+of BAFL, not a replacement for it.
+
 ## 4. The unresolved BAFL estimate
 
 For a candidate trajectory with the advertised pump, routing, activation,
@@ -397,9 +478,18 @@ cross-audited.  The second kills this stage geometry by a named mode and a
 quantitative lower bound.  Neither outcome requires opening another
 cascade architecture.
 
+Within this target, the active-focus/gain construction is no longer
+open-ended: the affine material realization is excluded by (3.9), the
+direct stationary-cutoff estimate fails at (3.10), and the exact-shell
+endpoint is excluded by (3.11). The surviving obligation is LBRG followed
+by the unfolded localized endpoint conversion, both measured in BAFL's
+two response channels. A specially canceled stationary cutoff is included
+in that surviving obligation, not excluded by (3.10).
+
 ## 8. Verification boundary
 
 `checks/one_cell_stage_map_obstruction.py` verifies the exponent,
 bootstrap, and summability arithmetic used above.  It cannot verify the
-PDE evolution-family estimate (BAFL), which remains the sole named analytic
-obstruction in this reduction.
+PDE evolution-family estimate (BAFL), which remains the umbrella analytic
+obstruction in this reduction. LBRG is its now-explicit active-focus/gain
+component.
