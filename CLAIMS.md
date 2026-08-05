@@ -186,16 +186,11 @@ audit sandbox (2026-07-29). Priority statuses:
 Full note: `audit/ATTEMPT-2026-08-03-transported-writer.md`; verification
 scripts `audit/wake_ledger.py`, `audit/affine_transport.py`,
 `audit/window_search.py`.  At the auditor's main-branch checkpoint, the
-range C50–C136 was reserved.  This integration branch now supplies the
-artifacts for C50–C101; the research model's in-session ledger grew through
-C136 (C107–C136
-reported in-session 2026-08-03: transported-writer reconcile/C107, Clebsch,
-on-shell sideband, Weber, terminal triads C114–C117, pump depletion C118,
-three-leaf orbit C119, one-leaf ladder eigenmode C120 with rational
-enclosure, C121–C125, factorial schedule C126–C136), but none of those
-artifacts were not yet present at that checkpoint and remain NO-ARTIFACT on
-this branch until they land.  Auditor claims occupy C102–C106 and continue
-at C137.
+range C50–C136 was reserved.  This integration branch supplies the
+artifacts for C50–C101 and reconstructs C107–C136 from the surviving
+registry, auditor notes, and fresh exact derivations.  The reconstructed
+files are not represented as byte-for-byte recovery of the lost in-session
+drafts.  Auditor claims occupy C102–C106 and continue at C137.
 
 | ID | Claim | Artifacts | Status |
 |----|-------|-----------|--------|
@@ -204,6 +199,47 @@ at C137.
 | C104 | Wake floor: any collar has irreducible DC (∫∂χ=−1); wake/child ≥ R_c/(2HL); with coherence cap L≤r_N/G² this is (G²/2H)N^{−m12}, m12=b(2α−4)−1, so wake-smallness FORCES the nested-torus condition (12) — second independent derivation. Coherence cap is a modeling step; decoherent-collar loophole flagged open | attempt note §3; `audit/window_search.py` (D) | VERIFIED-SELF (algebra exact; cap flagged) |
 | C105 | Exact affine transport: quadratic chirps (P'=−MᵀP−PM) and affine jets are exactly invariant classes on U_p=Mx; Kelvin polarization preserves a·k=0 (incl. nonnormal M, ≤2.5e−15); general-frame beat is form-invariant L₀=2i(q·W)W, W=t×(w×t). Item 2 of the five-item lemma reduces to curvature ≍ G·N^{−m12} + O(Q/Λ) polarization corrections | attempt note §4; `audit/affine_transport.py` | VERIFIED-SELF |
 | C106 | Window theorem + fork: joint window (1)∧(12)∧(17)∧(L2: m12>2b(b−1)Δ)∧(L3: β/2>1+m12) is nonempty, optimum (α,β,b)=(2.4541,2.4072,1.1726), min margin 0.0459; paranoid tolerance (L2′: m12>(b−1)(2α−β−1)) strictly infeasible on the whole window (m12≤b−1<(b−1)(α−1)); wake floor beats polylogs only above N*≈10^247 | attempt note §5; `audit/window_search.py` (A–C) | VERIFIED-SELF |
+
+## Reconstructed one-cell sequence C107–C136 (2026-08-05)
+
+These claims were re-derived after the original in-session artifacts were
+lost. “EXACT” below means exact under the displayed finite-dimensional or
+boundary hypotheses; it never promotes the selected Fourier circuit to an
+invariant full-PDE subsystem. The localized unforced stage and BAFL remain
+open.
+
+| ID | Claim | Artifacts | Status |
+|----|-------|-----------|--------|
+| C107 | Rank-one wake protection is directional, not profile slaving; \(V=r\) is an exact counterexample to a bounded multiplier relation, leaving the nonlinear wake-slaving/spatial-export fork. | research/2026-08-05-transported-writer-reconcile-c107-c113.md; checks/transported_writer_reconcile_c107_c113.py | RECONSTRUCTED; identity/counterexample EXACT; both PDE branches OPEN |
+| C108 | Transported Clebsch gradients obey the exact Piola/Cauchy law \((F^{-T}p)\times(F^{-T}q)=F(p\times q)\) for \(\det F=1\). | same C107–C113 note/checker | RECONSTRUCTED EXACT |
+| C109 | One global single-valued Clebsch pair has zero integrated helicity under the stated periodic/decaying boundary hypotheses and cannot carry a nonzero homochiral Beltrami pump. | same C107–C113 note/checker | RECONSTRUCTED EXACT under stated boundary hypotheses |
+| C110 | A homochiral nonzero single-shell Beltrami field evolves as an exact unforced Navier–Stokes heat-decaying orbit. | same C107–C113 note/checker | RECONSTRUCTED EXACT |
+| C111 | The pulled-back Euler velocity one-form satisfies the exact Weber identity. | same C107–C113 note/checker | RECONSTRUCTED EXACT |
+| C112 | Navier–Stokes adds the exact viscous Weber impulse \(\nu\int F^T\Delta u\circ X\), which is not generally a gradient. | same C107–C113 note/checker | RECONSTRUCTED EXACT; impulse smallness OPEN |
+| C113 | The Leray-projected quadratic map and its tangent vanish within one homochiral shell; just-in-time activation must leave that dark manifold. | same C107–C113 note/checker | RECONSTRUCTED EXACT; activation closure OPEN |
+| C114 | \(k_1=(1,-1,0),k_2=(0,1,-1),k_3=(-1,0,1)\) form an exact equal-shell integer \(A_2\) hexagon; the difference shell has squared length \(6\). | research/2026-08-05-terminal-triad-hexagon-c114-c117.md; checks/terminal_triad_hexagon_c114_c117.py | RECONSTRUCTED EXACT |
+| C115 | Same-helicity terminal pairs are dark; opposite-helicity unit pairs have output norm squared \(3/2\) and squared projection \(3/4\) onto either output helicity. | same C114–C117 note/checker | RECONSTRUCTED EXACT |
+| C116 | In the helical coordinates of (4.3), the dual-helicity choice \((x_1,y_1)=(i,1),(x_2,y_2)=(-i,1)\) cancels the first reality-difference sideband while retaining nonzero terminal output. | same C114–C117 note/checker | RECONSTRUCTED EXACT |
+| C117 | The resulting equal-amplitude two-helicity child necessarily emits at least one named length-\(\sqrt6\) mode \(e_1=(2,-1,-1)\) or \(e_2=(1,1,-2)\) at second Picard order. | same C114–C117 note/checker | RECONSTRUCTED EXACT bare-gate support/Taylor statement; larger-ladder PDE response OPEN |
+| C118 | Every positive singular direction of the energy-conserving pump–leaf normal form has an exact nonlinear depletion heteroclinic. | research/2026-08-05-hexagon-depletion-eigenmode-c118-c120.md; checks/hexagon_depletion_eigenmode_c118_c120.py | RECONSTRUCTED EXACT finite-dimensional statement |
+| C119 | The equal three-leaf orbit is \(p=-A\tanh(2A(t-t_0))\), \(a=A\operatorname{sech}(2A(t-t_0))/\sqrt6\), with \(p^2+6a^2=A^2\). | same C118–C120 note/checker | RECONSTRUCTED EXACT finite-dimensional statement |
+| C120 | The weighted hexagon has polynomial \(\lambda^6-9\lambda^4+18\lambda^2-9\) and a simple top growth rate \(633/250<\sigma_*<2533/1000\). | same C118–C120 note/checker | RECONSTRUCTED EXACT polynomial/rational enclosure; physical coefficient identification OPEN |
+| C121 | The \(A_2\) homochiral pump is an exact unforced Navier–Stokes solution \(P_0e^{-2\nu K^2t}U_*\). | research/2026-08-05-unforced-decaying-pump-c121-c125.md; checks/unforced_decaying_pump_c121_c125.py | RECONSTRUCTED EXACT pump background; perturbation closure OPEN |
+| C122 | On an ideal retained ladder eigenline, the decaying pump gives \(G(t)=\sigma P_0(1-e^{-\delta t})/\delta-dt\). | same C121–C125 note/checker | RECONSTRUCTED EXACT retained-block identity; PDE eigenvalue match OPEN |
+| C123 | For \(R=\sigma P_0/d>1\), the unique gain maximum is \(t_*=\delta^{-1}\log R\) and \(G(t_*)=(d/\delta)(R-1-\log R)\). | same C121–C125 note/checker | RECONSTRUCTED EXACT |
+| C124 | The nonlinear finite-dimensional pump--leaf normal form retains at least \(e^{G(t_*)-\eta}\) gain under the explicit small-seed conditions (5.6). | same C121–C125 note/checker | RECONSTRUCTED EXACT comparison bound; iterated PDE seed theorem OPEN |
+| C125 | Variation of constants reduces retained gain to the relative off-ladder/slaving integral (6.5); the centre and second sidebands are support-allowed at the same pump-interaction order as desired edges, without a support-level coefficient or smallness conclusion. | same C121–C125 note/checker | RECONSTRUCTED identity/support EXACT; uniform PDE bound OPEN |
+| C126 | No nonzero compactly supported smooth field can satisfy \(-\Delta u=\kappa^2u\); exact monochromatic compact localization is impossible. | research/2026-08-05-factorial-stage-schedule-c126-c131.md; checks/factorial_stage_schedule_c126_c131.py | RECONSTRUCTED EXACT |
+| C127 | The factorial schedule \(\ell_j=(j!)^{-8},a_j=(j!)^{10}\) gives \(q_j=n^8,b_j=n^{-2},F_j=n^{12},b_jF_j=n^{10}\), summable \(E_j,\tau_j,\mu_j,D_j\), and \({\rm Re}_j\to\infty\). | same C126–C131 note/checker | RECONSTRUCTED EXACT scalar ledger |
+| C128 | The curl cutoff \(U_M=\nabla\times(\chi_MW/\kappa)\) is exactly divergence free and core-equal to \(W\); its separated pressure contribution \(C\log q_j/M_j\) is a hypothesis. | same C126–C131 note/checker | RECONSTRUCTED cutoff EXACT; pressure bound CONDITIONAL |
+| C129 | A packet with the displayed Gaussian tail, truncated at \(M_j=n^{7/2}\), yields \(Ce^{-cn^7}\), absorbing every fixed polynomial loss. | same C126–C131 note/checker | RECONSTRUCTED exact implication; packet-tail hypothesis CONDITIONAL |
+| C130 | Factorial decay absorbs every fixed polynomial stage loss: \(\sum_j j^C/(j!)^\alpha<\infty\). | same C126–C131 note/checker | RECONSTRUCTED EXACT |
+| C131 | A right inverse with loss \(L_j\le n^2\) covers an output ball of scale \(n^{-2}\) under the displayed quantitative inverse-map hypothesis; the unit-coefficient target additionally requires the stated radius constant or a fixed normalization. | same C126–C131 note/checker | RECONSTRUCTED CONDITIONAL inverse-map gate |
+| C132 | Three material coordinate phases retain determinant one; conditional Gevrey-2 coefficients truncated at \(m_j\asymp j^2/\log n\) with \(K_j=n^{32}\) leave \(e^{-c_\eta j^2}\) residual. | research/2026-08-05-active-focus-activation-c132-c136.md; checks/active_focus_activation_c132_c136.py | RECONSTRUCTED determinant EXACT; residual implication CONDITIONAL |
+| C133 | Under the displayed uncancelled raw-feedback model, the scalar ledger selects weak parent-frequency routing, then destination activation, then focus; child-frequency routing and pre-amplified routing diverge. | same C132–C136 note/checker | RECONSTRUCTED EXACT conditional scale trichotomy; realization OPEN |
+| C134 | The equal-shell \(A_2\) circuit is not support-closed. BAFL requires \(O(n^{-4})\) retained dark/exported wake and worst-case \(O(n^{-6})\) pre-chart active return before an \(O(n^2)\) inverse. | same C132–C136 note/checker; research/2026-08-05-one-cell-stage-map-obstruction.md; checks/one_cell_stage_map_obstruction.py | RECONSTRUCTED non-closure EXACT; BAFL OPEN |
+| C135 | Transferring the same leading seed energy from parent volume to \(q_j^{-3}\) child volume forces the amplitude factor \(q_j^{3/2}\); the schedule exactly gives \(a_{j+1}\), \(E_{j+1}/E_j=n^{-4}\), and \(L_jb_j\le1\). | same C132–C136 note/checker | RECONSTRUCTED scale algebra EXACT; active focus/wake bound CONDITIONAL |
+| C136 | The full one-cell target is an exact unforced stage realizing C118/C119/C125, just-in-time routing, active \(q_j^{3/2}\) focus, \(L_j\le n^2\), retained wake \(O(n^{-4})\), and pre-chart BAFL active return \(O(n^{-6})\). | same C132–C136 note/checker; one-cell BAFL note/checker | RECONSTRUCTED OPEN TARGET; conditional reduction only |
 
 Cross-audit requested on: the coherence cap in C104; the Fork of C106
 (co-growing coefficient shift vs r²-amplified equation residual — a finite

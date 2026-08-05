@@ -248,54 +248,75 @@ Piola residual lemma in the ambient domain.  Its remaining gap is the
 uniform coalescing-edge analytic scalar construction and the gain-time
 parameter balance; it is not an internally closed carrier chain.
 
-## Current load-bearing theorem chain
+## Current load-bearing theorem: one \(A_2\) cell
 
-The remaining prize-level target is an integrated localized transition
-theorem with four linked estimates:
+The program is now frozen on one geometry. C107–C136 were reconstructed
+from the surviving registry and auditor notes, then re-derived with
+dependency-free checkers; they are not represented as byte-for-byte recovery
+of the lost drafts.
 
-1. Cross-audit and nonlinearly deploy the physical spectral carrier.  Exact
-   q-free velocity--pressure reconstruction, aspect-ratio-aware winding,
-   compact support, the aspect-uniform ambient Piola estimate, and the
-   uniform coalescing analytic scalar packet are now in hand at SELF status.
-   Conditional on the C82/C97 normalized curved-base hypotheses, their
-   combined curvature/viscosity/gain ledger closes in the existing geometric
-   schedule.  Those ambient hypotheses still need independent audit.  The
-   missing constructive step is material capture inside one physical
-   nonlinear transition, not another local scalar estimate.
-2. Realize the active covariance and endpoint map. A new one-material-phase
-   chart covers a full stress neighborhood modulo pressure around a biased
-   rank-two covariance and avoids leading cross-colour \(O(K)\) terms. It
-   has exact fixed-cohomology phase controls in a localized core, and its
-   common-affine Kelvin covariance derivative remains full rank.  Passive
-   long-window use is now excluded under a bounded launch-energy budget; the
-   viable one-phase route needs a genuinely sourced/reservoir-fed bounded
-   terminal bath.  Its infinite charged hierarchy has a uniform forward
-   Gevrey semigroup and flat finite-band tail, but the charged terminal wake
-   must be carried rather than erased.  Control-dependent/localized flow,
-   finite-\(K\) longitudinal correction, the launch mechanism, and the full
-   charged-plus-zero-wake endpoint map remain open. The three-phase construction
-   remains a coarse controlled splice: its finite Reynolds endpoint map is
-   onto, but clean physical amplitudes force collar matching through
-   \(2M+2\), not merely \(M\).
-3. Carry the global zero-charge wake. High Reynolds number supplies no
-   contraction. Stage renormalization contracts in every slightly
-   subcritical annular weight if the wake-restricted one-stage Lipschitz
-   constants are uniform; the critical tail needs an invariant graph.
-   Literal fixed-volume exponential material export is excluded by the
-   finite-energy displacement inequality, so any whole-space repair must use
-   a weaker Eulerian decoupling mechanism.
-4. Close an aspect-ratio-uniform all-order Gevrey induction through
-   \(M_j\asymp j^2/\log j\), at polynomial carrier \(K_j=j^A\), with
-   residual and seam errors \(e^{-c j^2}\). The outgoing seam is prescribed
-   by the exact Navier--Stokes collar jet rather than an impossible constant
-   Euler endpoint.
+The exact finite-dimensional and scalar-ledger layer now contains:
 
-That last rate beats every physical derivative cost and would make the
-terminal force \(C^\infty\)-flat.  No theorem in this repository closes
-this chain, so no Millennium conclusion is claimed.
+1. an equal-shell integer \(A_2\) hexagon and a dual-helicity paired gate
+   that cancels its first reality sideband;
+2. an unavoidable named \(\sqrt6\)-mode at second Picard order once the
+   terminal child is active;
+3. exact pump-depletion orbits and the weighted ladder polynomial
+   \[
+   \lambda^6-9\lambda^4+18\lambda^2-9,\qquad
+   {633\over250}<\sigma_*<{2533\over1000};
+   \]
+4. an exact unforced heat-decaying Beltrami pump with ideal gain
+   \[
+   G(t_*)={d\over\delta}(R-1-\log R);
+   \]
+5. the factorial schedule
+   \[
+   \ell_j=(j!)^{-8},\quad a_j=(j!)^{10},\quad
+   q_j=(j+1)^8,\quad b_j=(j+1)^{-2},\quad
+   F_j=q_j^{3/2},
+   \]
+   on which the recorded scalar budgets are summable.
 
-## Exact notes
+The remaining package is **backward-weighted active-focus leakage
+(BAFL)**. Put \(n=j+1\). The one-cell trajectory must realize the unforced
+depletion/gain blocks, route the dormant seed before activation, actively
+concentrate its energy by \(q_j^{3/2}\), and satisfy the two-channel response
+bound
 
+\[
+ \mathfrak L_j^{\rm act}\le Cn^{-6},\qquad
+ \mathfrak L_j^{\rm wake}\le Cn^{-4},\qquad
+ L_j\le Cn^2,
+\]
+
+so that \(L_j\mathfrak L_j^{\rm act}=O(n^{-4})\).  Constructing the
+localized trajectory is part of the BAFL package; the displayed inequalities
+are the BAFL estimate on that trajectory.
+
+The split is load-bearing. For the fixed nondegenerate paired gate of C116,
+a child of size \(b_j=n^{-2}\) creates the first unavoidable
+second-Picard leak with nonzero leading coefficient at natural size
+\(b_j^2=n^{-4}\).
+That exactly fits the retained-wake allowance, but it is two powers too
+large if it returns through an active chart with worst-case \(n^2\) inverse
+loss. Thus the transported-writer fork and the unfolded terminal gate are
+the same problem: prove that the second-Picard mode remains dark/exported,
+or gain an additional \(n^{-2}\) in its backward-weighted active return.
+
+No localized BAFL trajectory is constructed here. Consequently there is no
+unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
+
+## One-cell artifacts
+
+- [Transported-writer reconcile, Clebsch, and Weber (reconstructed C107–C113)](research/2026-08-05-transported-writer-reconcile-c107-c113.md)
+- [Terminal A2 paired gate and second-Picard leakage (reconstructed C114–C117)](research/2026-08-05-terminal-triad-hexagon-c114-c117.md)
+- [A2 depletion and enclosed ladder eigenvalue (reconstructed C118–C120)](research/2026-08-05-hexagon-depletion-eigenmode-c118-c120.md)
+- [Unforced decaying pump and gain gate (reconstructed C121–C125)](research/2026-08-05-unforced-decaying-pump-c121-c125.md)
+- [Factorial one-cell schedule (reconstructed C126–C131)](research/2026-08-05-factorial-stage-schedule-c126-c131.md)
+- [Just-in-time active focus and BAFL (reconstructed C132–C136)](research/2026-08-05-active-focus-activation-c132-c136.md)
+- [One-cell BAFL reduction and explicit A2 leakage](research/2026-08-05-one-cell-stage-map-obstruction.md)
+- [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)
 - [Two-colour rank theorem and three-beat repair](research/2026-07-29-two-colour-endpoint-rank.md)
