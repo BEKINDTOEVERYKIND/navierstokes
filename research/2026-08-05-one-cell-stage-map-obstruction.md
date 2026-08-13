@@ -528,6 +528,43 @@ identities propagates through the actual localized \(A_2\) linearization or
 controls its nonlinear, pressure, and retained-wake response; those remain
 inside RIGM/MCKC/BAFL.
 
+C179 supplies a second exact autonomous reservoir class. For every planar
+passive scalar \(\Theta\), the 2D3C field \(v_{A_2}+\Theta N\) is an exact
+unforced Navier--Stokes background, and the one-edge off-plane Leray symbol
+has determinant
+
+\[
+ \frac{(h\cdot p)^2(|p|^2-|g|^2)}{|p|\,|p+g|}.          \tag{3.10j}
+\]
+
+Thus separated source/gate radii give a genuine two-polarization edge
+chart, and planar coset translations can supply the \(q^2\)-to-\(q^3\)
+first-generation support count. This does not supply a propagator: reality
+separation, reverse rows, collisions, depletion, and physical endpoint
+coherence remain the **planar passive reservoir gate (PPRG)**.
+
+C180 strengthens the same-shell SCRG branch. The factorial C121 shell
+contains \(q+O(1)\) reality-complete octahedral directions whose normalized
+forward edges give an \(O(J^{-1}+q^{-1})\) tight frame on both source
+polarizations. A narrowed C176 slab still contains \(q^2\) reality pairs,
+and first-generation source--daughter collisions cost only a fixed factor.
+The gain interpretation fails at exactly the next step: the leading symbol
+is volume-preserving scalar transport, and the reservoir strain is only
+\(O(q^{-1/2})\). Closing this gap is the **finite-frequency composition
+closure (FFCC)**: either prove that the full velocity propagator is bounded
+polarization transport composed with the reservoir flow in the norm needed
+for endpoint coherence, or identify a controlled subprincipal
+stretching/Leray resonance that yields the missing focus.
+
+C181 rules out the simplest such subprincipal candidate on the existing
+packet. The actual affine Euler Kelvin propagator of a static vertical shear
+is uniformly \(O_\kappa(1)\) for every shear duration when its input covector
+satisfies \(|m|\ge\kappa|k_0|\). Hence appending this shear to the fixed
+C159/C176 projective tube cannot supply \(\sqrt q\). The same formula does
+allow gain \((\pi/2)X\) on a cone degenerating like \(X^{-1}\), so it is not
+a global no-gain theorem; a redesigned \(q^{-1/2}\)-normal-charge tube would
+have to repay all C159, residence, coherence, and BAFL ledgers.
+
 The coherent alternative has an exact kinematic target but an exact
 endpoint obstruction. The existing lattice contains a divergence-free
 packet with \(q^3\) conjugate pairs (\(2q^3\) nonzero Fourier wavevectors)
@@ -1052,6 +1089,19 @@ every prescribed collar or rewrite source into one unforced Navier--Stokes
 trajectory.  The finite-notch, time-sliced, residence, and graph identities
 alone do not constitute a stage map.
 
+C177--C181 replace the prescribed terminal pulse by two exact unforced
+reservoir candidates and then expose their common obstruction. Same-curl
+Beltrami reservoirs remove the additive writer, while planar 2D3C
+reservoirs allow broad frequency support and a full-rank one-edge chart.
+The factorial shell even supplies the full normalized \(q\)-way forward
+tight frame. Yet the dominant star is transport, and the exact static-shear
+Kelvin test is uniformly bounded on the fixed C159/C176 cone. Therefore the
+surviving converter must close FFCC/PPRG through the complete finite-frequency
+velocity evolution, or identify one controlled subprincipal resonance; no
+product of edge determinants or isolated daughters can be credited as the
+missing focus. This FFCC/PPRG clause remains inside C125, RIGM, MCKC, LCE,
+and BAFL.
+
 ## 8. Verification boundary
 
 `checks/one_cell_stage_map_obstruction.py` verifies the exponent,
@@ -1084,3 +1134,13 @@ on the propagated-tangent bound, and it does not verify SCRG or a stage.
 analytic-buffer, compact polynomial-preparation, and schedule arithmetic.
 It does not verify the full \(A_2\) evolution, pressure tails, nonlinear
 closure, C125, RIGM, MCKC, LCE, BAFL, or an unforced stage.
+`checks/planar_passive_reservoir_c179.py` verifies C179's exact 2D3C
+triangular algebra, one-edge determinant, compact-cone and coset ledgers,
+and Piola--Leray proxy, but not PPRG or physical focus.
+`checks/factorial_shell_transport_star_c180.py` verifies C180's factorial
+shell count, octahedral Gram, dominant symbol, narrowed-slab count,
+first-collision pruning, and scalar-composition boundary, but not FFCC.
+`checks/static_vertical_shear_kelvin_c181.py` verifies C181's exact affine
+Kelvin propagator, fixed-input-cone bound, and degenerating-cone asymptotic,
+but not a non-affine finite-frequency velocity estimate. None verifies the
+one-cell stage.

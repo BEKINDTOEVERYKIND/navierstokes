@@ -416,6 +416,26 @@ preparations also retain compact entrance support and converge terminally.
 These are genuine autonomous/scalar repairs; neither proves their required
 full \(A_2\), C125, pressure-tail, or nonlinear propagation estimates.
 
+C179--C181 isolate the terminal-reservoir branch without promoting an
+instantaneous Fourier edge to a stage map. The exact 2D3C background
+\(v_{A_2}+\Theta N\) supports arbitrary planar passive frequencies and its
+off-plane one-edge Leray symbol is uniformly two-polarization invertible
+away from the exact normal-charge and equal-radius defects. The factorial
+C121 shell is richer still: it contains a reality-complete octahedral
+palette of \(q+O(1)\) modes whose normalized forward rows form an almost
+isometric full-polarization star on a narrowed \(q^2\)-source C176 slab,
+with only constant-cost first-collision pruning. Its leading term,
+however, is scalar transport and its normalized strain is only
+\(O(q^{-1/2})\). C181 closes the corresponding affine principal test: the
+actual Euler Kelvin multiplier of a terminal vertical shear is uniformly
+bounded on the fixed C159/C176 input cone for arbitrarily long shear action.
+The missing \(\sqrt q\) gain appears only when that input cone degenerates
+at least as fast as \(q^{-1/2}\). The remaining finite-frequency velocity
+question is FFCC: prove that transport composition controls the coherent
+endpoint, or exhibit the precise subprincipal stretching/Leray resonance
+that defeats it. PPRG, depletion, C125, RIGM, BAFL, and the stage remain
+open.
+
 There is an exact coherent packet with \(q^3\) conjugate pairs
 (\(2q^3\) nonzero Fourier wavevectors) on the existing
 \(\mathbb ZN+\mathbb Zk_1+\mathbb Zk_2\) lattice, but it repeats in every
@@ -625,6 +645,9 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Correlated A2 tube residence and carrier capacity (C176)](research/2026-08-13-a2-correlated-tube-residence-c176.md)
 - [Same-curl unforced reservoir and cross-curl gate (C177)](research/2026-08-13-same-curl-unforced-reservoir-c177.md)
 - [Compact and analytic-buffer heat preparation (C178)](research/2026-08-13-compact-heat-preparation-c178.md)
+- [Planar passive reservoir and full-rank one-edge chart (C179)](research/2026-08-13-planar-passive-reservoir-c179.md)
+- [Factorial-shell full-polarization transport star (C180)](research/2026-08-14-factorial-shell-transport-star-c180.md)
+- [Static vertical-shear Euler Kelvin propagator (C181)](research/2026-08-14-static-vertical-shear-kelvin-c181.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)
