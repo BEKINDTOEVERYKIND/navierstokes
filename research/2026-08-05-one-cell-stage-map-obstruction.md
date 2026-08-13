@@ -565,6 +565,44 @@ allow gain \((\pi/2)X\) on a cone degenerating like \(X^{-1}\), so it is not
 a global no-gain theorem; a redesigned \(q^{-1/2}\)-normal-charge tube would
 have to repay all C159, residence, coherence, and BAFL ledgers.
 
+C182 closes a narrower finite-frequency test conditionally. Work on the
+parent-rescaled large torus with unnormalized norms. If the entrance packet
+satisfies
+
+\[
+ \|v_0\|_2\lesssim b,
+ \qquad \|v_0\|_\infty\lesssim bq,
+ \qquad
+ \|v_0\|_{W^{1/4,16}}\lesssim q^{1/4}\|v_0\|_{16},       \tag{3.10k}
+\]
+
+then the complete linearized Euler, and standard linearized
+Navier--Stokes transport-diffusion, propagator about the exact
+\(A_2\)+C180 base obeys
+
+\[
+                  \sup_{0\le t\le T_0}\|v(t)\|_\infty
+                              \lesssim bq^{9/8}           \tag{3.10l}
+\]
+
+on every fixed \(O(1)\) normalized interval. This is short of the raw
+\(bq^{3/2}\) focus by \(q^{-3/8}\), and remains short of the narrowed
+\(J^2\)-taxed target by \(J^2q^{-3/8}\to0\). The estimate uses an exact
+order-zero pressure rewrite and scale-uniform finite-\(p\) propagation; the
+large-torus Hölder and generic \(B^0_{\infty,1}\) shortcuts are explicitly
+invalid. C176/C180 do not prove (3.10k), so this is a conditional no-focus
+theorem, not unconditional FFCC.
+
+The C180 reservoir is preloaded and its common-shell heat factor cannot
+switch it on only at the terminal time. Its possible autonomous action
+through the preceding \(O(\log q)\) C159 window therefore survives C182.
+The corresponding FFCC target is now a smooth finite-frequency C159
+Floquet-frame theorem controlling sideband transport, Leray pressure, and
+the stable/growing off-diagonal response on the moving packet, plausibly at
+\(O(\operatorname{polylog}(q)/q)\). That rate is a target, not a proved
+estimate; an explicit controlled resonance violating it would instead be
+the only gain mechanism left in this same-shell branch.
+
 The coherent alternative has an exact kinematic target but an exact
 endpoint obstruction. The existing lattice contains a divergence-free
 packet with \(q^3\) conjugate pairs (\(2q^3\) nonzero Fourier wavevectors)
@@ -1089,18 +1127,24 @@ every prescribed collar or rewrite source into one unforced Navier--Stokes
 trajectory.  The finite-notch, time-sliced, residence, and graph identities
 alone do not constitute a stage map.
 
-C177--C181 replace the prescribed terminal pulse by two exact unforced
+C177--C182 replace the prescribed terminal pulse by two exact unforced
 reservoir candidates and then expose their common obstruction. Same-curl
 Beltrami reservoirs remove the additive writer, while planar 2D3C
 reservoirs allow broad frequency support and a full-rank one-edge chart.
 The factorial shell even supplies the full normalized \(q\)-way forward
 tight frame. Yet the dominant star is transport, and the exact static-shear
-Kelvin test is uniformly bounded on the fixed C159/C176 cone. Therefore the
-surviving converter must close FFCC/PPRG through the complete finite-frequency
-velocity evolution, or identify one controlled subprincipal resonance; no
-product of edge determinants or isolated daughters can be credited as the
-missing focus. This FFCC/PPRG clause remains inside C125, RIGM, MCKC, LCE,
-and BAFL.
+Kelvin test is uniformly bounded on the fixed C159/C176 cone. C182 further
+shows, conditional on an explicit unnormalized entrance/tail norm, that a
+fixed-time isolated linear C180 star is short of the coherent target even
+after the \(J^2\) envelope tax. It does not control the preloaded reservoir
+through the autonomous \(O(\log q)\) C159 window. Therefore the surviving
+same-shell converter must prove a smooth C159 Floquet-frame
+sideband/pressure theorem, with the stable/growing off-diagonal response
+targeted at \(O(\operatorname{polylog}(q)/q)\), or identify one controlled
+subprincipal resonance that violates that rate and supplies physical focus.
+The planar branch still requires PPRG. No product of edge determinants or
+isolated daughters can be credited as the missing focus. These FFCC/PPRG
+clauses remain inside C125, RIGM, MCKC, LCE, and BAFL.
 
 ## 8. Verification boundary
 
@@ -1142,5 +1186,10 @@ shell count, octahedral Gram, dominant symbol, narrowed-slab count,
 first-collision pruning, and scalar-composition boundary, but not FFCC.
 `checks/static_vertical_shear_kelvin_c181.py` verifies C181's exact affine
 Kelvin propagator, fixed-input-cone bound, and degenerating-cone asymptotic,
-but not a non-affine finite-frequency velocity estimate. None verifies the
-one-cell stage.
+but not a non-affine finite-frequency velocity estimate.
+`checks/holder_terminal_no_focus_c182.py` verifies C182's pressure algebra,
+C180 base-norm ledger, finite-\(p\) interpolation exponents, raw and
+\(J^2\)-taxed target ratios, and fixed-time boundary. It does not prove the
+entrance/tail hypothesis, the autonomous \(O(\log q)\) C159
+Floquet-frame/sideband/pressure estimate, nonlinear depletion, localization,
+C125, RIGM, BAFL, or the one-cell stage. None verifies the one-cell stage.

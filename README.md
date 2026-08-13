@@ -416,7 +416,7 @@ preparations also retain compact entrance support and converge terminally.
 These are genuine autonomous/scalar repairs; neither proves their required
 full \(A_2\), C125, pressure-tail, or nonlinear propagation estimates.
 
-C179--C181 isolate the terminal-reservoir branch without promoting an
+C179--C182 isolate the terminal-reservoir branch without promoting an
 instantaneous Fourier edge to a stage map. The exact 2D3C background
 \(v_{A_2}+\Theta N\) supports arbitrary planar passive frequencies and its
 off-plane one-edge Leray symbol is uniformly two-polarization invertible
@@ -431,10 +431,23 @@ actual Euler Kelvin multiplier of a terminal vertical shear is uniformly
 bounded on the fixed C159/C176 input cone for arbitrarily long shear action.
 The missing \(\sqrt q\) gain appears only when that input cone degenerates
 at least as fast as \(q^{-1/2}\). The remaining finite-frequency velocity
-question is FFCC: prove that transport composition controls the coherent
-endpoint, or exhibit the precise subprincipal stretching/Leray resonance
-that defeats it. PPRG, depletion, C125, RIGM, BAFL, and the stage remain
-open.
+question is narrowed further by C182. On a fixed \(O(1)\) normalized
+interval, any complete linearized C180 propagator whose entrance packet
+obeys the explicit unnormalized \(L^2\), \(L^\infty\), and scale-\(q\)
+\(W^{1/4,16}\) tail bounds has endpoint at most \(Cbq^{9/8}\). This is
+short of the raw coherent target by \(q^{-3/8}\), and remains short after
+the C180 \(J^2\) normalization tax. The result is conditional: C176/C180
+do not construct those entrance/tail bounds, and the large-torus Hölder and
+generic \(B^0_{\infty,1}\) shortcuts are invalid.
+
+The same-curl reservoir is preloaded and has no autonomous heat switch, so
+its possible action through the preceding \(O(\log q)\) C159 window is not
+covered by C182. That surviving FFCC branch now asks for a smooth
+C159 Floquet-frame sideband/pressure theorem on the moving packet, with the
+off-diagonal response expected to be at most
+\(O(\operatorname{polylog}(q)/q)\), or for an explicit controlled
+resonance violating that estimate. PPRG, depletion, C125, RIGM, BAFL, and
+the stage remain open.
 
 There is an exact coherent packet with \(q^3\) conjugate pairs
 (\(2q^3\) nonzero Fourier wavevectors) on the existing
@@ -648,6 +661,7 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Planar passive reservoir and full-rank one-edge chart (C179)](research/2026-08-13-planar-passive-reservoir-c179.md)
 - [Factorial-shell full-polarization transport star (C180)](research/2026-08-14-factorial-shell-transport-star-c180.md)
 - [Static vertical-shear Euler Kelvin propagator (C181)](research/2026-08-14-static-vertical-shear-kelvin-c181.md)
+- [Conditional finite-p terminal no-focus theorem (C182)](research/2026-08-14-holder-terminal-no-focus-c182.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)
