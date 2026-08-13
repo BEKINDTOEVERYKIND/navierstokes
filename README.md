@@ -403,6 +403,19 @@ central-fiber C154 shear.  An enclosing spherical collar costs only
 background residence and arithmetic capacity, not localized finite-frequency
 propagation or the unforced collar correction.
 
+C177 and C178 attack that unforced correction from complementary sides.
+A same-curl Beltrami reservoir can be preloaded into the pump as an exact
+unforced heat-decaying background: it contributes a homogeneous tangent and
+no additive writer.  Different curl values instead create the exact cross
+source \((\kappa_1-\kappa_2){\mathbb P}(U\times R)\), while a common shell's
+single heat envelope supplies no polarization timing.  For the collar, a
+fixed compact monotone ramp has no exact \(L^2\) backward-heat preparation,
+but a forward analytic buffer has an explicit contractive entrance datum
+with exact pure-heat terminal cancellation.  Local Laplacian-polynomial
+preparations also retain compact entrance support and converge terminally.
+These are genuine autonomous/scalar repairs; neither proves their required
+full \(A_2\), C125, pressure-tail, or nonlinear propagation estimates.
+
 There is an exact coherent packet with \(q^3\) conjugate pairs
 (\(2q^3\) nonzero Fourier wavevectors) on the existing
 \(\mathbb ZN+\mathbb Zk_1+\mathbb Zk_2\) lattice, but it repeats in every
@@ -562,6 +575,17 @@ therefore signed full-packet cancellation, \(O(b)\)-action just-in-time
 exposure, or controlled spatial export--not an automatic eikonal, heat, or
 graph-transform gain.
 
+C177 removes the fatal additive-writer ratio on an exact same-curl manifold,
+conditional on the actual propagated tangent satisfying C125.  Its remaining
+same-curl reservoir realization gate (SCRG) is to recover the full physical
+polarization and charge action from one static shell, or cancel every
+noncommon-curl cross source.  C178 separately shows that prescribed collar
+ramps can be absorbed exactly at the pure-heat endpoint after analytic
+buffering, and approximately by compact local entrance data.  The tuned C142
+rate makes that scalar preparation smaller than the \(n^{-28}\) seed, but the
+full \(A_2\) evolution and RIGM/MCKC response are still the load-bearing
+estimates.
+
 No localized BAFL trajectory is constructed here. Consequently there is no
 unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 
@@ -599,6 +623,8 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Time-sliced rigid collar and rechart-or-rewrite obstruction (C174)](research/2026-08-06-time-sliced-rigid-collar-c174.md)
 - [Lagrangian resonance and invariant-graph Melnikov gate (C175)](research/2026-08-13-lagrangian-resonant-graph-obstruction-c175.md)
 - [Correlated A2 tube residence and carrier capacity (C176)](research/2026-08-13-a2-correlated-tube-residence-c176.md)
+- [Same-curl unforced reservoir and cross-curl gate (C177)](research/2026-08-13-same-curl-unforced-reservoir-c177.md)
+- [Compact and analytic-buffer heat preparation (C178)](research/2026-08-13-compact-heat-preparation-c178.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)

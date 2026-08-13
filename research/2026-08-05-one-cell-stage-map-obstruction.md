@@ -488,6 +488,46 @@ by signed packet cancellation, an \(O(b)\)-action just-in-time exposure, or
 spatial export with controlled global tails; no splitting-independent
 no-go is claimed.
 
+C177 supplies an exact autonomous half-repair to that gate.  If the old
+pump and a preloaded reservoir share one curl eigenvalue, their heat-decaying
+sum is an exact unforced Beltrami background.  The reservoir then appears in
+the perturbation equation only through a homogeneous tangent, so there is no
+absolute writer to divide by the \(n^{-28}\) seed.  Under C177's explicit
+propagated-tangent hypothesis the relative charge is only
+\(O(b\log n)=o(1)\).  The repair is not yet the converter: distinct curl
+components create the exact additive block
+
+\[
+ \varepsilon(\kappa_1-\kappa_2)
+      {\mathbb P}(U_0\times R_0),                 \tag{3.10h}
+\]
+
+and one common shell has only a scalar heat envelope, so it cannot supply
+the prescribed noncommuting polarization clock.  Recovering full physical
+polarization on a same-curl multi-direction shell, or canceling (3.10h), is
+the **same-curl reservoir realization gate (SCRG)**.
+
+C178 addresses the separate question of absorbing the prescribed collar
+ramps into entrance data.  A fixed nonzero compact profile times a monotone
+scalar ramp is not in the exact backward heat range of any \(L^2\) datum.
+There are nevertheless two constructive repairs.  Forward buffering
+
+\[
+ g=e^{\sigma\Delta}h,
+ \qquad
+ z_0=\int_0^T\vartheta'(s)e^{(\sigma-\nu s)\Delta}h\,ds,
+ \qquad \sigma\ge\nu T,                            \tag{3.10i}
+\]
+
+gives exact pure-heat terminal cancellation with an \(L^2\)-contractive
+entrance datum, at the price of analytic global tails.  Alternatively,
+finite polynomials in \(-\Delta\) give compact divergence-free entrance
+data whose terminal errors tend to zero.  On the tuned C142 rate the scalar
+preparation is factorially smaller than the C125 seed.  None of these heat
+identities propagates through the actual localized \(A_2\) linearization or
+controls its nonlinear, pressure, and retained-wake response; those remain
+inside RIGM/MCKC/BAFL.
+
 The coherent alternative has an exact kinematic target but an exact
 endpoint obstruction. The existing lattice contains a divergence-free
 packet with \(q^3\) conjugate pairs (\(2q^3\) nonzero Fourier wavevectors)
@@ -1036,3 +1076,11 @@ Riccati/Melnikov identities, but not the actual broad-packet RIGM estimate.
 background flow, central-fiber slab, lattice-capacity, enlarged-collar, and
 fixed-cocycle ledgers.  It does not verify the localized finite-frequency
 packet, converter, C125, MCKC, LCE, BAFL, or an unforced stage.
+`checks/same_curl_unforced_reservoir_c177.py` verifies C177's exact
+same-curl darkness, homogeneous perturbation structure, cross-curl source,
+heat-flatness, and scale ledgers.  Its C125 conclusion remains conditional
+on the propagated-tangent bound, and it does not verify SCRG or a stage.
+`checks/compact_heat_preparation_c178.py` verifies C178's pure-heat Duhamel,
+analytic-buffer, compact polynomial-preparation, and schedule arithmetic.
+It does not verify the full \(A_2\) evolution, pressure tails, nonlinear
+closure, C125, RIGM, MCKC, LCE, BAFL, or an unforced stage.
