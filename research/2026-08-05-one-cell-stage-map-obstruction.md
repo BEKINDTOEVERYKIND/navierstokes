@@ -280,7 +280,7 @@ entrance/wake state classes also remain to be controlled.
 
 ### 3.2 Active-focus audit: affine failure and the broad-band target
 
-C142--C148 test the active-focus step without changing the \(A_2\)
+C142--C151 test the active-focus step without changing the \(A_2\)
 geometry. The strongest global affine selector is explicit: with
 \(h=q^{3/2}\), it amplifies the intended child velocity by
 \(\asymp h\) while leaving the two named C117 wake velocities bounded.
@@ -307,6 +307,151 @@ parent transport and gives an integrated wake-to-active block \(O(b)\).
 The direct \(O(\log h)\) estimate does not place the retained
 \(b^2=n^{-4}\) wake below the \(b^3=n^{-6}\) active allowance; the ratio
 of its natural scale to that allowance is \(12n^2\log n\).
+
+The [C171 co-moving collar audit](2026-08-06-comoving-piola-collar-c171.md)
+and its [checker](../checks/comoving_piola_collar_c171.py) separate the
+parent-cross loss from the wake-return loss.  If a compact curl potential is
+transported as a one-form by the parent flow \(X\), the resulting Piola
+velocity is exactly divergence free and satisfies
+
+\[
+ U\circ X=Fw_0,\qquad
+ D_t^VU=(U\mathbin\cdot\nabla)V,
+ \qquad G_{\rm parent}=2(U\mathbin\cdot\nabla)V.       \tag{3.10a}
+\]
+
+Thus material transport removes the large stationary term
+\(V\cdot\nabla\chi\), but the velocity-linearized strain terms add rather
+than cancel.  With the full Piola/F-jet polynomial denoted by \(M_F\), its
+normalized time-integrated and backward-focused scales are
+
+\[
+ M_Fq^{-5/2}\log h
+ \quad\xrightarrow{\ \times h\ }\quad
+ M_Fq^{-1}\log h=12M_Fn^{-8}\log n.                \tag{3.10b}
+\]
+
+Conditional on
+
+\[
+ M_F\log n=o(n^2),                                  \tag{3.10c}
+\]
+
+the last scale is \(o(n^{-6})\); one prescribed-ray chart charge
+\(\kappa_{\rm ch}\le Cn^2=Cq^{1/4}\) gives
+\(M_Fq^{-3/4}\log h=o(n^{-4})\).  A rigid collar following only the central
+trajectory proves the same parent-cross arithmetic without \(M_F\), but it
+is not material and therefore still owes boundary-crossing and retained-wake
+control.  Leray projection and the pressure complement are \(L^2\)
+contractions of the raw residual, but the pressure tail is global and the
+backward active propagator need not be contractive.
+
+This gain does not supply the missing factor \(b\) in the wake-to-active
+block.  C171 gives an explicit real zero-charge \(A_2\) wake-to-child triad
+and a separate allowed polarization for which the Piola ordering is bright;
+reality partners add rather than cancel.  For the actual C140 wake, C141's
+fixed-projector calculation remains the sharper statement: its first return
+is the nonzero cubic term, so its factor \(b\) comes from one additional
+interaction, not from charge or reality by itself.  The exact collar
+obligation is therefore
+
+> **Material-collar kernel closure (MCKC).** (i) Prove (3.10c), including
+> the required first two label derivatives, or control boundary crossing
+> for the rigid center-following substitute; and (ii) prove for the actual
+> retained C140 wake \(w\) that its integrated wake-to-active block obeys
+> \(\|{\cal L}_{WA}w\|\le Cb\|w\|\), or export it with stage-uniform
+> pressure/heat tails.
+
+MCKC settles neither the inherited self/viscous response nor LCE/BAFL.  It
+is the now-explicit collar/kernel subproblem inside those estimates.
+
+The [C172 pressure-dark audit](2026-08-06-affine-pressure-dark-material-transport-c172.md)
+and its [checker](../checks/affine_pressure_dark_material_transport_c172.py)
+rule out exact pressure darkness as a local replacement for MCKC on the
+existing selector.  For a constant matrix \(A\), the determinant of the
+pressure-dark compression on \(k^\perp\) is
+\(k^T\operatorname{adj}(A)k/|k|^2\).  A rank-two matrix therefore has
+dark frequencies only on the union of the planes normal to its right and
+left kernels, and no nonzero \(L^2(\mathbb R^3)\) localized field can obey
+\({\mathbb P}(AU)=0\) when \(\operatorname{rank}A\ge2\).  The fixed
+trace-free rank-one curl-kernel exception has no material, \(L^p\), or
+pointwise Piola amplitude gain.  In the displayed C142 launch frame,
+\(A=\sigma(d\otimes N+N\otimes d)\); per displayed \(N\)-coefficient, the
+full \(2AU\) residual has projected squared sizes \(216\sigma^2\) at the
+child and \(162\sigma^2\) at each named wake.  Making all three start-frame
+fibers dark for one constant selector forces \(AN=0\) and removes their
+Kelvin velocity gain.  Scalar Piola is the only universal
+datum/label-independent zero-order affine multiplier, and no universal
+translation-invariant finite-order velocity operator reproduces the
+rational Hodge generator on an open frequency cone.  Variable-coefficient
+auxiliary systems and mode-tailored antidivergences are outside that last
+no-go.
+
+The [C173 paired-multipole audit](2026-08-06-paired-multipole-piola-collar-c173.md)
+and its [checker](../checks/paired_multipole_piola_collar_c173.py) supply an
+exact finite-coordinate repair, not the broad-band response theorem.  The
+paired symmetric collars
+
+\[
+             w_{\rm pair}={128\over127}w_r-{1\over127}w_{2r}
+                                                               \tag{3.10d}
+\]
+
+retain \(Sx\) on the inner core while canceling the full degree-three
+moment.  Their Fourier transform vanishes to at least order five at the
+origin, two orders beyond one symmetric collar.  At fixed local-core
+normalization this gives a \(q^{-2}\) improvement on fixed,
+chart-tracked parent-scale coordinates.  A material-label triple-shell
+polynomial of spatial order 12 and coefficient \(\ell^1\)-norm \(343/64\)
+preserves the core and kills the named \(|\zeta|^2=2,6\) fibers through two
+Fourier derivatives, including the affine coefficient and its formal first
+curvature variation.  This removes the finite named-fiber part only.  A
+robust underlying-jet-independent two-jet notch on \(q\) distinct axial
+labels has scalar degree at least \(3q\), or radial differential order at
+least \(6q\), outside the current Gevrey budget.  The actual C140 profile
+normalization, moving active bundle, curvature remainder, full local
+\(L^2\)/non-normal response, and periodic pressure tails remain open.
+
+The [C174 time-sliced rigid-collar audit](2026-08-06-time-sliced-rigid-collar-c174.md)
+and its [checker](../checks/time_sliced_rigid_collar_c174.py) test the rigid
+branch by slicing the gain window into \(J=O(\log h)\) prescribed pieces.
+Under its bounded profile-variation hypothesis,
+\(\Lambda\log n=o(n^2)\), factorial Reynolds decay, and the stated
+trajectory-separation assumptions, the switch, parent-cross, self,
+viscous, and instantaneous pressure-tail ledgers integrated along a
+separated trajectory all fit the schedule.  These are residual bounds for
+a prescribed approximate trajectory, not an unforced operation.  An exact
+coordinate rechart satisfies
+
+\[
+ \widetilde P_{J-1}\cdots\widetilde P_0
+ =Q_J^{-1}(P_{J-1}\cdots P_0)Q_0.                \tag{3.10e}
+\]
+
+It represents the same physical cocycle and produces no PDE source, but it
+is a Floquet similarity only when \(Q_J=Q_0\).  It does not reset physical
+support, bandwidth, or C154's accumulated shear.  At the central first-jet
+return times an isotropic radius shrink \(O(J^{-1})\) is sufficient for
+residence, with reciprocal-volume \(O(J^3)\), fixed-energy amplitude
+\(O(J^{3/2})\), and bandwidth \(O(J)\) costs.  A uniform second-flow-jet
+bound and residence between returns remain open.
+
+A physical rewrite has a different ledger.  If \(\delta_m\) is its relative
+mismatch in the normalized growing child coordinate, then its individual
+terminal-weighted norm is exactly \(\delta_m b\).  Hence a robust
+triangle-inequality proof of the \(O(b^3)\) active allowance requires
+
+\[
+                         \sum_m\delta_m=O(b^2).    \tag{3.10f}
+\]
+
+The sum of individual norms is not a lower bound for a specially phased
+signed Duhamel response.  This leaves the exact **rechart-or-rewrite
+obstruction (RRR)**: either prove finite-tube residence/coherence under the
+C154 shear, including second jets and between-return control, or prove the
+signed physical-rewrite cancellation directly while preserving the target
+cocycle.  Neither branch supplies MCKC(ii)'s broad-band wake kernel/export
+bound or absorbs the prescribed collar residual into an unforced stage.
 
 The coherent alternative has an exact kinematic target but an exact
 endpoint obstruction. The existing lattice contains a divergence-free
@@ -349,15 +494,326 @@ The reservoir variant moves that uniformity into C125. A point seed
 \(26n^{-20}\log n\) is larger than the seed by
 \(26n^8\log n\). Absolute summability therefore gives no retained gain.
 
-This isolates the **localized broad-band relative-gain theorem (LBRG)** as
-the active-focus/gain subproblem. The exact axial-layer linearization is
-the variable-fiber operator C148, not the finite C120 matrix and not a
-Toeplitz block. LBRG must construct an eikonal-rephased positive amplitude
-cocycle across \(m\asymp q\), tangential bandwidth \(q\), control packet
-edges and nonlinear descendants, and prove the C125 weighted defect
-relative to \(n^{-28}\). It must also feed the unfolded localized
-next-pump conversion while satisfying LCE. LBRG is a concrete component
-of BAFL, not a replacement for it.
+The exact axial-layer linearization is the variable-fiber operator C148,
+not the finite C120 matrix and not a Toeplitz block. C149 settles one local
+ray of its principal high-frequency problem: a nonsymmetric three-root C121
+pump has a vertical elliptic ray with bounded periodic covector and a
+simple expanding Floquet multiplier. Its dimensionless inertial-time
+exponent is
+
+\[
+ {9\over16}\sqrt3(2+\delta)\epsilon+O(\epsilon^2),
+ \qquad \epsilon={1-\delta\over2+\delta}>0.                  \tag{3.13}
+\]
+
+For an inviscid or instantaneously frozen physical background
+\(P_0U_\delta(Kx)\), this exponent is multiplied by \(P_0K\) per unit
+physical time; the unforced heat-decaying pump instead uses the C149
+inertial-time reparametrization.
+
+This removes the hyperbolic frequency-stretch objection at the local
+principal-cocycle level, and C127 makes its \(O(\log n)\) heat ledger
+harmless. It does not yet provide a localized packet. For fixed small
+\(\epsilon\), the selected critical-point ray has nonzero axial speed and
+travels \(O(\log n)\) parent lengths during the gain interval, requiring a
+co-moving or long core.
+
+C152 supplies an exact zero-drift alternative on this same pump. For
+\(\delta=4/5\), the regular level \(f_\delta=0\) is one contractible closed
+streamline in the phase torus. Its full three-dimensional linearized return
+is the rank-one shear \(F=I+u\otimes g_0\), and its periodic-covector plane
+\(u^\perp\) contains an explicit off-plane direction. The Kelvin amplitude
+monodromy on that direction has numerical trace
+\(16716.8837799\ldots\); C153 retains this number only as orientation.
+C159 now supplies the theorem-grade sign. It reduces the periodic covector
+to one scalar quadrature and, in a periodic transverse frame, certifies by
+outward arithmetic that a fixed positive vector is a strict cooperative
+subsolution. Hence \(\rho(M)>1\); the exact determinant-one identity gives
+\(\operatorname{tr}M>2\). No floating trace or precomputed amplitude column
+is a premise. C154 also gives the exact fiberwise shear
+\((F^{-T})^\ell=I-\ell g_0\otimes u\). An \(O(q)\) band with nondegenerate
+width in the shearing direction therefore grows to \(\Theta(q\log q)\)
+over \(\Theta(\log q)\) returns. Correlation of every displacement with
+\(u^\perp\) removes the shear but leaves a two-dimensional fiber; a
+three-dimensional candidate must instead pay a \(q/\log q\) initial width
+in the shearing direction or provide another correlation mechanism.
+
+Normal charge supplies an exact partial nonlinear protection. If the
+retained real charge band is \(S\cup(-S)\), with
+\(S=[m_0-\Delta,m_0+\Delta]\) and \(m_0>3\Delta\), then
+
+\[
+ P_HB(v_H,v_H)=0,                                           \tag{3.14}
+\]
+
+and degree three is the first support-allowed active return. However, C151
+shows that this grading does not remove derivatives. Two explicit limiting
+unstable rays have the exact principal scales
+
+\[
+ \text{wake}\asymp QA^2,\qquad
+ \text{growing-line return}\asymp Q^2A^3,                   \tag{3.15}
+\]
+
+with nonzero return projection \(-9/40\); the displayed same-charge \(A_2\)
+lattice sequences converge to this limiting symbol. For fixed small
+\(\epsilon>0\), nearby retuned integer directions retain it by continuity,
+but their microlocal PDE realization remains open.
+
+We call (3.15) the **derivative-amplified cubic return (DACR)**. For one
+quarter-period pair in the limiting cocycle, C155 closes the
+zero-incoming-wake, first-period averaging question. Its complete selected
+coefficient is
+
+\[
+ \mathfrak C_0={3\over64}\left[-24\pi-3
+ +3\cos\!\left({4\sqrt{10}\pi\over5}\right)
+ +4\sqrt{10}\sin\!\left({4\sqrt{10}\pi\over5}\right)\right]
+ <-{21\over8}. \tag{3.16}
+\]
+
+The sign persists for continuously normalized right/dual-left branches at
+all sufficiently small positive \(\epsilon\). This rules out Floquet
+averaging as a cancellation for that pair, but it does not produce an
+iterable scalar map: the sum wake is nonzero after the period and must be
+retained in the state. Moreover the resulting \(Q^{-1}\) balance is a
+single-Fourier-coefficient scale. C147's \(q^{-2}\) quantity is a total
+coherent point amplitude over \(q^3\) modes, so no packet gain threshold
+follows without the aggregate normalization and all cross-channel sums.
+
+C156 gives one exact fixed-ring boundary: cancellation of the whole
+quadratic complement on one limiting resonant ring forces support onto one
+Fourier ray. Its proposed stronger secular-coercivity boundary does not
+survive a shared-wake audit. The coefficient \(\mathfrak K(-t)\) comes from
+reinitializing the neutral difference wake after exchanging the parents;
+it is not the reverse-parent coefficient in the same two-mode evolution.
+With the one causal difference wake shared by both equations, exact
+reevaluation gives
+
+\[
+ \mathfrak K_{0\leftarrow\phi}(t)=\mathfrak K(t),\qquad
+ \mathfrak K_{\phi\leftarrow0}(t)=-\mathfrak K(t).           \tag{3.17}
+\]
+
+At quarter separation these are \(-9\pi/8\) and \(+9\pi/8\). Their
+retained-energy secular sum is zero, as the Euler energy identity requires.
+The former negative pair-symmetric formula and its scalar-phase no-go are
+therefore withdrawn.  In fact the corrected antisymmetric fixed-ring
+normal form has the explicit strictly positive three-ray balance (4.17) of
+C156. This is a genuine candidate invariant distribution, although it does
+not cancel the quadratic wake or survive finite \(\epsilon\) by itself.
+
+C157 begins the required radial thickening. For two distinct radii, two
+reflected pair decompositions have the same quadratic output but linearly
+independent projected wake vectors. Their two scalar pair products cannot
+cancel that output. The determinant is proportional to \(A-B\), so its
+inverse loses one power of radial separation and can cost \(O(q)\) on
+adjacent \(q^{-1}\)-spaced layers. A full slab may have more decompositions,
+which this rank-two test does not classify.
+
+C158 fixes the reduced-half-lattice diagonal normalization. For \(M\)
+equal-modulus positive-frequency representatives and an order-one bounded
+diagonal kernel,
+
+\[
+ \Lambda_{\rm up}={Q^2A_{\ell^1}^2\over M}.                 \tag{3.18}
+\]
+
+At \(M=q^3\), \(Q=q\), this is \(q^{-5}\) at the C147 seed, one at the
+formal coefficient scale \(q^{1/2}\), and \(q^{3/2}\) at the target.
+Reality doubles the Fourier energy, while the selected cone supplies only
+fixed-factor comparability between \(A_{\ell^1}\) and the physical coherent
+point component. This remains an upper-bound ledger, not a lower bound or a
+recovered cubic no-go.
+
+C160 tests whether radial detuning supplies the missing cancellation. For
+two unequal radii and fixed interior nonzero angular separation, the unique
+periodic sum- and difference-wake return means cancel exactly, and the causal
+directed return has zero Cesàro long-time mean. However,
+
+\[
+ \omega_-\asymp {|A-B|\over A+B}.                           \tag{3.19}
+\]
+
+Thus adjacent normalized layers separated by \(q^{-1}\) detune only after
+time \(O(q)\), far longer than the \(O(\log q)\) gain window. This is not a
+useful short-stage cancellation estimate.
+
+C161 avoids carrying all \(q^3\) modes through that nonlinear window. It
+retains a \(q^2\)-mode source packet during the long gain, matching the real
+two-dimensional capacity suggested by C154's periodic-covector plane, and
+creates the third Fourier coordinate only at the endpoint. This dimension
+count does not supply \(q^2\) exact torus frequencies in that plane; C170
+below makes its arithmetic boundary explicit. On the cofinal even-\(n\)
+schedule, a reality-symmetric set of \(q\) nonzero pure-normal shifts gives
+\(q^3\) distinct first daughters, while the
+normalized abstract bright state
+
+\[
+ B_q=q^{-1/2}\sum_{a=1}^q e_a                              \tag{3.20}
+\]
+
+preserves \(\ell^2\) and changes the half-lattice coefficient-\(\ell^1\)
+scale from \(bq=n^6\) to \(bq^{3/2}=n^{10}\). The pure-normal gate bundle
+has zero gate--gate Euler self-interaction. Splitting the abstract quarter
+rotation into \(J=b^{-1}\) factors meets the conditional C146 powers
+\(b,b^2,b^3\). These facts are support and Hilbert-space arithmetic, not a
+physical Leray propagator or a point-coherence lower bound.
+
+C162 rules out the most direct circular realization of (3.20). At its
+tuned height the forward edge is nonzero, but the exact forward/reverse
+product is
+
+\[
+ \kappa_{\rm f}\kappa_{\rm r}=-{1\over4}+{i\over4},          \tag{3.21}
+\]
+
+and the reverse vector also leaves the selected source line. No phase or
+positive diagonal rescaling turns this specified block into a skew star.
+Other polarizations and time-dependent/full gate bundles remain open.
+
+C163 repairs the complex phase, but only after compressing to the selected
+source and forward-bright lines.  For the fixed equal-magnitude
+dual-helicity gate \(E_0=(e_x-e_y)/\sqrt2\), signed height
+\(-1\le y<\infty\),
+and \(h=\cos\phi-\sin\phi\), the compressed product is
+
+\[
+ -A^2R,\qquad
+ R={h^2\over2}\left[1+
+ { (\cos\phi+\sin\phi)^2y^2(y-2)
+    \over4(y^2+2y+4)}\right].                       \tag{3.22}
+\]
+
+It is strictly negative away from \(h=0\), and on the symmetric
+reality-safe range \(|y|\le1\) one has \(R\ge h^2/4\).  The selected
+compression is diagonally similar to a skew block.  The full reverse
+interaction, however, has an explicit same-wavevector component in the
+orthogonal source polarization, so this weighted rotation is not a closed
+physical subsystem.  Static synchronization also fails on an angular
+interval: for any nonzero shared intensity sum \(W\), the squared rate has
+the rigid linear coefficient \(-W\sin(2\phi)/2\), independent of the gate
+heights.  Full two-polarization evolution or a genuinely time-dependent
+unfolding is therefore load-bearing.
+
+C164 resolves the complete frozen two-polarization block.  Its source
+round-trip eigenvalues are
+
+\[
+ u^2,\qquad
+ u^2{(2-y)(y+2)^2\over2(y^2+2y+4)}.                \tag{3.23}
+\]
+
+A nonzero reality pair generically shares only the tangential source line.
+On the whole charge lattice that line is not a hidden focusing channel: for
+an arbitrary real pure-normal shear bundle it satisfies
+
+\[
+ Z_t=-i(p_h\mathbin\cdot W_h)Z,\qquad
+ \|Z(t)\|_\infty\le e^{-\nu|p_h|^2t}\|Z(0)\|_\infty. \tag{3.24}
+\]
+
+Thus coefficient spreading on the common line is phase cancellation in
+the exact linearized scalar fiber. C165 also closes the most direct
+synchronization controls negatively. A prescribed common chirped two-level
+pulse has an explicit \(O(J^{-1})\) population error on a compact rate
+interval, but its normalized envelope area is
+\(2J/3\), not the \(O(1)\) action in C161, and its final phase is generally
+rate dependent.
+
+Time ordering does escape the common-line algebra at finite dimension.
+C166 proves
+
+\[
+ [H_r,H_t]e_\sigma={2\over7}e_t                 \tag{3.25}
+\]
+
+for the reality pair \(y=\pm1\), and its explicit first-neighbour two-pulse
+Galerkin endpoint has point ratio \(\sqrt{3/2}\). The raw
+coefficient-energy factor \(113/112\) is prescribed-pump work, not a
+conservative splitter or an unforced pulse. C167 then rules out the static
+independent-edge scalar star and its scalar-return full-fiber relaxation on
+an open angular/radial sheet: reality forces the non-tangential common slope
+\(2\sigma i/y\), incompatible across distinct heights, while the
+pair-summed full-fiber return retains the strict gap
+
+\[
+ {2y^2(y^2+8)\over y^4+4y^2+16}>0.                \tag{3.26}
+\]
+
+C168 removes C166's first-neighbour truncation for one source.  The radial
+gate is a bounded full-integer nearest-neighbour operator and the
+tangential gate is globally square-zero. A unit tangential pulse has exact
+perturbation **point** gain \(\sqrt2\) and half-lattice coefficient energy
+\(3/2\); after a nonzero radial action \(1/100\), the all-walk tail is below
+\(1/32\), the point gain remains above \(13/10\), and
+the half-lattice endpoint energy is below three.  This is an exact
+prescribed-pump linear statement, not a nonlinear or unforced stage.
+
+C169 gives the exact nonlinear interpretation.  Every real fixed-plane
+2D3C solution splits into autonomous two-dimensional Navier--Stokes and a
+passive transverse scalar.  If the latter initially has \(q_{\rm s}\)
+signed modes and coefficient norm \(G_t\), then
+
+\[
+ \|\Theta(t)\|_\infty\le\sqrt{q_{\rm s}}G_t.       \tag{3.27}
+\]
+
+For C161's literal \(q_{\rm s}=q\) convention, a coherent transverse target
+\(cbq^{3/2}\) requires \(G_t\ge cbq\), or half that for the difference of
+two full solutions. Here \(G_t\) is a coefficient-\(\ell^2\) norm and its
+energy is \(G_t^2\). Thus the fixed-plane completion contradicts the
+additional scheduled gate **norm** \(G=O(b)\); the C168 linear gain
+measures sensitivity of a pre-existing scalar reservoir.  A viable terminal
+converter of the C161 charge-star type must therefore leave the fixed plane
+genuinely three-dimensionally. A wholly different theorem focusing an
+in-plane component remains logically open, but it would replace rather than
+realize the pure-normal source-to-bright block.
+
+C170 closes the aligned-source-sheet shortcut at the C159 amplifier.  The
+C152 periodic plane has the exact form
+
+\[
+ \mathcal P=\operatorname{span}_{\mathbb R}\{d,r+\sigma N\}, \tag{3.28}
+\]
+
+and horizontal projection is an isomorphism on \(\mathcal P\). If
+\(\sigma\notin\mathbb Q\), the exact integer intersection is only
+\(\mathbb Z d\); if \(\sigma\in\mathbb Q\), it has rank two, and C170 does
+not decide which case holds. Independently of that arithmetic, the ambient
+projected integer lattice has capacity \(O(\delta q^2+q)\) in the tested
+angular aperture \(\delta\) about the C159 horizontal ray at size \(O(q)\).
+Thus its \(C/q\)-sector contains at most \(O(q)\) projected modes, and its
+exact-plane subset cannot contain more. The central C159 ray has exactly
+scale-independent monodromy. Nearby real
+exact-plane directions inherit hyperbolicity only as a qualitative smooth
+principal-cocycle consequence; along their individual expanding lines the
+relative gain varies by \(1+O((\log q)/q)\) through \(O(\log q)\) returns.
+C154 forces an off-plane lift that remains aligned through
+\(\Theta(\log q)\) returns to satisfy
+
+\[
+ |u\mathbin\cdot\Delta k|=O((\log q)^{-1}),         \tag{3.29}
+\]
+
+leaving at most one integer normal lift per projected point.  Hence the
+required \(q^2\) growing packet must occupy a genuinely two-directional
+sheet and cannot share one source-adapted pure-normal polarization.
+
+The actual focused packet has the multi-radius and multi-charge thickness
+required by C145, but C161 postpones that thickness until a terminal
+charge-star interval. The surviving stage theorem must first construct a
+finite-frequency \(q^2\) lattice/microlocal packet in a fixed hyperbolic
+neighborhood of the certified C159 ray, including near-plane arithmetic,
+C154 shear, and a genuinely two-directional polarization chart. It must
+then replace the failed pure-normal source-to-bright block by an unforced,
+genuinely three-dimensional, time-ordered full-polarization converter with
+physical endpoint coherence, source depletion, and repeated-charge
+collision control. A different in-plane focusing theorem would be a
+replacement architecture inside the same stage, not a completion of C161's
+block. Finally the construction must prove C125 relative to the \(n^{-28}\)
+seed, land in the localized next-pump core, and satisfy LCE. This remains a
+component of BAFL, not a replacement for it.
 
 ## 4. The unresolved BAFL estimate
 
@@ -479,12 +935,33 @@ quantitative lower bound.  Neither outcome requires opening another
 cascade architecture.
 
 Within this target, the active-focus/gain construction is no longer
-open-ended: the affine material realization is excluded by (3.9), the
-direct stationary-cutoff estimate fails at (3.10), and the exact-shell
-endpoint is excluded by (3.11). The surviving obligation is LBRG followed
-by the unfolded localized endpoint conversion, both measured in BAFL's
-two response channels. A specially canceled stationary cutoff is included
-in that surviving obligation, not excluded by (3.10).
+open-ended: the generic transported high-frequency envelope is excluded by
+(3.9), the direct stationary-cutoff estimate fails at (3.10), and the
+exact-shell endpoint is excluded by (3.11). The surviving obligation is LBRG producing
+the C159-near \(q^2\) finite-frequency packet with C154/C170
+arithmetic-and-shear control, followed by an unfolded localized endpoint
+conversion that leaves the fixed plane through an unforced genuinely
+three-dimensional noncommuting full-polarization evolution. It must include
+normalized depletion, physical point coherence, and repeated charge
+collisions. Its localization must also prove MCKC, including the global
+pressure/heat export alternative, and separately prove the propagated
+self/viscous bounds; all modules are measured in BAFL's two response
+channels. A specially canceled stationary cutoff is included in that
+surviving obligation, not excluded by (3.10).
+
+C172--C174 make that collar obligation finite and explicit.  Exact affine
+pressure darkness cannot close the rank-two selector.  C173 removes the
+named finite material-label fibers but not the moving broad bundle.  On the
+rigid-sliced branch, C174 requires one of the two RRR outcomes: prove
+finite-tube residence and coherence under C154's physical shear, with the
+second-jet and between-return bounds, or prove a signed rewrite cancellation
+which is not available from triangle inequalities unless
+\(\sum_m\delta_m=O(b^2)\).  Either outcome must still be combined with the
+broad-band MCKC(ii) Duhamel kernel/export bound, propagated self/viscous
+control, endpoint coherence, and absorption of every prescribed collar or
+rewrite source into one unforced Navier--Stokes trajectory.  This is the
+surviving one-cell target; the finite-notch and time-sliced ledgers alone do
+not constitute a stage map.
 
 ## 8. Verification boundary
 
@@ -492,4 +969,14 @@ in that surviving obligation, not excluded by (3.10).
 bootstrap, and summability arithmetic used above.  It cannot verify the
 PDE evolution-family estimate (BAFL), which remains the umbrella analytic
 obstruction in this reduction. LBRG is its now-explicit active-focus/gain
-component.
+component.  `checks/comoving_piola_collar_c171.py` verifies C171's exact
+curl/Piola, Helmholtz, Fourier-triad, and scale arithmetic, but not MCKC,
+LCE, BAFL, or the unforced stage.
+`checks/affine_pressure_dark_material_transport_c172.py` verifies the C172
+fiber classification, selector brightness, Piola uniqueness, and constant
+symbol obstruction.  `checks/paired_multipole_piola_collar_c173.py`
+verifies the C173 moment/notch and fixed-coordinate scale algebra.
+`checks/time_sliced_rigid_collar_c174.py` verifies the C174 prescribed-ramp,
+rechart, return-time residence, and rewrite ledgers.  They do not verify the
+broad-band Duhamel response, second-flow-jet/between-return residence,
+signed rewrite cancellation, RRR, MCKC, LCE, BAFL, or an unforced stage.
