@@ -416,7 +416,7 @@ preparations also retain compact entrance support and converge terminally.
 These are genuine autonomous/scalar repairs; neither proves their required
 full \(A_2\), C125, pressure-tail, or nonlinear propagation estimates.
 
-C179--C182 isolate the terminal-reservoir branch without promoting an
+C179--C183 isolate the terminal-reservoir branch without promoting an
 instantaneous Fourier edge to a stage map. The exact 2D3C background
 \(v_{A_2}+\Theta N\) supports arbitrary planar passive frequencies and its
 off-plane one-edge Leray symbol is uniformly two-polarization invertible
@@ -440,14 +440,30 @@ the C180 \(J^2\) normalization tax. The result is conditional: C176/C180
 do not construct those entrance/tail bounds, and the large-torus Hölder and
 generic \(B^0_{\infty,1}\) shortcuts are invalid.
 
+C183 makes the long 2D3C evolution exact in Lagrangian coordinates without
+turning it into an endpoint deformation formula. For each vertical Fourier
+charge, a unit-modulus gauge removes scalar transport and gives
+\(D^Tp=p_0-mt g_0\) together with the exact Piola constraint. The remaining
+Kelvin velocity is a time-ordered two-polarization connection. At a planar
+return with \(L=D_T^T\), a common periodic coefficient requires
+\(Lg_0=g_0\) and \(Lp_0=p_0-mTg_0\); unipotent defects generate explicit
+linear or quadratic covector drift. Stationary C152 scalars \(H(f)\) do
+admit returning covectors after the exact retuning
+\(u_h\cdot p_0=-mTc\). If a common periodic frame is constructed and its
+connection differs from C159 by \(\varepsilon_q=O(q^{-1/2})\) per return,
+the extra factor over \(O(\log q)\) returns is only \(1+o(1)\). C180's
+spatial coefficient ledger does not prove this common-frame hypothesis,
+and a broad nonstationary PPRG scalar need not satisfy the return resonance.
+
 The same-curl reservoir is preloaded and has no autonomous heat switch, so
 its possible action through the preceding \(O(\log q)\) C159 window is not
-covered by C182. That surviving FFCC branch now asks for a smooth
-C159 Floquet-frame sideband/pressure theorem on the moving packet, with the
-off-diagonal response expected to be at most
-\(O(\operatorname{polylog}(q)/q)\), or for an explicit controlled
-resonance violating that estimate. PPRG, depletion, C125, RIGM, BAFL, and
-the stage remain open.
+covered by C182. C183 names the required **common-Floquet-frame closure
+(CFFC)** inside the surviving FFCC/PPRG branch: either construct a smooth
+return-coherent C159 frame and control sideband transport, pressure, and the
+off-diagonal connection, targeted at
+\(O(\operatorname{polylog}(q)/q)\), or exploit and control the explicit
+nonperiodic return defects. That rate is a target, not a theorem. PPRG,
+depletion, C125, RIGM, BAFL, and the stage remain open.
 
 There is an exact coherent packet with \(q^3\) conjugate pairs
 (\(2q^3\) nonzero Fourier wavevectors) on the existing
@@ -662,6 +678,7 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Factorial-shell full-polarization transport star (C180)](research/2026-08-14-factorial-shell-transport-star-c180.md)
 - [Static vertical-shear Euler Kelvin propagator (C181)](research/2026-08-14-static-vertical-shear-kelvin-c181.md)
 - [Conditional finite-p terminal no-focus theorem (C182)](research/2026-08-14-holder-terminal-no-focus-c182.md)
+- [Exact 2D3C Lagrangian gauge and common-Floquet return obstruction (C183)](research/2026-08-14-2d3c-lagrangian-gauge-c183.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)

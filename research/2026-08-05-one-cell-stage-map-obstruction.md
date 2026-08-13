@@ -596,12 +596,54 @@ theorem, not unconditional FFCC.
 The C180 reservoir is preloaded and its common-shell heat factor cannot
 switch it on only at the terminal time. Its possible autonomous action
 through the preceding \(O(\log q)\) C159 window therefore survives C182.
-The corresponding FFCC target is now a smooth finite-frequency C159
-Floquet-frame theorem controlling sideband transport, Leray pressure, and
-the stable/growing off-diagonal response on the moving packet, plausibly at
-\(O(\operatorname{polylog}(q)/q)\). That rate is a target, not a proved
-estimate; an explicit controlled resonance violating it would instead be
-the only gain mechanism left in this same-shell branch.
+
+C183 identifies the exact long-window coordinate obstruction. For an
+inviscid 2D3C base \(U=(v_h,\Theta)\), vertical Fourier charge \(m\), planar
+deformation \(D\), and passive label gradient \(g_0\), the unit-modulus
+Lagrangian gauge gives
+
+\[
+                    D(t)^Tp(t)=p_0-mt g_0,
+\]
+
+with the exact Piola divergence constraint. It removes transport and phase,
+not the velocity dynamics: the two physical polarizations still solve a
+time-ordered Kelvin/pressure connection. If \(L=D_T^T\) is the planar
+return, the full orbit/covector coefficient returns under
+
+\[
+                    Lg_0=g_0,
+       \qquad       Lp_0=p_0-mTg_0.
+\]
+
+For a unipotent return, failure of these identities gives the explicit
+linear/quadratic covector drift in C183. For the stationary C152 subclass
+\(\Theta=H(f)\), the condition reduces exactly to
+\(u_h\cdot p_0=-mTc\), equivalently the full three-dimensional
+fixed-covector plane, so a returning frame exists after retuning. This does
+not bound its polarization connection or place the retuned covector in the
+required packet tube.
+
+In a genuinely common periodic frame, C183's conditional finite-dimensional
+Floquet estimate is
+
+\[
+       \|\Phi_q(NT,0)\|
+          \le C\rho_0^N\exp(CN\varepsilon_q),
+       \qquad
+       \int_0^T\|B_q-B_0\|\,dt\le\varepsilon_q.
+\]
+
+Thus \(\varepsilon_q=O(q^{-1/2})\) over \(N=O(\log q)\) returns gives only
+\(1+o(1)\) extra gain. C180's \(O(q^{-1/2})\) spatial coefficient ledger
+does not imply this connection estimate, a common closed trajectory, or a
+common frame. The corresponding **common-Floquet-frame closure (CFFC)** is
+therefore the sharpened FFCC target: prove a smooth finite-frequency C159
+frame controlling sideband transport, Leray pressure, and stable/growing
+off-diagonal response on the moving packet, targeted at
+\(O(\operatorname{polylog}(q)/q)\), or exploit and control the explicit
+nonperiodic return defects as a physical focusing mechanism. That rate is a
+target, not a proved estimate, and neither alternative closes PPRG.
 
 The coherent alternative has an exact kinematic target but an exact
 endpoint obstruction. The existing lattice contains a divergence-free
@@ -1127,7 +1169,7 @@ every prescribed collar or rewrite source into one unforced Navier--Stokes
 trajectory.  The finite-notch, time-sliced, residence, and graph identities
 alone do not constitute a stage map.
 
-C177--C182 replace the prescribed terminal pulse by two exact unforced
+C177--C183 replace the prescribed terminal pulse by two exact unforced
 reservoir candidates and then expose their common obstruction. Same-curl
 Beltrami reservoirs remove the additive writer, while planar 2D3C
 reservoirs allow broad frequency support and a full-rank one-edge chart.
@@ -1138,13 +1180,12 @@ shows, conditional on an explicit unnormalized entrance/tail norm, that a
 fixed-time isolated linear C180 star is short of the coherent target even
 after the \(J^2\) envelope tax. It does not control the preloaded reservoir
 through the autonomous \(O(\log q)\) C159 window. Therefore the surviving
-same-shell converter must prove a smooth C159 Floquet-frame
-sideband/pressure theorem, with the stable/growing off-diagonal response
-targeted at \(O(\operatorname{polylog}(q)/q)\), or identify one controlled
-subprincipal resonance that violates that rate and supplies physical focus.
-The planar branch still requires PPRG. No product of edge determinants or
-isolated daughters can be credited as the missing focus. These FFCC/PPRG
-clauses remain inside C125, RIGM, MCKC, LCE, and BAFL.
+same-shell converter must close CFFC: construct a return-coherent C159 frame
+and prove its sideband/pressure/off-diagonal bound, or control C183's exact
+nonperiodic return defects and show that they supply physical focus. The
+planar branch still requires PPRG. No product of edge determinants or
+isolated daughters can be credited as the missing focus. These
+FFCC/CFFC/PPRG clauses remain inside C125, RIGM, MCKC, LCE, and BAFL.
 
 ## 8. Verification boundary
 
@@ -1192,4 +1233,11 @@ C180 base-norm ledger, finite-\(p\) interpolation exponents, raw and
 \(J^2\)-taxed target ratios, and fixed-time boundary. It does not prove the
 entrance/tail hypothesis, the autonomous \(O(\log q)\) C159
 Floquet-frame/sideband/pressure estimate, nonlinear depletion, localization,
+C125, RIGM, BAFL, or the one-cell stage.
+`checks/two_d_three_c_lagrangian_gauge_c183.py` verifies C183's exact
+passive-gradient/covector and gauge/Piola algebra, Kelvin constraint,
+vorticity correction, connection trace/area identity, return drift and
+resonance, and stationary C152 specialization. It does not prove the
+finite-dimensional Floquet perturbation theorem, construct a C180/PPRG
+common frame, give a localized finite-frequency estimate, or verify CFFC,
 C125, RIGM, BAFL, or the one-cell stage. None verifies the one-cell stage.
