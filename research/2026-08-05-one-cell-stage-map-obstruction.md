@@ -453,6 +453,41 @@ signed physical-rewrite cancellation directly while preserving the target
 cocycle.  Neither branch supplies MCKC(ii)'s broad-band wake kernel/export
 bound or absorbs the prescribed collar residual into an unforced stage.
 
+C176 resolves the exact-background part of the first branch.  In the
+regular action--angle--axial annulus, the full flow jets through the gain
+window satisfy \(D\Phi=O(J)\), \(D^2\Phi=O(J^2)\), and a correlated packet
+has an \(O(Jr)\) bounding tube at every intermediate time.  A fixed-aperture
+\(q\times q\times(q/J)\) carrier slab contains
+\(\Omega(q^3/J)\) unordered reality pairs; on the central fiber, C154 keeps
+its frequency at \(O(q)\) through \(J\) returns.  Enlarging the rigid collar
+to the tube costs only
+\(O((1+\Lambda)J^{7/2}q^{-1})=n^{-8}\operatorname{polylog}n\).
+This does not propagate the localized base-dependent finite-frequency
+packet, and it does not turn the prescribed collar into an unforced field.
+
+C175 sharpens the second clause of MCKC.  A common material eikonal preserves
+the exact relation \(e_1-k_1=k_c\), and the allowed-class Leray--heat Born
+response on that edge has one sign and an order-one inviscid limit.  For a
+specified active/wake splitting, the graph equation
+
+\[
+ K'=AK+B-KD-KCK
+\]
+
+implies the exact Melnikov identity
+
+\[
+ [\ell Kr]_{t_0}^{t_1}
+ =\int_{t_0}^{t_1}(\ell Br-\ell KCKr)\,dt.        \tag{3.10g}
+\]
+
+Therefore an \(O(b)\) graph on the stated admissible wake class requires
+the corresponding first-order transfer to be \(O(b)\) already.  This is
+**RIGM**, the resonant invariant-graph Melnikov gate.  It can still be met
+by signed packet cancellation, an \(O(b)\)-action just-in-time exposure, or
+spatial export with controlled global tails; no splitting-independent
+no-go is claimed.
+
 The coherent alternative has an exact kinematic target but an exact
 endpoint obstruction. The existing lattice contains a divergence-free
 packet with \(q^3\) conjugate pairs (\(2q^3\) nonzero Fourier wavevectors)
@@ -949,19 +984,33 @@ self/viscous bounds; all modules are measured in BAFL's two response
 channels. A specially canceled stationary cutoff is included in that
 surviving obligation, not excluded by (3.10).
 
-C172--C174 make that collar obligation finite and explicit.  Exact affine
+C172--C176 make that collar obligation finite and explicit.  Exact affine
 pressure darkness cannot close the rank-two selector.  C173 removes the
 named finite material-label fibers but not the moving broad bundle.  On the
 rigid-sliced branch, C174 requires one of the two RRR outcomes: prove
 finite-tube residence and coherence under C154's physical shear, with the
 second-jet and between-return bounds, or prove a signed rewrite cancellation
 which is not available from triangle inequalities unless
-\(\sum_m\delta_m=O(b^2)\).  Either outcome must still be combined with the
-broad-band MCKC(ii) Duhamel kernel/export bound, propagated self/viscous
-control, endpoint coherence, and absorption of every prescribed collar or
-rewrite source into one unforced Navier--Stokes trajectory.  This is the
-surviving one-cell target; the finite-notch and time-sliced ledgers alone do
-not constitute a stage map.
+\(\sum_m\delta_m=O(b^2)\).  C176 now closes the exact-background residence
+part of the first branch: the action--angle--axial flow has first and second
+jets \(O(J)\) and \(O(J^2)\), a correlated \(q\times q\times(q/J)\) slab
+contains the required \(q^2\) carrier centres, and the enlarged collar costs
+only \(q^{-1}\operatorname{polylog}q\).  This is a central-fiber/principal
+compatibility theorem, not the finite-frequency localized propagator.
+
+C175 also identifies the remaining broad-band kernel precisely.  Common
+material phases preserve the named wake resonance, and a uniformly
+\(O(b)\)-tilted invariant graph over a specified admissible wake class can
+exist only when the corresponding first-order Melnikov transfer is already
+\(O(b)\).  Call this residual operator estimate **RIGM**.  Thus the surviving
+MCKC(ii) alternatives are a signed full-packet RIGM cancellation, an
+\(O(b)\)-action just-in-time exposure, or genuine spatial export with global
+pressure/heat control.  They must still be combined with propagated
+self/viscous control, the localized finite-frequency C159 packet, endpoint
+coherence, the genuinely three-dimensional converter, and absorption of
+every prescribed collar or rewrite source into one unforced Navier--Stokes
+trajectory.  The finite-notch, time-sliced, residence, and graph identities
+alone do not constitute a stage map.
 
 ## 8. Verification boundary
 
@@ -980,3 +1029,10 @@ verifies the C173 moment/notch and fixed-coordinate scale algebra.
 rechart, return-time residence, and rewrite ledgers.  They do not verify the
 broad-band Duhamel response, second-flow-jet/between-return residence,
 signed rewrite cancellation, RRR, MCKC, LCE, BAFL, or an unforced stage.
+`checks/lagrangian_resonant_graph_obstruction_c175.py` verifies C175's
+material resonance, allowed-class Leray--heat response, and finite-block
+Riccati/Melnikov identities, but not the actual broad-packet RIGM estimate.
+`checks/a2_correlated_tube_residence_c176.py` verifies C176's exact
+background flow, central-fiber slab, lattice-capacity, enlarged-collar, and
+fixed-cocycle ledgers.  It does not verify the localized finite-frequency
+packet, converter, C125, MCKC, LCE, BAFL, or an unforced stage.

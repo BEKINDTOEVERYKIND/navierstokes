@@ -392,6 +392,17 @@ terminal-weighted norm, so a separated triangle-inequality proof needs
 \(\sum_m\delta_m=O(b^2)\).  A signed Duhamel cancellation is not excluded.
 This is the rechart-or-rewrite obstruction (RRR), not an unforced stage.
 
+C176 closes the exact-background residence question left in that historical
+C174 ledger.  Regular action--angle--axial coordinates give first and second
+flow jets \(O(J)\) and \(O(J^2)\) at every intermediate time.  A correlated
+packet fits in an \(O(Jr)\) tube, while a fixed-aperture
+\(q\times q\times(q/J)\) carrier slab contains
+\(\Omega(q^3/J)\) reality pairs and stays at \(O(q)\) frequency under the
+central-fiber C154 shear.  An enclosing spherical collar costs only
+\(q^{-1}\operatorname{polylog}q\) in the backward ledger.  This closes
+background residence and arithmetic capacity, not localized finite-frequency
+propagation or the unforced collar correction.
+
 There is an exact coherent packet with \(q^3\) conjugate pairs
 (\(2q^3\) nonzero Fourier wavevectors) on the existing
 \(\mathbb ZN+\mathbb Zk_1+\mathbb Zk_2\) lattice, but it repeats in every
@@ -531,16 +542,25 @@ and prove an \(O(b)\) integrated return for the actual retained C140 wake or
 export it with uniform pressure/heat tails.  MCKC is necessary inside
 LCE/BAFL; it is not a stage theorem.
 
-C172--C174 sharpen that target without closing it.  Exact local pressure
+C172--C176 sharpen that target without closing it.  Exact local pressure
 darkness is unavailable for the rank-two selector.  C173 pays the named
 finite material-label fibers but not the moving (q^2)-to-(q^3) active
 bundle.  C174 replaces the rigid-collar part of MCKC(i) by the RRR fork:
 either prove finite-tube residence and coherence under the accumulated
 C154 shear, including second jets and between-return control, or prove a
 signed physical-rewrite cancellation stronger than the separated condition
-(sum_mdelta_m=O(b^2)).  In either branch, the actual retained wake still
+\(\sum_m\delta_m=O(b^2)\).  In either branch, the actual retained wake still
 needs the broad-band Duhamel kernel/export estimate in MCKC(ii), and the
 prescribed collar sources must be absorbed into one unforced trajectory.
+C176 resolves the exact-background residence, second-jet, and carrier-count
+portion of the first branch; base-dependent finite-frequency propagation
+remains open.  C175 identifies the remaining kernel requirement as RIGM:
+common material phases preserve the dangerous \(A_2\) resonance, and an
+\(O(b)\)-tilted invariant graph over a specified admissible wake class already
+requires an \(O(b)\) first-order Melnikov transfer.  The surviving choices are
+therefore signed full-packet cancellation, \(O(b)\)-action just-in-time
+exposure, or controlled spatial export--not an automatic eikonal, heat, or
+graph-transform gain.
 
 No localized BAFL trajectory is constructed here. Consequently there is no
 unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
@@ -577,6 +597,8 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Affine pressure-dark material-transport obstruction (C172)](research/2026-08-06-affine-pressure-dark-material-transport-c172.md)
 - [Paired multipole Piola collar and finite-shell notch (C173)](research/2026-08-06-paired-multipole-piola-collar-c173.md)
 - [Time-sliced rigid collar and rechart-or-rewrite obstruction (C174)](research/2026-08-06-time-sliced-rigid-collar-c174.md)
+- [Lagrangian resonance and invariant-graph Melnikov gate (C175)](research/2026-08-13-lagrangian-resonant-graph-obstruction-c175.md)
+- [Correlated A2 tube residence and carrier capacity (C176)](research/2026-08-13-a2-correlated-tube-residence-c176.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)
