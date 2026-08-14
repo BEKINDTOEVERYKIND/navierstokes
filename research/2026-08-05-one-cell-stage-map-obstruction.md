@@ -1169,7 +1169,7 @@ every prescribed collar or rewrite source into one unforced Navier--Stokes
 trajectory.  The finite-notch, time-sliced, residence, and graph identities
 alone do not constitute a stage map.
 
-C177--C183 replace the prescribed terminal pulse by two exact unforced
+C177--C184 replace the prescribed terminal pulse by two exact unforced
 reservoir candidates and then expose their common obstruction. Same-curl
 Beltrami reservoirs remove the additive writer, while planar 2D3C
 reservoirs allow broad frequency support and a full-rank one-edge chart.
@@ -1186,6 +1186,26 @@ nonperiodic return defects and show that they supply physical focus. The
 planar branch still requires PPRG. No product of edge determinants or
 isolated daughters can be credited as the missing focus. These
 FFCC/CFFC/PPRG clauses remain inside C125, RIGM, MCKC, LCE, and BAFL.
+
+C184 closes the first return-coherent stationary PPRG shortcut without
+closing PPRG itself.  For \(\Theta=H(f)\), diagonal phase frequencies give
+an algebraically full-rank normalized tangent row.  But a degree-\(q\)
+outer diagonal coefficient \(\tau_q\) forces an off-line binomial face with
+coefficient-\(\ell^2\) lower bound
+
+\[
+                 |\tau_q|{(9/4)^q-1\over\sqrt q}.         \tag{7.1}
+\]
+
+At the required scale \(|\tau_q|\asymp bq^{-3/2}\), this is at least
+\(b(9/4)^q/q^2\), so the stationary degree-\(q\) polynomial line palette
+cannot meet any polynomial reservoir, leakage, or wake budget.  Its high
+polynomial parameters also vanish to first order on the C159 zero loop and
+do not change the central principal cocycle.  This SPCE conclusion leaves
+only a nonpolynomial stationary profile, deliberate use of the collateral
+modes, or C183's genuinely non-returning time-ordered PPRG branch.  Each
+still owes finite-frequency physical focus, depletion, localization,
+C125, RIGM, MCKC, LCE, and BAFL.
 
 ## 8. Verification boundary
 
@@ -1240,4 +1260,10 @@ vorticity correction, connection trace/area identity, return drift and
 resonance, and stationary C152 specialization. It does not prove the
 finite-dimensional Floquet perturbation theorem, construct a C180/PPRG
 common frame, give a localized finite-frequency estimate, or verify CFFC,
-C125, RIGM, BAFL, or the one-cell stage. None verifies the one-cell stage.
+C125, RIGM, BAFL, or the one-cell stage.
+`checks/stationary_polynomial_star_c184.py` verifies C184's exact Fourier
+coefficient space, diagonal interpolation, selected tangent Gram,
+outer-face collateral lower bound, zero-loop jet, and initial viscous-drift
+ledger. It does not rule out nonpolynomial or collateral-reuse PPRG, prove a
+finite-frequency propagator, or verify any one-cell obligation.
+None of these checkers verifies the one-cell stage.

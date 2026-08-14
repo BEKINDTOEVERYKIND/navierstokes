@@ -416,7 +416,7 @@ preparations also retain compact entrance support and converge terminally.
 These are genuine autonomous/scalar repairs; neither proves their required
 full \(A_2\), C125, pressure-tail, or nonlinear propagation estimates.
 
-C179--C183 isolate the terminal-reservoir branch without promoting an
+C179--C184 isolate the terminal-reservoir branch without promoting an
 instantaneous Fourier edge to a stage map. The exact 2D3C background
 \(v_{A_2}+\Theta N\) supports arbitrary planar passive frequencies and its
 off-plane one-edge Leray symbol is uniformly two-polarization invertible
@@ -454,6 +454,20 @@ connection differs from C159 by \(\varepsilon_q=O(q^{-1/2})\) per return,
 the extra factor over \(O(\log q)\) returns is only \(1+o(1)\). C180's
 spatial coefficient ledger does not prove this common-frame hypothesis,
 and a broad nonstationary PPRG scalar need not satisfy the return resonance.
+
+C184 tests the most natural return-coherent PPRG repair, a stationary
+polynomial \(\Theta=H(f)\). Its diagonal Fourier coefficients are genuine
+triangular coordinates and can produce a normalized full-polarization
+tangent row, so there is no selected-row rank obstruction. The complete
+polynomial is fatal instead: an outer diagonal coefficient \(\tau_q\)
+forces an off-line binomial face of coefficient-\(\ell^2\) size at least
+\(|\tau_q|\{(9/4)^q-1\}/\sqrt q\). At the required star scale this is
+\(\gtrsim b(9/4)^q/q^2\), exponentially above every polynomial reservoir
+or wake budget, and the high polynomial parameters have zero first jet on
+the C159 zero loop. This **stationary-polynomial collateral explosion
+(SPCE)** closes only the degree-\(q\) polynomial line-palette shortcut.
+Nonpolynomial profiles, deliberate recycling of the collateral face, and
+non-returning time-ordered PPRG remain open.
 
 The same-curl reservoir is preloaded and has no autonomous heat switch, so
 its possible action through the preceding \(O(\log q)\) C159 window is not
@@ -679,6 +693,7 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Static vertical-shear Euler Kelvin propagator (C181)](research/2026-08-14-static-vertical-shear-kelvin-c181.md)
 - [Conditional finite-p terminal no-focus theorem (C182)](research/2026-08-14-holder-terminal-no-focus-c182.md)
 - [Exact 2D3C Lagrangian gauge and common-Floquet return obstruction (C183)](research/2026-08-14-2d3c-lagrangian-gauge-c183.md)
+- [Stationary polynomial star and exponential collateral obstruction (C184)](research/2026-08-14-stationary-polynomial-star-c184.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)
