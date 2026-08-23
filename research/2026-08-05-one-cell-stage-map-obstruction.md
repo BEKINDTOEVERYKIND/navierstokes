@@ -1046,6 +1046,17 @@ chart-weighted error uniformly over all \(L_j\le Cn^2\).
 
 ## 5. Conditional one-cell theorem
 
+**C187 audit update (2026-08-23).**  The former presentation treated (5.1)
+as a freestanding named estimate, but \({\cal A}_j\), \({\cal W}_j\), and
+the complete state norm \({\cal Y}_j\) were never defined.  Consequently
+(5.1) has no independently auditable uniform constant in the landed corpus.
+It is withdrawn as a separate analytic target and folded below into one
+full active-plus-wake renormalization/trapping hypothesis.  C187 proves an
+explicit ordinary \(H^3\) finite-stage substitute, whose constant is
+\(44\sqrt{2T/\nu}\exp(7744V^2T/\nu)\).  That estimate demonstrates
+continuity but is not uniform on the factorial-viscosity schedule and does
+not prove the trapping hypothesis.
+
 Assume the following uniform statements for all sufficiently large \(j\).
 
 1. The candidate \(v_j\) starts in the stage-\(j\) chart and its intended
@@ -1053,37 +1064,47 @@ Assume the following uniform statements for all sufficiently large \(j\).
    wake.
 2. The terminal chart has condition number at most \(C(j+1)^2\).
 3. Equation (3.3) holds.
-4. The space measured by \({\cal Y}_j\) is a complete solution space for
-   (2.4), and the bilinear Duhamel map obeys
+4. The **full renormalization trapping package** holds.  It specifies a
+   complete active-plus-wake Banach state space \({\cal Y}_j\), every moving
+   projection and chart in its norm, and an explicit constant \(K_j\) for
+   the bilinear part of the exact Duhamel map:
 
 \[
  \left\|\int_{t_j}^{\cdot}{\cal U}_j(\cdot,s)
  \mathbb P\nabla\!\cdot(f\otimes g)(s)\,ds\right\|_{{\cal Y}_j}
- \le K\|f\|_{{\cal Y}_j}\|g\|_{{\cal Y}_j}                  \tag{5.1}
+ \le K_j\|f\|_{{\cal Y}_j}\|g\|_{{\cal Y}_j}.             \tag{5.1}
 \]
+
+   The same package includes (BAFL), with the active and wake projections
+   defined as bounded maps on \({\cal Y}_j\).  Equation (5.1) and (BAFL)
+   are therefore two clauses of one continuity/trapping premise, not two
+   successive architecture gates.  No stage-uniform value of \(K_j\) is
+   proved here.
 
 Let
 
 \[
  Z_j:=c_0n^{-4}+\|F_j^{\rm paid}\|_{{\cal R}_j},
- \qquad KZ_j\le\frac18.                                     \tag{5.2}
+ \qquad \|F_j^{\rm paid}\|_{{\cal R}_j}\le c_1n^{-4},
+ \qquad K_jZ_j\le\frac18.                                   \tag{5.2}
 \]
 
-5. (BAFL) holds.
-
 Then the exact unforced Navier--Stokes solution through that cell exists on
-\(I_j\), remains within \(2c_0n^{-4}+o(n^{-4})\) of \(v_j\) in
-\({\cal Y}_j\), and both its terminal active coordinates and its retained
-wake differ from the stage-\((j+1)\) target by \(O(n^{-4})\).
+\(I_j\), remains within
+\(2Z_j\le2(c_0+c_1)n^{-4}\) of \(v_j\) in \({\cal Y}_j\), and both its
+terminal active coordinates and its retained wake differ from the
+stage-\((j+1)\) target by at most \(2(c_0+c_1)n^{-4}\), in the normalized
+component norms included in \({\cal Y}_j\).
 
-Indeed, (2.4), (5.1), and the two BAFL channels give
+Indeed, the full trapping package gives
 
 \[
- E_j\le Z_j+K E_j^2,\qquad Z_j=c_0n^{-4}+o(n^{-4}).             \tag{5.3}
+ E_j\le Z_j+K_j E_j^2,\qquad
+ Z_j\le(c_0+c_1)n^{-4}.                                    \tag{5.3}
 \]
 
 On the ball \(E_j\le2Z_j\), the right side is at most \(2Z_j\) when
-\(4KZ_j\le1\), and the same estimate makes the Duhamel map a contraction.
+\(4K_jZ_j\le1\), and the same estimate makes the Duhamel map a contraction.
 The active-chart loss is already included in \({\cal Y}_j\); it is not
 charged a second time.  Since \(\sum_j(j+1)^{-4}<\infty\), both the
 structured endpoint error and retained wake are summable.
@@ -1266,4 +1287,16 @@ coefficient space, diagonal interpolation, selected tangent Gram,
 outer-face collateral lower bound, zero-loop jet, and initial viscous-drift
 ledger. It does not rule out nonpolynomial or collateral-reuse PPRG, prove a
 finite-frequency propagator, or verify any one-cell obligation.
+`checks/essential_pde_growth_c185.py` verifies the exact rational bridge
+from C159's cone inequalities to the explicit \(e^{1/5}>6/5\) growth
+constant.  C185's infinite-dimensional conclusion additionally invokes
+Shvydkoy's cited Theorem 4.1; it remains inviscid and linear.
+`checks/unipotent_pprg_dichotomy_c186.py` verifies C186's two-unipotent
+classification, growth and robustness constants, bounded passive-gradient
+example, and conditional conjugacy algebra.  It does not realize the two
+robust episode boxes in one PPRG orbit.
+`checks/explicit_h3_duhamel_c187.py` verifies C187's explicit Fourier and
+energy constants.  Its finite-stage \(H^3\) estimate is not uniform on the
+factorial-viscosity schedule and does not prove the full renormalization
+trapping package introduced in the C187 audit update to Section 5.
 None of these checkers verifies the one-cell stage.

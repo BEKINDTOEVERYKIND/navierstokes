@@ -469,6 +469,59 @@ the C159 zero loop. This **stationary-polynomial collateral explosion
 Nonpolynomial profiles, deliberate recycling of the collateral face, and
 non-returning time-ordered PPRG remain open.
 
+C185 inverts the proof architecture and lands the first explicit positive
+infinite-dimensional PDE-operator estimate in this branch.  Shvydkoy's
+essential-spectral-radius theorem applies directly to the velocity-form
+linearized Euler group about the smooth steady C152 field.  Combining it
+with C159's independently certified periodic cone gives
+
+\[
+ r_{\rm ess}(G_T)\ge e^{1/5}>{6\over5},\qquad
+ \|G_{nT}\|_{2\to2}\ge e^{n/5}>\left({6\over5}\right)^n.
+\]
+
+This is genuine infinite-dimensional inviscid operator growth, not a
+Galerkin or frozen-symbol statement.  It does not give a viscous scale
+return.  The accompanying fixed-point audit maps the program to
+Albritton--Bru\'e--Colombo, Elgindi, and Chen--Hou and isolates the one
+component with no completed analogue: an **unforced viscous
+physical-velocity scale return (UVSR)** for the complete active-plus-wake
+state.  The repository now treats BAFL, C125, and RIGM as projections of one
+renormalization residual/trapping estimate rather than successive proof
+architectures.  The root `FRONTIER.md` is the mandatory session boot state
+and records the pre-registered PPRG kill trigger.
+
+C186 gives a conditional abstract finite-dimensional PPRG witness, with a
+sharp realization boundary.  C183's planar return is unipotent, but its
+Kelvin polarization monodromy is only known to have determinant one.  If
+two candidate polarization generators are square-zero,
+the scalar \(\tau=\operatorname{tr}(N_1N_2)\) vanishes exactly when their
+unipotent episode maps share a flag.  The explicit transverse pair
+\(I+E_{12},I+E_{21}\) has per-episode exponent greater than \(12/25\), and
+entrywise \(1/100\) perturbations in \(SL(2)\) retain exponent greater than
+\(9/20\).  A smooth bounded exact passive 2D3C Euler example also rotates a
+scalar gradient through transverse directions, so passivity alone cannot
+force gradient alignment; it says nothing by itself about invariant lines
+of the Kelvin connection and does not realize the two polarization blocks.
+What remains is the load-bearing PDE test: realize two
+such robust polarization blocks along one unforced passive orbit in a
+common C183 return fiber and validate the finite-frequency evolution.
+
+C187 reconciles the two outstanding audit items.  Ordinary \(H^3\)
+linearized Navier--Stokes Duhamel continuity holds with the explicit
+constant
+
+\[
+ 44\sqrt{2T/\nu}\exp(7744V^2T/\nu),
+\]
+
+but this explodes on the factorial-viscosity schedule and cannot prove the
+old abstract (5.1); that display is now folded into the full trapping
+premise until its structured state space is defined.  The session-only
+infinite-ladder values \(0.66855\ldots\) and \(2.63707\ldots\) are withdrawn:
+no operator, tail enclosure, proof, or checker exists for them.  C120's
+finite \(6\times6\) enclosure is unaffected.
+
 The same-curl reservoir is preloaded and has no autonomous heat switch, so
 its possible action through the preceding \(O(\log q)\) C159 window is not
 covered by C182. C183 names the required **common-Floquet-frame closure
