@@ -470,15 +470,17 @@ Nonpolynomial profiles, deliberate recycling of the collateral face, and
 non-returning time-ordered PPRG remain open.
 
 C185 inverts the proof architecture and lands the first explicit positive
-infinite-dimensional PDE-operator estimate in this branch.  Shvydkoy's
-essential-spectral-radius theorem applies directly to the velocity-form
-linearized Euler group about the smooth steady C152 field.  Combining it
-with C159's independently certified periodic cone gives
+infinite-dimensional PDE-operator estimate in this branch.  Combining
+C159's independently certified periodic cone with the abstract-level
+Shvydkoy spectral inclusion gives the robust operator-norm statement
 
 \[
- r_{\rm ess}(G_T)\ge e^{1/5}>{6\over5},\qquad
  \|G_{nT}\|_{2\to2}\ge e^{n/5}>\left({6\over5}\right)^n.
 \]
+
+C189's independent cross-audit holds the stronger
+\(r_{\rm ess}(G_T)\ge e^{1/5}\) citation pending a paper-body check of
+Shvydkoy Theorem 4.1.  It is not used downstream until that check lands.
 
 This is genuine infinite-dimensional inviscid operator growth, not a
 Galerkin or frozen-symbol statement.  It does not give a viscous scale
@@ -793,11 +795,14 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Conditional finite-p terminal no-focus theorem (C182)](research/2026-08-14-holder-terminal-no-focus-c182.md)
 - [Exact 2D3C Lagrangian gauge and common-Floquet return obstruction (C183)](research/2026-08-14-2d3c-lagrangian-gauge-c183.md)
 - [Stationary polynomial star and exponential collateral obstruction (C184)](research/2026-08-14-stationary-polynomial-star-c184.md)
-- [Fixed-point literature map and essential PDE growth (C185)](research/2026-08-23-fixed-point-literature-map-c185.md)
+- [Fixed-point literature map and operator growth (C185)](research/2026-08-23-fixed-point-literature-map-c185.md)
 - [Conditional unipotent PPRG dichotomy (C186)](research/2026-08-23-unipotent-pprg-dichotomy-c186.md)
 - [Explicit Duhamel constant and ladder audit (C187)](research/2026-08-23-duhamel-and-ladder-audit-c187.md)
 - [UVSR schedule corridor and epsilon-regularity audit (C188)](research/2026-08-25-uvsr-schedule-corridor-c188.md)
 - [Adversarial audit of C188](audit/AUDIT-2026-08-25-c188.md)
+- [Independent cross-audit of C185--C187 (C189)](audit/AUDIT-2026-08-25-c185-c187.md)
+- [Rotating-gradient return obstruction (C190)](research/2026-08-25-rotating-gradient-return-obstruction-c190.md)
+- [Adversarial audit of C190](audit/AUDIT-2026-08-25-c190.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)

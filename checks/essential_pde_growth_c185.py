@@ -77,8 +77,9 @@ def main() -> None:
     explicit_exponential_constant()
     returning_orthogonal_frame_norm()
     iteration_ledger()
-    print("C185 essential-PDE-growth bridge arithmetic passed")
-    print("BOUNDARY: C159 interval certificate and Shvydkoy theorem are premises")
+    print("C185 infinite-dimensional operator-growth bridge arithmetic passed")
+    print("BOUNDARY: C159 certificate and Shvydkoy abstract inclusion are premises")
+    print("BOUNDARY: essential-radius identification is citation-held by C189")
     print("BOUNDARY: no viscous UVSR, nonlinear stage, or singularity is proved")
 
 

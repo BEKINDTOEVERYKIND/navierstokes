@@ -1,7 +1,8 @@
 # Navier--Stokes frontier
 
 **Branch:** `agent/aug2-integrated-transition`
-**Registry frontier:** C188 (2026-08-25 checkpoint)
+**Registry frontier:** C190 (2026-08-25 checkpoint; C189 is the ingested
+auditor cross-audit)
 **Boot rule:** every research session starts from this file, `CLAIMS.md`, and
 the referenced artifacts on the branch. Chat history is not a premise.
 Every checkpoint commit must update this file in the same commit.
@@ -116,21 +117,52 @@ upper bounds there.  This does not control backward cylinders centered at
 an eventual singular point.  No criterion was weakened after seeing the
 result.
 
+## C190 pre-registered PPRG verdict
+
+The C186 rotating-gradient orbit has now completed outcome (b) of the
+unchanged witness test.  Along its fixed origin, any two consecutive maps
+between three distinct endpoint times can both have determinant one only
+when the conserved vertical charge is \(m=0\); this includes the two
+quarter episodes.  A genuine \(2\pi\) coefficient return also forces
+\(m=0\).  For the two equal quarter episodes, in the canonical common
+co-rotating orthonormal fiber frame,
+
+\[
+ \Phi_1=\Phi_2=I+{\pi\over2}\beta E_{12},\quad |\beta|\le1,\qquad
+ (\Phi_i-I)^2=0,qquad
+ \operatorname {tr}(\Phi_2\Phi_1)=2.
+\]
+
+Thus the ordered \(1/100\) boxes about \(I+E_{12}\) and \(I+E_{21}\)
+cannot both hold, and the direct \(2+\delta\) branch fails for every
+\(\delta>0\).  The genuine full-return block
+\(S=I+2\pi\beta E_{12}\) obeys the explicit bound
+
+\[
+                         \|S^N\|_2\le1+{44\over7}N.
+\]
+
+This is a theorem-grade obstruction for the chosen orbit, not a failed
+float search and not a no-go for the complete admissible Kelvin class.
+Accordingly it feeds but does not fire the architecture trigger.  No
+criterion was weakened and no successor gate was created.
+
 ## Current positive target
 
-1. **PPRG admissibility test.** On one explicit smooth bounded unforced
-   passive 2D3C orbit, derive two consecutive return-fiber polarization
-   maps \(\Phi_1,\Phi_2\in SL(2,\mathbb R)\) in a common C183 return
-   frame. Success is pre-registered as either entrywise enclosure of
-   \(\Phi_1,\Phi_2\) in C186's respective \(1/100\) boxes about the
-   canonical \(U,V\), or a direct enclosure
-   \(|\operatorname{tr}(\Phi_2\Phi_1)|\ge2+\delta\) with explicit
-   \(\delta>0\). It must also include a witness-specific finite-frequency
-   error budget which preserves a stated positive exponent. The scalar
-   \(\tau=\operatorname{tr}(N_1N_2)\) is available only if
-   \((\Phi_i-I)^2=0\) is separately proved; C183 does not prove that.
-2. **Viscous operator bridge.** Starting from C185's inviscid essential
-   gain \(>6/5\), certify three separate multiplicative operator/norm-
+1. **PPRG complete-class decision.** C190 excludes the chosen C186 orbit
+   exactly but leaves the broader admissible passive 2D3C class open.  Any
+   positive realization must still give two consecutive maps in one
+   common C183 frame, either in C186's respective entrywise \(1/100\)
+   boxes or with
+   \(|\operatorname{tr}(\Phi_2\Phi_1)|\ge2+\delta\) for an explicit
+   \(\delta>0\), and it must include a witness-specific finite-frequency
+   error budget preserving a stated positive exponent.  The scalar
+   \(\tau=\operatorname{tr}(N_1N_2)\) remains available only after
+   \((\Phi_i-I)^2=0\) is proved for the actual maps.  A negative verdict
+   still requires the complete-class theorem in the kill criteria below.
+2. **Viscous operator bridge.** Starting from C185's robust inviscid
+   operator-norm lower bound \(\|G_T\|>6/5\), certify three separate
+   multiplicative operator/norm-
    amplitude factors:
    viscous damping \(\mathfrak d\), retained band fraction
    \(\mathfrak b\), and physical normalization \(\mathfrak n\).
@@ -175,10 +207,12 @@ result.
   \(O(q^{-1/2})\) perturbation gives no extra \(\sqrt q\).
 - C184: degree-\(q\) stationary polynomial palettes pay an exponential
   off-line cost and cannot meet a polynomial reservoir budget.
-- C185: C159 plus Shvydkoy's theorem gives
-  \(r_{\rm ess}(G_T)\ge e^{1/5}>6/5\) for the actual
-  infinite-dimensional velocity-form linearized Euler group and
-  \(\|G_{nT}\|\ge e^{n/5}\).
+- C185/C189: C159 plus the abstract-level Shvydkoy spectral inclusion gives
+  the robust infinite-dimensional operator-norm estimate
+  \(\|G_{nT}\|_{L^2\to L^2}\ge e^{n/5}>(6/5)^n\).  The
+  essential-spectral-radius form is citation-held until the paper-body
+  Theorem 4.1 check lands.  C189 independently confirms C186 and C187 in
+  full and C185 with precisely this split.
 - C186: conditionally, candidate unipotent polarization blocks do not
   algebraically force a common flag. The exact pair
   \(I+E_{12},I+E_{21}\) has per-episode exponent \(>12/25\), robustly
@@ -205,14 +239,24 @@ result.
   numerical CKN/Tao power follows from the scalar ledger alone.  Also
   \(\mu'=(q/g)\mu\), and the factorial schedule is an augmented
   nonautonomous map, not an autonomous fixed point.
+- C190: on the explicit C186 rotating-gradient orbit, the determinant-one
+  gate for any two consecutive episodes forces \(m=0\).  In the canonical
+  common co-rotating frame both maps equal
+  \(I+(\pi/2)\beta E_{12}\), \(|\beta|\le1\); their product trace is
+  exactly two, their
+  square-zero generators share a flag, and the full-return powers satisfy
+  \(\|S^N\|_2\le1+(44/7)N\).  This is the pre-registered orbit-specific
+  obstruction, not the complete-class PPRG verdict.
 
 ## Open
 
 - UVSR: no exact or rigorously trapped unforced viscous scale-return profile
   with physical velocity focus is known.
-- PPRG realization: abstract noncommuting polarization growth is not enough;
-  the two episode blocks must arise from one smooth bounded passive scalar
-  and the exact unforced 2D3C evolution, with finite-frequency control.
+- PPRG realization: abstract noncommuting polarization growth is not enough.
+  C190 proves that the chosen C186 rotating-gradient orbit cannot realize
+  the two-block witness.  The complete admissible passive 2D3C class is
+  still undecided; any positive pair must arise from one exact unforced
+  evolution in a common frame and carry finite-frequency control.
 - A complete state space and normalization for \(\mathcal R\), including the
   retained wake and normalized-viscosity coordinate, have not been fixed.
 - No normalized convergence \(\mathcal R_{n,0}\to\mathcal R_{\infty,0}\)
@@ -220,11 +264,14 @@ result.
   point problem for the actual factorial schedule.
 - No coercive bulk estimate or spectral gap has yet been proved for the
   proposed renormalized Navier--Stokes operator.
-- No residual-stable forced epsilon criterion, torus transfer of Tao's
-  quantitative theorem, singular-center tracking, or active-plus-wake
-  critical-norm comparison has been proved. C188 shows none is needed for
-  the scalar exponent corridor, but all would be needed to claim a
-  numerical regularity-theory window.
+- **UVSR standing terminal obligation:** terminal singular-center tracking
+  has not been proved.  C188's CKN/Lin/Tao clearance is confined to the
+  scalar ledger and smooth intermediate stage centers.  Any terminal UVSR
+  object must still control backward cylinders at the proposed singular
+  center, including time occupancy, pressure/wake contributions, the local
+  energy inequality, and the relevant critical-norm comparison.  No
+  residual-stable forced epsilon criterion or torus transfer of Tao's
+  quantitative theorem has been proved.
 - C125's relative return, the old BAFL split, and RIGM remain unproved, but
   are to be absorbed into one full residual/trapping inequality rather than
   promoted into further architecture gates.
@@ -234,7 +281,8 @@ result.
 These verdicts are fixed before the next computation.
 
 1. **PPRG architecture trigger.** C186 keeps only abstract matrix algebra
-   alive. PPRG is negative only after a rigorous theorem for the complete
+   alive, and C190 excludes only its explicit rotating-gradient candidate.
+   PPRG is negative only after a rigorous theorem for the complete
    admissible Kelvin class: for example, exact Euler/passive integrability
    forces a common invariant flag together with an explicit growth upper
    bound too small for C182's \(q^{3/8}\) deficit, or an exhaustive cocycle
@@ -283,7 +331,18 @@ These verdicts are fixed before the next computation.
   withdrawn.  The bounded-profile C176 worst-case-envelope infimum is
   \(7/6\), not the current \(5/4\); the equal-shape ledger multiplier is
   \(q^{3/2}\), with an explicit physical shape-factor correction.
-- The PPRG two-box/trace witness criterion is unchanged after C188. The next
-  computation must either meet it with validated finite-frequency bounds or
-  complete the pre-registered negative branch; a partial float search is
-  not a checkpoint.
+- **Standing UVSR obligation after C188:** the CKN/Lin/Tao conclusion is
+  scalar-ledger-scoped.  It does not clear backward-cylinder regularity at
+  a terminal singular center.  Terminal center tracking, time occupancy,
+  pressure/wake terms, the local energy inequality, and critical-norm
+  comparison remain attached to UVSR and may not be dropped at profile
+  certification.
+- **C185 citation restriction from C189:** until the Shvydkoy Theorem 4.1
+  paper-body check lands, every downstream use cites only
+  \(\|G_{nT}\|_{L^2\to L^2}\ge e^{n/5}>(6/5)^n\).  The
+  \(r_{\rm ess}\) form remains source-held and is not a premise.
+- **Completed by C190 for the chosen orbit:** the PPRG two-box/trace test
+  landed as pre-registered outcome (b), with exact square-zero and trace
+  calculations.  The complete-class success and architecture-negative
+  criteria remain unchanged.  A later candidate may not relax them, and a
+  partial float search is not a checkpoint.

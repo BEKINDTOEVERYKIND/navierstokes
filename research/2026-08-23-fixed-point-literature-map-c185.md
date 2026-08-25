@@ -3,9 +3,11 @@
 **Date:** 2026-08-23
 
 **Status:** exact architecture map and a positive infinite-dimensional
-linearized-Euler estimate obtained by combining C159 with a primary-source
-essential-spectrum theorem; no unforced viscous scale-return profile,
-Navier--Stokes spectral gap, nonlinear stage, or singularity
+linearized-Euler operator-norm estimate obtained by combining C159 with
+Shvydkoy's abstract-level spectral inclusion; C189 holds the stronger
+essential-spectral-radius citation pending a paper-body Theorem 4.1 check;
+no unforced viscous scale-return profile, Navier--Stokes spectral gap,
+nonlinear stage, or singularity
 
 **Checker:**
 [checks/essential_pde_growth_c185.py](../checks/essential_pde_growth_c185.py)
@@ -48,11 +50,14 @@ orbit period.  Then
 
 \[
  \boxed{
-   r_{\rm ess}(G_T)\ge e^{1/5}>{6\over5},\qquad
    \|G_{nT}\|_{L^2\to L^2}\ge e^{n/5}>
                       \left({6\over5}\right)^n
    \quad(n\ge1).}                                      \tag{0.2}
 \]
+
+Until the C189 source check is closed, the stronger displayed form
+\(r_{\rm ess}(G_T)\ge e^{1/5}\) is citation-held and is not a downstream
+premise.
 
 Thus the program now has an explicit positive cocycle-growth estimate for
 an actual infinite-dimensional PDE operator, not merely for a Galerkin
@@ -210,7 +215,7 @@ the validated profile and finite-rank response estimates.
 
 ## 3. C185: the positive infinite-dimensional estimate
 
-### Theorem 3.1 (essential linearized-Euler growth)
+### Theorem 3.1 (linearized-Euler operator-norm growth)
 
 Let
 
@@ -265,20 +270,28 @@ bicharacteristic system therefore satisfies
                          \mu_{\max}\ge {1\over5T}.        \tag{3.6}
 \]
 
-For a smooth stationary divergence-free velocity field on the torus,
-Shvydkoy's Theorem 4.1 identifies the essential spectral radius of the
-velocity-form linearized Euler group with this cocycle exponent:
+The abstract-level spectral inclusion in Shvydkoy puts the exponential of
+the relevant bicharacteristic-amplitude spectral point into the spectrum of
+the velocity-form linearized Euler group.  Consequently
 
 \[
-                         r_{\rm ess}(G_t)=e^{\mu_{\max}t}.
+ r(G_{nT})\ge e^{n/5},\qquad
+ \|G_{nT}\|_{L^2\to L^2}\ge r(G_{nT})\ge e^{n/5}.
                                                                \tag{3.7}
 \]
 
-The incompressibility fiber in that theorem is exactly \(k^\perp\), and
-its velocity-amplitude equation (the paper's equation (41)) is C159's
-Kelvin equation.  Equations (3.6)--(3.7) give
-\(r_{\rm ess}(G_{nT})\ge e^{n/5}\).  Operator norm dominates essential
-spectral radius.  Finally
+C189's independent source-scope check confirms that this abstract
+inclusion covers the velocity-form group and the C159
+bicharacteristic-amplitude system at the level needed for (3.7).  The
+further identification
+
+\[
+                         r_{\rm ess}(G_t)=e^{\mu_{\max}t}
+                                                               \tag{3.7a}
+\]
+
+is the paper-body Theorem 4.1 step held by C189 for source verification;
+it is not needed for the operator-norm conclusion (3.7).  Finally
 
 \[
  e^{1/5}>1+{1\over5}+{1\over2}\left({1\over5}\right)^2
@@ -287,17 +300,21 @@ spectral radius.  Finally
 
 which proves (0.2).  \(\square\)
 
-Primary bridge: R. Shvydkoy,
+Load-bearing source scope: the abstract-level spectral inclusion in
+R. Shvydkoy,
 [*The essential spectrum of advective equations*](https://arxiv.org/abs/math-ph/0412019),
-Theorem 4.1, Propositions 4.2--4.3, equation (41), and inequality (81).
+as confirmed by C189.  The paper-body Theorem 4.1, Propositions 4.2--4.3,
+equation (41), and inequality (81) remain the pending source check for the
+essential-radius refinement (3.7a).
 
 ## 4. What C185 changes and what it does not
 
 C185 discharges one strategic deficit: the certified C159 exponent is now
 a theorem about the actual infinite-dimensional linearized Euler operator.
 No separate finite-frequency packet construction is required merely to
-prove operator growth; geometric optics is already encoded rigorously in
-the essential-spectrum theorem.
+prove operator growth; geometric optics is already encoded in the cited
+spectral inclusion.  The essential-radius refinement remains source-held
+as stated above.
 
 The following remain open and are not consequences of (0.2):
 
