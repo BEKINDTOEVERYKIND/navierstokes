@@ -522,6 +522,52 @@ infinite-ladder values \(0.66855\ldots\) and \(2.63707\ldots\) are withdrawn:
 no operator, tail enclosure, proof, or checker exists for them.  C120's
 finite \(6\times6\) enclosure is unaffected.
 
+C188 completes the demand-side UVSR scalar-corridor audit.  Under the
+equal-normalized-shape convention, same-energy transfer into a \(q^{-3}\)
+child fixes the ledger focus multiplier at \(q^{3/2}\); unequal physical
+shapes contribute the explicit square root of their \(L^2\)-constant
+ratio.  The optimizable quantity is the net gain \(g=bF\); in the
+equal-shape power ledger, \(g=bq^{3/2}=q^\gamma\).  The bare
+high-Re/finite-energy corridor has
+infimum \(1\).  If the bounded-profile C176 worst-case upper majorant
+\(C(1+\Lambda)q^{-1}J^{7/2}\) must remain separately below the \(b^3\)
+active tolerance, its sharp polynomial infimum is \(7/6\), with a
+sufficient logarithmic correction at the boundary.  This is a result for
+the declared envelope, not a lower bound on the physical collar.  The
+equal-shape all-sequence forms are \(g=q\rho\),
+\(1<\rho=bq^{1/2}<q^{1/2}\), with
+\(\log\rho/\log q\to0\) at the direct floor, in
+the direct class and
+\(g=K_*^{1/3}q^{7/6}(\log q)^{7/6}\omega\), with
+\(\omega\to\infty\), \(\log\omega/\log q\to0\), and \(0<b<1\), for
+the declared envelope, where
+\(K_*=C_{\rm col}C_J^{7/2}\) and \(C_{\rm col}\) absorbs the uniform
+bound on \(1+\Lambda_j\).  Arbitrary sequences must additionally satisfy
+C188's exact global energy-product condition.  The scalar schedule
+\(q=n^4,g=2q,b=2n^{-2}\) attains direct polynomial order one, doubles
+Reynolds each return, and has total normalized energy at most \(16/3\),
+but it does not reuse C180's shell theorem.  The current
+\(5/4\) ledger is therefore not envelope-optimal: keeping C180's
+proved \(q=n^8\) shell and taking \(b=n^{-5/2}\) gives the exact lower
+scalar point \(g=q^{19/16}\), after respecifying C161 with
+\(H=n^{51/2}\) and \(J_{\rm split}=\lceil n^{5/2}\rceil\).
+
+The constraint-theory audit also corrects the proposed use of partial
+regularity.  CKN epsilon regularity constrains cylinders centered at an
+actual singular point; at every smooth finite-stage center the standard
+scaled quantities instead have explicit \(r^2,r^3,r^4\) upper bounds and
+tend to zero.  This does not control stage radii in cylinders centered at
+the eventual singular point.  The local energy inequality contains
+indefinite inward pressure/advective flux, and Tao's quantitative \(L^3\)
+lower rate is global, subsequential, and has an unspecified exponent.  No
+numerical per-stage power follows from the landed scalar ledger without
+additional center, occupancy, pressure, and wake hypotheses.  Finally,
+the exact law \(\mu_{j+1}=(q_j/g_j)\mu_j\) shows that a fixed supercritical
+scaling has no positive-viscosity autonomous fixed point.  The actual
+factorial construction is the nonautonomous augmented map
+\((X,\mu,n)\mapsto(\mathcal R_{n,\mu}X,(q_n/g_n)\mu,n+1)\); an autonomous
+inviscid limiting map remains open.
+
 The same-curl reservoir is preloaded and has no autonomous heat switch, so
 its possible action through the preceding \(O(\log q)\) C159 window is not
 covered by C182. C183 names the required **common-Floquet-frame closure
@@ -747,6 +793,11 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Conditional finite-p terminal no-focus theorem (C182)](research/2026-08-14-holder-terminal-no-focus-c182.md)
 - [Exact 2D3C Lagrangian gauge and common-Floquet return obstruction (C183)](research/2026-08-14-2d3c-lagrangian-gauge-c183.md)
 - [Stationary polynomial star and exponential collateral obstruction (C184)](research/2026-08-14-stationary-polynomial-star-c184.md)
+- [Fixed-point literature map and essential PDE growth (C185)](research/2026-08-23-fixed-point-literature-map-c185.md)
+- [Conditional unipotent PPRG dichotomy (C186)](research/2026-08-23-unipotent-pprg-dichotomy-c186.md)
+- [Explicit Duhamel constant and ladder audit (C187)](research/2026-08-23-duhamel-and-ladder-audit-c187.md)
+- [UVSR schedule corridor and epsilon-regularity audit (C188)](research/2026-08-25-uvsr-schedule-corridor-c188.md)
+- [Adversarial audit of C188](audit/AUDIT-2026-08-25-c188.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)
