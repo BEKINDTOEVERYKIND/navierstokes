@@ -326,3 +326,9 @@ until the corresponding artifacts land in this repository.
 10. Turn C56 into a localized PDE capture theorem with the weighted affine-defect norm and seed-survival estimate. Use C87's exact Navier–Stokes collar and C91's controlled endpoint map, while proving that the actual phase-resolved WKB dynamics realizes those controls. **BLOCKED (no artifacts). Note: overlaps the Fork of C106.**
 11. Obtain external expert review of C58 before using it as a literature-level no-go. **BLOCKED (no artifact; if C58 is the countable-stagnation Liouville theorem of the 2026-08-01 branch, the artifact exists on agent/palasek-gavrilov-rectifier and the auditor has already verified it in full — see session review 2026-08-02).**
 12. Develop C62's compact projected tube into an all-order weighted Leray/heat parametrix; compare it quantitatively with the infinite characteristic-crossing slab before fixing the transition architecture. **BLOCKED (no artifacts).**
+
+## Auditor cross-audit 2026-08-25
+
+| ID | Claim | Artifacts | Status |
+|----|-------|-----------|--------|
+| C188 | Cross-audit of C185–C187 (0c5bf3b): C186, C187 VERIFIED-CROSS in full; C185 VERIFIED-CROSS with a split — the operator-norm growth ‖G_{nT}‖≥e^{n/5} follows from the abstract-level Shvydkoy inclusion alone, while the r_ess identification awaits paper-body Thm 4.1; C159 premise independently corroborated (own implementation: four cone inequalities hold with margins 48.3/1.04/3.91/4.80; full 3D Kelvin monodromy det M=1.000000, tr M=16715.92 matching C153 to 5e−5, Mw≥e^{1/5}w by factor ~8000). Prior auditor flags (5.1; ladder numbers) resolved and closed | `audit/AUDIT-2026-08-25-c185-c187.md`; `audit/audit_c185_orbit.py`; `audit/audit_c186_c187.py` | VERIFIED-CROSS (auditor) |
