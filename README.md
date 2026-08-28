@@ -570,15 +570,51 @@ factorial construction is the nonautonomous augmented map
 \((X,\mu,n)\mapsto(\mathcal R_{n,\mu}X,(q_n/g_n)\mu,n+1)\); an autonomous
 inviscid limiting map remains open.
 
+C190 completes the pre-registered two-episode test on C186's
+rotating-gradient orbit.  Consecutive determinant-one episodes force
+\(m=0\); in the common co-rotating frame both quarter maps are the same
+parabolic shear, their product trace is exactly two, and full-return powers
+grow at most linearly.  This is a theorem for that orbit, not a no-go for
+all passive 2D3C dynamics.
+
+C191 tests the proposed direct reuse of C185 against C182's raw
+\(q^{3/8}\) deficit.  The certified exponent is scalar-power capable:
+\[
+R_\Delta=\left\lceil{15\over8}\log q\right\rceil
+\quad\Longrightarrow\quad
+\|G_{R_\Delta T}\|_{2\to2}\ge q^{3/8},
+\]
+with required pump action
+\[
+{45\over8}\log q<TR_\Delta
+<{57\over10}\log q+{76\over25}.
+\]
+The declared scalar collar and heat budgets remain feasible under an
+explicit logarithmic allocation, but no landed theorem supplies that
+lower stage coverage.  More decisively, C182 is an \(L^\infty\) upper
+bound while C185 is an unrestricted supremal \(L^2\) operator-norm lower
+bound with no common finite band.  A common \(q^{3/8}\) multiplier overruns
+child energy by \(q^{3/4}\); fixed-energy rescaling cancels it but does not
+resolve C125.  In C147's coherent-packet template, uniform rescaling leaves
+the divergent ratio at \((57/2)n^8\log n\).  Thus PPRG is
+not obsolete: the missing object is same-witness, retained-band,
+fixed-final-energy concentration, not bare norm growth.
+
+C191 also catches a class-scope inconsistency.  The C152/C159/C185
+background is itself passive 2D3C and supplies an \(m\ne0\) exact return
+with growth, so universal secular no-return is false on C179/C183's broad
+class.  It is periodic/resonant, however, and therefore does not satisfy
+the accepted non-resonant witness form.  No third form is introduced; the
+sole unresolved accepted target is one genuinely incommensurate non-fixed
+orbit with transported return or growth and the same-witness physical
+endpoint estimate.  Failure of a search is not promoted to a class no-go.
+
 The same-curl reservoir is preloaded and has no autonomous heat switch, so
-its possible action through the preceding \(O(\log q)\) C159 window is not
-covered by C182. C183 names the required **common-Floquet-frame closure
-(CFFC)** inside the surviving FFCC/PPRG branch: either construct a smooth
-return-coherent C159 frame and control sideband transport, pressure, and the
-off-diagonal connection, targeted at
-\(O(\operatorname{polylog}(q)/q)\), or exploit and control the explicit
-nonperiodic return defects. That rate is a target, not a theorem. PPRG,
-depletion, C125, RIGM, BAFL, and the stage remain open.
+its possible action through a logarithmic C159 window is not covered by
+C182.  C191 forbids treating the inherited \(O(\log q)\) upper charge as
+actual lower residence and forbids subtracting C185's \(L^2\) exponent from
+the concentration demand.  Finite-band propagation, viscosity, depletion,
+C125, RIGM, BAFL, and the stage remain open.
 
 There is an exact coherent packet with \(q^3\) conjugate pairs
 (\(2q^3\) nonzero Fourier wavevectors) on the existing
@@ -803,6 +839,8 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Independent cross-audit of C185--C187 (C189)](audit/AUDIT-2026-08-25-c185-c187.md)
 - [Rotating-gradient return obstruction (C190)](research/2026-08-25-rotating-gradient-return-obstruction-c190.md)
 - [Adversarial audit of C190](audit/AUDIT-2026-08-25-c190.md)
+- [C185 deficit accounting and passive-class correction (C191)](research/2026-08-27-c185-deficit-accounting-c191.md)
+- [Adversarial audit of C191](audit/AUDIT-2026-08-27-c191.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)

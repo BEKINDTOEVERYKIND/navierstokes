@@ -1,7 +1,7 @@
 # Navier--Stokes frontier
 
 **Branch:** `agent/aug2-integrated-transition`
-**Registry frontier:** C190 (2026-08-25 checkpoint; C189 is the ingested
+**Registry frontier:** C191 (2026-08-27 checkpoint; C189 is the ingested
 auditor cross-audit)
 **Boot rule:** every research session starts from this file, `CLAIMS.md`, and
 the referenced artifacts on the branch. Chat history is not a premise.
@@ -147,38 +147,94 @@ float search and not a no-go for the complete admissible Kelvin class.
 Accordingly it feeds but does not fire the architecture trigger.  No
 criterion was weakened and no successor gate was created.
 
+## C191 C185-deficit verdict and class-scope correction
+
+C185's allowed operator-norm floor has enough abstract scalar exponent for
+the raw C182 power.  On C188's \(q=n^8\) schedule,
+
+\[
+ R_\Delta=\left\lceil{15\over8}\log q\right\rceil
+ \quad\Longrightarrow\quad
+ \|G_{R_\Delta T}\|_{2\to2}\ge q^{3/8},
+\]
+
+and the required inertial pump action is enclosed explicitly by
+
+\[
+ {45\over8}\log q<TR_\Delta
+ <{57\over10}\log q+{76\over25}.
+\]
+
+If the same floor is also assigned to C188's formal preparation factor,
+\[
+R_*=\left\lceil{285\over16}\log q\right\rceil
+\quad\Longrightarrow\quad
+\|G_{R_*T}\|_{2\to2}\ge Hq^{3/8}.
+\]
+Conditionally on C176/C188's declared collar constants, this longer clock
+has nonviscous normalized collar at most
+\(C_{\rm col}856^{7/2}n^{-1/4}\) and viscous-collar factor at most
+\(C_{\nu{\rm col}}\nu856^{3/2}(j!)^{-3/2}n^{437/28}\).  The explicit
+C191 heat condition retains at least \(99/100\) of the pump and charges at
+most a \(100/99\) factor in normalized time; on C188's physical scale,
+\[
+(j!)^{-35/2}TR_*\le t_*\le{100\over99}(j!)^{-35/2}TR_*.
+\]
+
+This does not close the physical endpoint.  The corpus supplies no lower
+stage-action theorem guaranteeing those returns.  C182 is an
+\(L^\infty\) upper bound on one packet class, while C185 is an unrestricted
+supremal \(L^2\) operator lower bound with no common finite-\(q\) retained
+band.  Treating \(q^{3/8}\) as a common scalar multiplier overruns child
+energy by \(q^{3/4}=n^6\); dividing the entrance seed by \(q^{3/8}\) restores
+the final energy and cancels the point multiplier.  Under uniform
+rescaling, C147's coherent-\(q^3\)-packet writer diagnostic remains
+divergent, \((57/2)n^8\log n\), but its transfer to C188/C161's displayed
+\(q^2\)-source coefficient is not proved.  The exact reservoir
+specification is therefore coherent fixed-final-energy
+\(L^\infty/L^2\) concentration by \(q^{3/8}\) on one retained-band witness,
+with window, viscosity, active-retention, depletion, and wake losses
+charged explicitly.  Bare \(L^2\) growth receives zero focus credit.
+
+C191 also corrects the proposed class dichotomy.  C152's background is
+itself passive 2D3C:
+\[
+U=N\times\nabla f-\sqrt2fN=v_h+\Theta n,\qquad
+n=N/\sqrt3,\quad\Theta=-\sqrt6f,\quad v_h\cdot\nabla\Theta=0.
+\]
+C159/C183/C184/C185 therefore already supplies an \(m\ne0\) exact return
+and growth inside the broad C179/C183 class.  Universal secular no-return
+is false on that class.  Calling this member the active pump rather than an
+auxiliary reservoir is not a mathematical class exclusion, and no narrower
+class is invented here.  The two requested forms are accepted program
+verdict forms, not an exhaustive theorem about the landed class.  Form (i)
+is unavailable; no third form is introduced.
+
 ## Current positive target
 
-1. **PPRG complete-class decision.** C190 excludes the chosen C186 orbit
-   exactly but leaves the broader admissible passive 2D3C class open.  Any
-   positive realization must still give two consecutive maps in one
-   common C183 frame, either in C186's respective entrywise \(1/100\)
-   boxes or with
-   \(|\operatorname{tr}(\Phi_2\Phi_1)|\ge2+\delta\) for an explicit
-   \(\delta>0\), and it must include a witness-specific finite-frequency
-   error budget preserving a stated positive exponent.  The scalar
-   \(\tau=\operatorname{tr}(N_1N_2)\) remains available only after
-   \((\Phi_i-I)^2=0\) is proved for the actual maps.  A negative verdict
-   still requires the complete-class theorem in the kill criteria below.
-2. **Viscous operator bridge.** Starting from C185's robust inviscid
-   operator-norm lower bound \(\|G_T\|>6/5\), certify three separate
-   multiplicative operator/norm-
-   amplitude factors:
-   viscous damping \(\mathfrak d\), retained band fraction
-   \(\mathfrak b\), and physical normalization \(\mathfrak n\).
-   The pre-registered pass threshold is
+1. **Final accepted PPRG witness form.** Produce one non-fixed-point base
+   trajectory with genuinely incommensurate frequencies and either a
+   certified \(m\ne0\) covector return or certified Lyapunov growth in the
+   physically transported frame.  The same witness must retain the stage
+   band and prove coherent fixed-final-energy concentration by at least
+   \(q^{3/8}\), with explicit window, viscosity, finite-frequency,
+   active-retention, depletion, and wake constants.  A failed search is
+   reported as a failed search, not converted into a class no-go or a new
+   gate.
+2. **Same-witness viscous conversion.** C185's inviscid operator-norm floor
+   may be used only in its C189-approved form.  The existing
+   \(\mathfrak d,\mathfrak b,\mathfrak n\ge99/100\) and
+   \(\varepsilon_{\rm ff}\le1/100\) bookkeeping remains a necessary
+   three-loss audit, but C191 shows it is not sufficient unless the same
+   retained-band vector also proves the normalized concentration endpoint.
+   Its operator-norm-only floor would be
    \[
-     \mathfrak d,\mathfrak b,\mathfrak n\ge{99\over100},
-     \qquad \varepsilon_{\rm ff}\le{1\over100}.
+    {6\over5}\left({99\over100}\right)^3-{1\over100}
+    ={2885897\over2500000}>{23\over20},
    \]
-   It gives the strict explicit normalized gain
-   \[
-    G_{\rm visc}>{6\over5}\left({99\over100}\right)^3-{1\over100}
-    ={2885897\over2500000}>{23\over20}.
-   \]
-   Each factor and the additive finite-frequency error must be proved for
-   the same witness and stage; they may not be merged into an unnamed
-   constant.
+   which is not a concentration estimate.
+   No \(L^2\) exponent may be subtracted from the \(q^{3/8}\) focus demand
+   before that common-witness theorem.
 3. **UVSR profile search.** Only after items 1--2, specify the complete
    Banach state, modulation slice, and viscosity coordinate for
    \({\cal R}_{n,\mu}\), then search for one approximate nonautonomous
@@ -247,16 +303,28 @@ criterion was weakened and no successor gate was created.
   square-zero generators share a flag, and the full-return powers satisfy
   \(\|S^N\|_2\le1+(44/7)N\).  This is the pre-registered orbit-specific
   obstruction, not the complete-class PPRG verdict.
+- C191: the C185 floor supplies the raw scalar \(q^{3/8}\) after
+  \(R_\Delta=\left\lceil(15/8)\log q\right\rceil\) returns and is compatible with the
+  declared scalar collar/heat powers after an explicit logarithmic-window
+  allocation.  No actual lower stage coverage is proved.  The landed
+  unrestricted \(L^2\) operator norm cannot be multiplied by C182's
+  \(L^\infty\) upper bound; common scalar reuse overruns energy by
+  \(q^{3/4}\), fixed-energy normalization cancels the gain, and C185
+  supplies no C125 relative-return cancellation.  Also, the
+  C159/C185 returning growing covector lies in the broad passive-2D3C
+  class, falsifying universal \(m\ne0\) secular no-return on that class.
 
 ## Open
 
 - UVSR: no exact or rigorously trapped unforced viscous scale-return profile
   with physical velocity focus is known.
-- PPRG realization: abstract noncommuting polarization growth is not enough.
-  C190 proves that the chosen C186 rotating-gradient orbit cannot realize
-  the two-block witness.  The complete admissible passive 2D3C class is
-  still undecided; any positive pair must arise from one exact unforced
-  evolution in a common frame and carry finite-frequency control.
+- PPRG realization: the broad landed passive-2D3C class contains both
+  C190's secular orbit and C159/C185's exact returning growing orbit, so a
+  universal secular-lock theorem is false there.  The sole unresolved
+  accepted witness form is one genuinely incommensurate non-fixed orbit
+  with an \(m\ne0\) return or transported-frame Lyapunov growth.  It must
+  carry the same-witness retained-band, viscosity, fixed-final-energy
+  \(q^{3/8}\) concentration, C125, depletion, and wake estimates.
 - A complete state space and normalization for \(\mathcal R\), including the
   retained wake and normalized-viscosity coordinate, have not been fixed.
 - No normalized convergence \(\mathcal R_{n,0}\to\mathcal R_{\infty,0}\)
@@ -280,22 +348,20 @@ criterion was weakened and no successor gate was created.
 
 These verdicts are fixed before the next computation.
 
-1. **PPRG architecture trigger.** C186 keeps only abstract matrix algebra
-   alive, and C190 excludes only its explicit rotating-gradient candidate.
-   PPRG is negative only after a rigorous theorem for the complete
-   admissible Kelvin class: for example, exact Euler/passive integrability
-   forces a common invariant flag together with an explicit growth upper
-   bound too small for C182's \(q^{3/8}\) deficit, or an exhaustive cocycle
-   enclosure gives the same upper bound. Excluding the canonical two-box
-   witness, or failing a non-exhaustive search, is not such a theorem. Once
-   the full negative dichotomy lands, do not create a successor gate. The
-   next deliverable must be a standalone architecture-level no-go assembled
-   from C181--C186, followed by a re-derivation of the base stack from the
-   surviving constraints.
-2. **Witness boundary.** An abstract pair of noncommuting unipotents keeps
-   PPRG algebraically alive but does not validate the architecture. PPRG is
-   promoted only after those blocks are realized by one exact passive 2D3C
-   orbit and yield a finite-frequency PDE estimate with explicit constants.
+1. **PPRG architecture-trigger scope.** The proposed universal
+   \(m\ne0\) secular-lock branch is unavailable on the broad C179/C183
+   class because C159/C185 is a landed counterexample.  Architectural role
+   labels do not remove it from that mathematical class, and no narrower
+   reservoir class is introduced to rescue the statement.  Failure to find
+   the remaining incommensurate witness is not a theorem and does not fire
+   the architecture trigger.  No third verdict form or successor gate is
+   permitted.
+2. **Witness boundary.** An abstract matrix pair or unrestricted
+   operator-norm exponent does not validate PPRG.  Promotion requires one
+   exact non-fixed incommensurate passive 2D3C orbit, its physically
+   transported return/growth, and on the same witness a finite-frequency
+   PDE estimate proving fixed-final-energy concentration by \(q^{3/8}\)
+   after every explicit loss.
 3. **Fixed-time regular branch.** Any candidate satisfying C182's entrance
    hypotheses on only \(O(1)\) normalized time is rejected as a source of
    \(bq^{3/2}\) focus.
@@ -303,8 +369,9 @@ These verdicts are fixed before the next computation.
    coefficient forces super-polynomial collateral norm, as in C184, is
    rejected unless the collateral modes are explicitly part of the useful
    endpoint state.
-5. **No sixth gate.** A negative PPRG verdict ends the modular
-   scalar-ledger architecture. Renaming its residue is not progress.
+5. **No sixth gate.** If the sole remaining accepted witness search fails,
+   record a failed search.  Do not rename the residue, narrow the class ad
+   hoc, or create another gate; the architecture trigger remains unfired.
 6. **Anti-formalism checkpoint rule.** A checkpoint must deliver an
    explicit-constant estimate, a strict corridor narrowing, or a completed
    dichotomy branch. State-space/operator definitions alone are not a
@@ -343,6 +410,18 @@ These verdicts are fixed before the next computation.
   \(r_{\rm ess}\) form remains source-held and is not a premise.
 - **Completed by C190 for the chosen orbit:** the PPRG two-box/trace test
   landed as pre-registered outcome (b), with exact square-zero and trace
-  calculations.  The complete-class success and architecture-negative
-  criteria remain unchanged.  A later candidate may not relax them, and a
-  partial float search is not a checkpoint.
+  calculations.  C191's class-scope correction does not alter that
+  orbit-specific theorem.  A partial float search is not a checkpoint.
+- **Resolved by C191:** the C185 floor has sufficient abstract scalar
+  exponent in an explicitly long logarithmic action allocation, but the
+  direct C182 reconciliation is negative on the landed statements.  There
+  is no lower stage-coverage theorem, no common retained-band concentration
+  witness or viscous multiplier, fixed-energy scalar reuse cancels, and
+  C125 remains open.  Do not credit
+  C185's \(L^2\) exponent toward the raw \(q^{3/8}\) concentration demand
+  before a same-witness theorem.
+- **Class correction from C191:** universal \(m\ne0\) secular no-return is
+  false on the broad C179/C183 passive-2D3C class because C159/C185 is a
+  returning growing member.  The incommensurate transported-frame witness
+  is the only unresolved accepted form.  Failed search is not a class
+  theorem, and no third formulation is permitted.
