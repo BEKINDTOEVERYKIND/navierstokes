@@ -1,7 +1,7 @@
 # Navier--Stokes frontier
 
 **Branch:** `agent/aug2-integrated-transition`
-**Registry frontier:** C192 (2026-08-28 checkpoint; C189 is the ingested
+**Registry frontier:** C194 (2026-08-28 checkpoint; C189 is the ingested
 auditor cross-audit)
 **Boot rule:** every research session starts from this file, `CLAIMS.md`, and
 the referenced artifacts on the branch. Chat history is not a premise.
@@ -266,27 +266,108 @@ size \(C_0(1+t)^Pq^{-1/2}e^{\Gamma t}\) is smaller than the
 \]
 
 an order-\(-1\) remainder has the weaker threshold
-\(\Gamma<550/57\).  These are conditional arithmetic thresholds, not
-landed remainder bounds.  A narrow C159 Gaussian at this scale has spatial
+\(\Gamma<550/57\).  These were conditional arithmetic thresholds in C192.
+C194 now lands the first local pressure-resolved remainder with exponent
+\(6\), but not its periodic/off-ray/same-witness completion.  A narrow
+C159 Gaussian at this scale has spatial
 width \(q^{-1/4}\), not the \(q^{-1}\) child width; squeezing it to the
 child scale destroys the narrow-cone premise.  Bare scalar growth also
 still cancels under fixed-energy normalization.  Thus C192 sharply moves
 the frontier but does not overturn C191's endpoint verdict.
 
+## C193 fixed-energy filter verdict
+
+C193 certifies the contracting line of the same C159 monodromy rather than
+treating its \(>3000\) multiplier as a scalar.  In the returning coefficient
+frame the two eigenlines have slopes \(\pm x\), with
+\[
+ \frac{13}{100}<x<\frac15.
+\]
+After conversion from the orthogonal C159 frame to a physical orthonormal
+frame, their slopes obey \(1/2<y=x|k_0|<2\).  Hence the physical spectral
+projectors have norm below \(5/4\) and the eigenbasis condition number is
+below \(2\).  The same claim proves the sharp global \(A_2\) jets
+\[
+ \|DU\|_{\rm op}\le6,\qquad
+ \|D^2U\|_{\rm mult}\le3\sqrt6,\qquad
+ \|D^3U\|_{\rm mult}\le9.
+\]
+
+In the exact complex principal two-fiber model, with
+\[
+ R_{\rm filt}=\left\lceil\frac38\log n\right\rceil+1,
+ \qquad q=n^8,\qquad G=\rho^{R_{\rm filt}}>3000n^3,
+\]
+C193 gives an explicit localized expanding profile and broad contracting
+profile whose entrance and endpoint \(L^2\) norms both equal \(b\), with no
+overshoot at any discrete return, and
+\[
+ \frac{\mathcal C(v_{R_{\rm filt}})}{\mathcal C(v_0)}
+ >\frac{1750}{251}n^3>q^{3/8},
+ \qquad \mathcal C(v)=\frac{\|v\|_\infty}{\|v\|_2}.
+\]
+This positively resolves C191's finite-dimensional scalar-normalization
+collision.  It does not control continuous within-period energy and is not
+yet a real, divergence-free, off-ray, periodic finite-frequency witness.
+
+## C194 pressure-resolved local bridge verdict
+
+C194 constructs the exact curl parametrix
+\[
+ v_{\rm app}=\frac{\hbar}{i}\operatorname {curl}(e^{i\phi/\hbar}c),
+ \quad c=-\frac{k\times b}{|k|^2},\quad
+ p_{\rm app}=\hbar e^{i\phi/\hbar}\,2i\frac{k^TAb}{|k|^2},
+\]
+on the \(\mathbb R^3\) \(A_2\) invariant annulus \(|f|\le1/10\).  It is
+exactly divergence free, resolves pressure explicitly, and has the exact
+residual identity
+\[
+ (D_t+DU)v_{\rm app}+\nabla p_{\rm app}
+ =\hbar e^{i\phi/\hbar}(D_td+DU\,d+\nabla\pi).
+\]
+For the exact linearized-Euler solution with the same initial data,
+\[
+\begin{aligned}
+\|v-v_{\rm app}\|_2
+\le\frac{\hbar e^{6t}|b_*|}{|k_0|}\big[&
+4{,}199{,}040\,\varepsilon^{-1}(1+t)^3\|\nabla\chi\|_2\\
+&+2{,}898{,}006{,}000{,}000{,}000(1+t)^7\|\chi\|_2\big].
+\end{aligned}
+\]
+Thus the full local symbol/pressure error has \(\Gamma=6<350/57\).  With
+\(\hbar=q^{-1}\) and the C193 concentration width
+\(\varepsilon=q^{-1/4}\), its first term has relative power margin
+\(q^{-27/100}\) against a hypothetical same-packet \(q^{3/8}\) signal;
+the narrower C192 stress test \(\varepsilon=q^{-1/2}\) retains margin
+\(q^{-1/50}\).  C193's extra return changes only the fixed clock factor
+from \(e^{456/25}\) to \(e^{912/25}\).
+
+C194 supplies the upper-error half only.  It does not prove off-ray
+expansion/stable transport, an integer periodic phase, reality completion,
+initial or endpoint band retention, the C193 concentration endpoint for
+the same exact solution, viscosity, or nonlinear closure.
+
 ## Current positive target
 
-1. **C192 same-orbit finite-frequency bridge.** On the certified C159
-   action--angle tube, prove a divergence-free retained-band parametrix
-   through \(R_\Delta^{(192)}\) returns with all symbol, Leray, pressure,
-   and band-tail errors enclosed.  A first-order beam must have total
-   exponential remainder rate strictly below \(350/57\) (the convenient
-   explicit target is \(61/10\)); an order-\(-1\) construction may instead
-   use \(550/57\).  It must then address, rather than hide, the
-   \(q^{-1/4}\)-beam versus \(q^{-1}\)-child localization mismatch and
-   prove fixed-final-energy \(L^\infty/L^2\) concentration on the same
-   vector.  A bound only for \(\|\nabla U\|\), without the full remainder,
-   is not the bridge.
-2. **Final accepted PPRG witness form.** Produce one non-fixed-point base
+1. **Quantitative off-ray hyperbolic bundle.** Extend C193's central
+   stable/unstable lines to the genuinely three-dimensional
+   \(q^{-1/4}\)-width base/covector packet needed by its localized profile.
+   Certify a uniform expanding multiplier, the covariant contracting
+   ballast, projector derivatives, and continuous within-period energy
+   with explicit constants through \(R_{\rm filt}\) returns.  Central-ray
+   continuity without an explicit packet radius receives no credit.
+2. **Periodic same-witness completion.** Put C193's two-profile filter and
+   C194's pressure-resolved beam into one real, exactly divergence-free
+   periodic solution.  Prove integer-carrier/reality completion and
+   transported endpoint-band retention, using the correct
+   \((57/400)\log q+152/25\) clock.  The endpoint must retain the exact
+   fixed-final-energy \(q^{3/8}\) concentration for that same solution.
+3. **Same-witness viscous conversion.** Prove packet heat retention,
+   band projection, and normalization as explicit factors.  The existing
+   \(\mathfrak d,\mathfrak b,\mathfrak n\ge99/100\) and
+   \(\varepsilon_{\rm ff}\le1/100\) audit remains necessary, now applied to
+   the C193/C194 composite rather than to an unrestricted operator norm.
+4. **Final accepted PPRG witness form.** Produce one non-fixed-point base
    trajectory with genuinely incommensurate frequencies and either a
    certified \(m\ne0\) covector return or certified Lyapunov growth in the
    physically transported frame.  The same witness must retain the stage
@@ -295,17 +376,7 @@ the frontier but does not overturn C191's endpoint verdict.
    active-retention, depletion, and wake constants.  A failed search is
    reported as a failed search, not converted into a class no-go or a new
    gate.
-3. **Same-witness viscous conversion.** C192's inviscid operator-norm floor
-   may be used only through C189's approved abstract inclusion.  The existing
-   \(\mathfrak d,\mathfrak b,\mathfrak n\ge99/100\) and
-   \(\varepsilon_{\rm ff}\le1/100\) bookkeeping remains a necessary
-   three-loss audit, but C191 shows it is not sufficient unless the same
-   retained-band vector also proves the normalized concentration endpoint.
-   C192 makes the scalar loss margin ample, but it remains an operator-norm
-   statement rather than a concentration estimate.
-   No \(L^2\) exponent may be subtracted from the \(q^{3/8}\) focus demand
-   before that common-witness theorem.
-4. **UVSR profile search.** Only after the same-witness physical endpoint,
+5. **UVSR profile search.** Only after the same-witness physical endpoint,
    specify the complete
    Banach state, modulation slice, and viscosity coordinate for
    \({\cal R}_{n,\mu}\), then search for one approximate nonautonomous
@@ -391,6 +462,18 @@ the frontier but does not overturn C191's endpoint verdict.
   \(q^{-1/2}\) finite-frequency remainder has the explicit nonempty power
   window \(\Gamma<350/57\).  No such remainder bound or physical endpoint
   is claimed.
+- C193: the exact \(A_2\) jets satisfy the sharp bounds
+  \(6,3\sqrt6,9\); the central C159 stable line has physical projector norm
+  below \(5/4\); and an exact principal two-polarization filter preserves
+  endpoint \(L^2\), has no discrete-return overshoot, and improves
+  concentration by more than \(q^{3/8}\).  It is complex, central-fiber,
+  and finite-dimensional.
+- C194: one exactly solenoidal pressure-resolved local \(A_2\) WKB beam
+  has the explicit linearized-Euler error displayed above, with
+  exponential rate \(6\) and margins \(q^{-27/100}\) at width \(q^{-1/4}\)
+  and \(q^{-1/50}\) at width \(q^{-1/2}\), relative to a hypothetical
+  same-packet signal.  Periodicity, off-ray growth, band, and endpoint
+  concentration are not included.
 
 ## Open
 
@@ -403,10 +486,11 @@ the frontier but does not overturn C191's endpoint verdict.
   with an \(m\ne0\) return or transported-frame Lyapunov growth.  It must
   carry the same-witness retained-band, viscosity, fixed-final-energy
   \(q^{3/8}\) concentration, C125, depletion, and wake estimates.
-- C192 finite-frequency bridge: the short clock is power-compatible, but
-  no explicit Leray/pressure remainder with \(\Gamma<350/57\), retained
-  viscous band, child-scale localization, or fixed-energy concentration
-  theorem has landed.
+- C193/C194 same-witness bridge: the principal fixed-energy filter and the
+  local pressure-resolved upper-error estimate have landed separately.
+  No quantitative three-dimensional off-ray bundle, real periodic
+  composite, retained viscous band, child-scale conversion, or
+  fixed-energy concentration theorem for one exact solution has landed.
 - A complete state space and normalization for \(\mathcal R\), including the
   retained wake and normalized-viscosity coordinate, have not been fixed.
 - No normalized convergence \(\mathcal R_{n,0}\to\mathcal R_{\infty,0}\)
@@ -511,7 +595,13 @@ These verdicts are fixed before the next computation.
   is the only unresolved accepted form.  Failed search is not a class
   theorem, and no third formulation is permitted.
 - **C192 boundary:** the short clock removes the generic power mismatch but
-  does not prove its conditional remainder exponent, retained band,
-  viscosity, child-scale localization, concentration, or C125.  Do not
+  does not by itself prove a remainder, retained band, viscosity,
+  child-scale localization, concentration, or C125.  C194 proves only the
+  local upper-error half.  Do not
   multiply its operator norm into C182's upper bound or treat a
   \(q^{-1/4}\)-width Gaussian as a \(q^{-1}\)-width child.
+- **C193/C194 boundary:** the fixed-energy filter is an exact complex
+  principal two-fiber lemma and the WKB estimate is an \(\mathbb R^3\)
+  local-beam upper bound.  Neither may be quoted as the real periodic
+  off-ray same-witness endpoint.  Composite uses pay the extra-return fixed
+  factor \(e^{912/25}\), not C194's raw-clock \(e^{456/25}\).

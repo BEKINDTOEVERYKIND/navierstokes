@@ -3,7 +3,7 @@
 Purpose: lets ANY fresh auditor session resume with zero loss. Boot rule:
 read this file, `FRONTIER.md`, `CLAIMS.md`, and the artifacts they cite.
 Chat history is not a premise. Updated: 2026-08-28, research checkpoint
-C192 after ingestion of auditor cross-audit C189.
+C194 after ingestion of auditor cross-audit C189.
 
 ## Standing constraints (from R, verbatim where it matters)
 - Never modify `research/` or `checks/` — auditor namespace is `audit/`,
@@ -63,6 +63,20 @@ C192 after ingestion of auditor cross-audit C189.
   C192 is self/adversarially audited and awaits independent
   `VERIFIED-CROSS`.
 
+- C193 certifies the complementary stable line and sharp \(A_2\) jets,
+  then proves an exact complex principal two-polarization filter: equal
+  entrance/endpoint \(L^2\), no discrete-return overshoot, and
+  \(>(1750/251)q^{3/8}\) concentration improvement.  Its physical
+  projector norm is below \(5/4\).  It does not prove a real, periodic,
+  off-ray, finite-frequency endpoint.
+- C194 proves the first explicit local pressure-resolved finite-frequency
+  upper error on the same \(A_2\) background.  The curl ansatz is exactly
+  solenoidal and the error has exponential rate \(6<350/57\).  At width
+  \(q^{-1/4}\) its conditional relative power margin is \(q^{-27/100}\);
+  at width \(q^{-1/2}\) it is \(q^{-1/50}\).  This is an \(\mathbb R^3\)
+  local-beam estimate only; periodicity, off-ray lower growth, band,
+  viscosity, and same-witness concentration remain open.
+
 ## Open auditor queue (priority order)
 1. Shvydkoy Theorem 4.1 paper-body check (closes the C185 split).
 2. Independently re-derive C190, especially the consecutive-quarter
@@ -76,23 +90,29 @@ C192 after ingestion of auditor cross-audit C189.
    directed Metzler product, \(3000\) factor, operator-source scope, clocks,
    and the conditional \(350/57,550/57\) thresholds.  Check specifically
    that Decimal negations and cell lengths use directed contexts.
-5. Audit any later PPRG witness artifact against the C191/C192 boundary: one
+5. Independently re-derive C193--C194: the physical frame normalization,
+   half-period \(\gamma\) symmetry, outward stable Riccati comparison,
+   nonorthogonal filter energy identity, global jet constants, exact
+   curl/pressure signs, annulus-restricted flow jets, residual constants,
+   and all three clock margins.  Do not combine the two claims without an
+   explicit off-ray periodic same-witness theorem.
+6. Audit any later PPRG witness artifact against the C191/C192 boundary: one
    genuinely incommensurate non-fixed orbit, physical transported-frame
    return/growth, and the same-witness retained-band, viscous,
    fixed-final-energy \(q^{3/8}\) concentration estimate.  A failed search
    is not a class no-go.
-6. For UVSR, audit terminal backward cylinders, time occupancy,
+7. For UVSR, audit terminal backward cylinders, time occupancy,
    pressure/wake contributions, the local energy inequality, and the
    critical-norm comparison.  Do not rerun C188's already-landed scalar
    corridor as if it settled the terminal object.
-7. Earlier standing items: external review of the countable-stagnation
+8. Earlier standing items: external review of the countable-stagnation
    Liouville theorem (branch 2026-08-01); auditor claims C102–C106 and
    C137–C139 (transported writer, wake ledger/floor, wake slaving) remain
    VERIFIED-SELF and open for their cross-audit.
 
 ## Numbering discipline
 Research model's registry is canonical once landed (currently through
-C192; auditor cross-audit = C189).  C188 remains the research corridor
+C194; auditor cross-audit = C189).  C188 remains the research corridor
 claim.  On any collision, the landed number wins and the auditor renumbers.
 
 ## Operational notes

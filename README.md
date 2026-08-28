@@ -634,11 +634,43 @@ TR_\Delta<{57\over400}\log q+{76\over25};
 the logarithmic action coefficient is exactly forty times smaller than in
 C191. Consequently a first-order \(q^{-1/2}e^{\Gamma t}\) remainder has
 the nonempty power window \(\Gamma<350/57\), and an order-\(-1\) remainder
-has \(\Gamma<550/57\).  Those remainder estimates are not yet proved.  A
+has \(\Gamma<550/57\).  C194 now proves the first local pressure-resolved
+remainder with \(\Gamma=6\), but not its periodic/off-ray completion.  A
 narrow-cone Gaussian at this scale also has width \(q^{-1/4}\), not the
 required \(q^{-1}\) child width, and scalar growth still cancels under
 fixed-energy normalization.  C192 therefore makes a direct finite-frequency
 bridge plausible without claiming the physical endpoint.
+
+C193 removes that last scalar-normalization collision at the exact
+principal level.  It certifies the C159 contracting line and its physical
+conditioning (projector norm \(<5/4\)), then places an explicit localized
+profile in the expanding line and a broad profile in the contracting line.
+After
+\[
+ R_{\rm filt}=\left\lceil\frac38\log n\right\rceil+1,
+ \qquad q=n^8,
+\]
+the entrance and endpoint \(L^2\) norms agree, no discrete return exceeds
+that energy, and the concentration quotient improves by more than
+\((1750/251)n^3>q^{3/8}\).  This is a complex principal two-fiber lemma,
+not yet a real finite-frequency solution.
+
+C194 supplies the complementary upper-error theorem.  Its exact curl
+ansatz is divergence free, its pressure cancels the leading Kelvin
+equation, and the full local linearized-Euler error is bounded by
+\[
+\frac{\hbar e^{6t}|b_*|}{|k_0|}
+\left[
+4{,}199{,}040\,\varepsilon^{-1}(1+t)^3\|\nabla\chi\|_2+
+2{,}898{,}006{,}000{,}000{,}000(1+t)^7\|\chi\|_2
+\right].
+\]
+At \(\hbar=q^{-1}\), the \(q^{-1/4}\) concentration width has conditional
+relative margin \(q^{-27/100}\) against a hypothetical same-packet signal;
+the \(q^{-1/2}\) stress test retains \(q^{-1/50}\).  The remaining single
+bridge problem is now exact: certify the off-ray expanding/stable bundle,
+periodic reality and retained band, and combine both results on the same
+solution.  C193's extra return pays the fixed factor \(e^{912/25}\).
 
 There is an exact coherent packet with \(q^3\) conjugate pairs
 (\(2q^3\) nonzero Fourier wavevectors) on the existing
@@ -867,6 +899,9 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Adversarial audit of C191](audit/AUDIT-2026-08-27-c191.md)
 - [Strong zero-drift gain and short finite-frequency clock (C192)](research/2026-08-28-strong-zero-drift-gain-c192.md)
 - [Adversarial audit of C192](audit/AUDIT-2026-08-28-c192.md)
+- [Hyperbolic fixed-energy polarization filter (C193)](research/2026-08-28-hyperbolic-polarization-filter-c193.md)
+- [Pressure-resolved local curl/WKB bridge (C194)](research/2026-08-28-a2-curl-wkb-bridge-c194.md)
+- [Adversarial audit of C193--C194](audit/AUDIT-2026-08-28-c193-c194.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)
