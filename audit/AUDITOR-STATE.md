@@ -2,8 +2,8 @@
 
 Purpose: lets ANY fresh auditor session resume with zero loss. Boot rule:
 read this file, `FRONTIER.md`, `CLAIMS.md`, and the artifacts they cite.
-Chat history is not a premise. Updated: 2026-08-27, research checkpoint
-C191 after ingestion of auditor cross-audit C189.
+Chat history is not a premise. Updated: 2026-08-28, research checkpoint
+C192 after ingestion of auditor cross-audit C189.
 
 ## Standing constraints (from R, verbatim where it matters)
 - Never modify `research/` or `checks/` — auditor namespace is `audit/`,
@@ -52,6 +52,16 @@ C191 after ingestion of auditor cross-audit C189.
   relative-return cancellation.  It does not prove the actual
   C185 cocycle lacks concentration.  C191 is self/adversarially audited and
   awaits independent `VERIFIED-CROSS`.
+- C192 strengthens the same C159 monodromy by an outward 2048-cell Metzler
+  comparison: \(Mw>3000w\), hence, through C189's already-approved abstract
+  inclusion, \(\|G_{rT}\|_{2\to2}\ge3000^r>e^{8r}\).  The raw deficit
+  action is now below \((57/400)\log q+76/25\), forty times smaller in its
+  logarithmic coefficient than C191's allowed-floor clock.  A conditional
+  first-order finite-frequency remainder has the explicit power threshold
+  \(\Gamma<350/57\).  No remainder, retained-band, viscosity,
+  child-localization, concentration, or nonlinear theorem is claimed.
+  C192 is self/adversarially audited and awaits independent
+  `VERIFIED-CROSS`.
 
 ## Open auditor queue (priority order)
 1. Shvydkoy Theorem 4.1 paper-body check (closes the C185 split).
@@ -62,31 +72,33 @@ C191 after ingestion of auditor cross-audit C189.
    lower-versus-upper window scope, heat-clock inversion and physical-time
    factor, both collar powers, fixed-energy cancellation, C125 writer
    ratio, and the C159/C185 passive-class counterexample.
-4. Audit any later PPRG witness artifact against the C191 boundary: one
+4. Independently re-derive C192: rerun the C159 tube, raw-entry intervals,
+   directed Metzler product, \(3000\) factor, operator-source scope, clocks,
+   and the conditional \(350/57,550/57\) thresholds.  Check specifically
+   that Decimal negations and cell lengths use directed contexts.
+5. Audit any later PPRG witness artifact against the C191/C192 boundary: one
    genuinely incommensurate non-fixed orbit, physical transported-frame
    return/growth, and the same-witness retained-band, viscous,
    fixed-final-energy \(q^{3/8}\) concentration estimate.  A failed search
    is not a class no-go.
-5. For UVSR, audit terminal backward cylinders, time occupancy,
+6. For UVSR, audit terminal backward cylinders, time occupancy,
    pressure/wake contributions, the local energy inequality, and the
    critical-norm comparison.  Do not rerun C188's already-landed scalar
    corridor as if it settled the terminal object.
-6. Earlier standing items: external review of the countable-stagnation
+7. Earlier standing items: external review of the countable-stagnation
    Liouville theorem (branch 2026-08-01); auditor claims C102–C106 and
    C137–C139 (transported writer, wake ledger/floor, wake slaving) remain
    VERIFIED-SELF and open for their cross-audit.
 
 ## Numbering discipline
 Research model's registry is canonical once landed (currently through
-C191; auditor cross-audit = C189).  C188 remains the research corridor
+C192; auditor cross-audit = C189).  C188 remains the research corridor
 claim.  On any collision, the landed number wins and the auditor renumbers.
 
 ## Operational notes
-- This session's git proxy blocks pushes (repo not in the session's source
-  set); reads work. Deliverable flow: commit locally → `git bundle` →
-  hand to R → applied/pushed from an authorized clone (the research
-  model's session pushes fine). A fresh session with the repo attached as
-  a source at creation restores direct push.
+- Research checkpoints are committed locally and then published through
+  the available authenticated GitHub path. Verify the remote tree and
+  synchronize the local branch after every publication.
 - GPU (Colab A100) is available via R for validated-numerics work; prefer
   interval/outward-rounded certificates over floats for anything
   load-bearing.

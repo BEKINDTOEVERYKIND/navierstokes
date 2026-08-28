@@ -616,6 +616,30 @@ actual lower residence and forbids subtracting C185's \(L^2\) exponent from
 the concentration demand.  Finite-band propagation, viscosity, depletion,
 C125, RIGM, BAFL, and the stage remain open.
 
+C192 sharply strengthens the positive asset on the same certified orbit.
+Instead of integrating the unstable amplitude column, it bounds the raw
+cooperative generator on 2048 cells and propagates a directed positive
+lower product. For \(w=(1,3/20)^T\),
+\[
+                 Mw>3000w,
+ \qquad \|G_{rT}\|_{2\to2}\ge3000^r>e^{8r},
+\]
+using only C189's approved operator-norm source scope.  The raw deficit now
+uses
+\[
+R_\Delta=\left\lceil{3\over64}\log q\right\rceil,
+\qquad
+TR_\Delta<{57\over400}\log q+{76\over25};
+\]
+the logarithmic action coefficient is exactly forty times smaller than in
+C191. Consequently a first-order \(q^{-1/2}e^{\Gamma t}\) remainder has
+the nonempty power window \(\Gamma<350/57\), and an order-\(-1\) remainder
+has \(\Gamma<550/57\).  Those remainder estimates are not yet proved.  A
+narrow-cone Gaussian at this scale also has width \(q^{-1/4}\), not the
+required \(q^{-1}\) child width, and scalar growth still cancels under
+fixed-energy normalization.  C192 therefore makes a direct finite-frequency
+bridge plausible without claiming the physical endpoint.
+
 There is an exact coherent packet with \(q^3\) conjugate pairs
 (\(2q^3\) nonzero Fourier wavevectors) on the existing
 \(\mathbb ZN+\mathbb Zk_1+\mathbb Zk_2\) lattice, but it repeats in every
@@ -636,11 +660,11 @@ streamline with zero axial drift, an exact rank-one linearized return, and
 a two-plane of periodic
 covectors containing an explicit off-plane direction.  The corresponding
 Kelvin amplitude calculation has a very large numerical multiplier
-(C153), and C159 now replaces that floating orientation with an
-outward-rounded cooperative-cone certificate.  It proves
-\(\rho(M)>1\), \(\det M=1\), and therefore
-\(\operatorname{tr}M>2\) without integrating an amplitude column or using
-the numerical trace as a premise.  C154 also shows that a fiber band with
+(C153), and C159 replaces that floating orientation with an
+outward-rounded cooperative-cone certificate.  C192 strengthens the same
+certificate to \(Mw>3000w\), hence \(\rho(M)>3000\), without integrating
+an amplitude column or using the numerical trace as a premise.  C154 also
+shows that a fiber band with
 nondegenerate width in the shearing direction widens from \(q\) to
 \(q\log q\) over the gain window.  Correlation with the periodic-covector
 plane removes that shear but leaves only a two-dimensional fiber; a
@@ -841,6 +865,8 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Adversarial audit of C190](audit/AUDIT-2026-08-25-c190.md)
 - [C185 deficit accounting and passive-class correction (C191)](research/2026-08-27-c185-deficit-accounting-c191.md)
 - [Adversarial audit of C191](audit/AUDIT-2026-08-27-c191.md)
+- [Strong zero-drift gain and short finite-frequency clock (C192)](research/2026-08-28-strong-zero-drift-gain-c192.md)
+- [Adversarial audit of C192](audit/AUDIT-2026-08-28-c192.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)

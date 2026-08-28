@@ -1,7 +1,7 @@
 # Navier--Stokes frontier
 
 **Branch:** `agent/aug2-integrated-transition`
-**Registry frontier:** C191 (2026-08-27 checkpoint; C189 is the ingested
+**Registry frontier:** C192 (2026-08-28 checkpoint; C189 is the ingested
 auditor cross-audit)
 **Boot rule:** every research session starts from this file, `CLAIMS.md`, and
 the referenced artifacts on the branch. Chat history is not a premise.
@@ -129,7 +129,7 @@ co-rotating orthonormal fiber frame,
 
 \[
  \Phi_1=\Phi_2=I+{\pi\over2}\beta E_{12},\quad |\beta|\le1,\qquad
- (\Phi_i-I)^2=0,qquad
+ (\Phi_i-I)^2=0,\qquad
  \operatorname {tr}(\Phi_2\Phi_1)=2.
 \]
 
@@ -210,9 +210,83 @@ class is invented here.  The two requested forms are accepted program
 verdict forms, not an exhaustive theorem about the landed class.  Form (i)
 is unavailable; no third form is introduced.
 
+## C192 strong-growth verdict
+
+The outward C159 tube contains much more quantitative gain than its former
+constant-subsolution floor recorded.  A 2048-cell directed Metzler
+comparison, with no unstable amplitude-column integration, proves
+
+\[
+ M(1,3/20)^T>3000(1,3/20)^T,
+ \qquad \rho(M)>3000>e^8.
+\]
+
+The C192 adversarial pass also repaired C159's inherited Decimal
+sign/absolute-value context defect and reran both complete certificates;
+the displayed lower bound is post-repair.
+
+Using only C189's approved abstract spectral-inclusion step, the robust
+infinite-dimensional conclusion is now
+
+\[
+             \|G_{rT}\|_{L^2\to L^2}\ge3000^r>e^{8r}.
+\]
+
+No essential-radius form is used.  On \(q=n^8\), the raw deficit clock and
+action are
+
+\[
+ R_\Delta^{(192)}=\left\lceil{3\over64}\log q\right\rceil,
+ \qquad
+ {9\over64}\log q<TR_\Delta^{(192)}
+ <{57\over400}\log q+{76\over25}.
+\]
+
+If the same floor is assigned to the formal \(Hq^{3/8}\) factor, then
+
+\[
+ R_*^{(192)}=\left\lceil{57\over128}\log q\right\rceil,
+ \qquad
+ TR_*^{(192)}<{1083\over800}\log q+{76\over25}.
+\]
+
+Both logarithmic action coefficients are exactly one fortieth of C191's
+allowed-floor coefficients. Under the same conditional C176/C188 scalar
+ledger, the scalar collar bound improves from \(856^{7/2}\) to
+\(23^{7/2}\), with the corresponding \(23^{3/2}\) viscous-collar
+constant.
+
+This removes the former **power-level** objection to a first-order
+finite-frequency bridge.  On the raw clock, a remainder of entrance-unit
+size \(C_0(1+t)^Pq^{-1/2}e^{\Gamma t}\) is smaller than the
+\(q^{3/8}\) signal whenever
+
+\[
+                         \Gamma<{350\over57};
+\]
+
+an order-\(-1\) remainder has the weaker threshold
+\(\Gamma<550/57\).  These are conditional arithmetic thresholds, not
+landed remainder bounds.  A narrow C159 Gaussian at this scale has spatial
+width \(q^{-1/4}\), not the \(q^{-1}\) child width; squeezing it to the
+child scale destroys the narrow-cone premise.  Bare scalar growth also
+still cancels under fixed-energy normalization.  Thus C192 sharply moves
+the frontier but does not overturn C191's endpoint verdict.
+
 ## Current positive target
 
-1. **Final accepted PPRG witness form.** Produce one non-fixed-point base
+1. **C192 same-orbit finite-frequency bridge.** On the certified C159
+   action--angle tube, prove a divergence-free retained-band parametrix
+   through \(R_\Delta^{(192)}\) returns with all symbol, Leray, pressure,
+   and band-tail errors enclosed.  A first-order beam must have total
+   exponential remainder rate strictly below \(350/57\) (the convenient
+   explicit target is \(61/10\)); an order-\(-1\) construction may instead
+   use \(550/57\).  It must then address, rather than hide, the
+   \(q^{-1/4}\)-beam versus \(q^{-1}\)-child localization mismatch and
+   prove fixed-final-energy \(L^\infty/L^2\) concentration on the same
+   vector.  A bound only for \(\|\nabla U\|\), without the full remainder,
+   is not the bridge.
+2. **Final accepted PPRG witness form.** Produce one non-fixed-point base
    trajectory with genuinely incommensurate frequencies and either a
    certified \(m\ne0\) covector return or certified Lyapunov growth in the
    physically transported frame.  The same witness must retain the stage
@@ -221,21 +295,18 @@ is unavailable; no third form is introduced.
    active-retention, depletion, and wake constants.  A failed search is
    reported as a failed search, not converted into a class no-go or a new
    gate.
-2. **Same-witness viscous conversion.** C185's inviscid operator-norm floor
-   may be used only in its C189-approved form.  The existing
+3. **Same-witness viscous conversion.** C192's inviscid operator-norm floor
+   may be used only through C189's approved abstract inclusion.  The existing
    \(\mathfrak d,\mathfrak b,\mathfrak n\ge99/100\) and
    \(\varepsilon_{\rm ff}\le1/100\) bookkeeping remains a necessary
    three-loss audit, but C191 shows it is not sufficient unless the same
    retained-band vector also proves the normalized concentration endpoint.
-   Its operator-norm-only floor would be
-   \[
-    {6\over5}\left({99\over100}\right)^3-{1\over100}
-    ={2885897\over2500000}>{23\over20},
-   \]
-   which is not a concentration estimate.
+   C192 makes the scalar loss margin ample, but it remains an operator-norm
+   statement rather than a concentration estimate.
    No \(L^2\) exponent may be subtracted from the \(q^{3/8}\) focus demand
    before that common-witness theorem.
-3. **UVSR profile search.** Only after items 1--2, specify the complete
+4. **UVSR profile search.** Only after the same-witness physical endpoint,
+   specify the complete
    Banach state, modulation slice, and viscosity coordinate for
    \({\cal R}_{n,\mu}\), then search for one approximate nonautonomous
    trapping orbit by minimizing the norm of the full stage residual (not
@@ -248,10 +319,9 @@ is unavailable; no third form is introduced.
 
 - C121: the homochiral \(A_2\) pump is an exact unforced heat-decaying
   Navier--Stokes background.
-- C152/C159: one exact zero-drift periodic orbit has a rigorously certified
-  Kelvin cone with one-period multiplier strictly larger than
-  \(e^{1/5}\); before this checkpoint it was registered only as a
-  finite-dimensional principal-cocycle statement.
+- C152/C159/C192: one exact zero-drift periodic orbit has a rigorously
+  certified returning \(m\ne0\) Kelvin cone, and the sharpened directed
+  comparison gives one-period multiplier strictly larger than \(3000\).
 - C161/C176/C179/C180: the required support cardinality, correlated tube,
   exact passive 2D3C background, and factorial-shell tight-star arithmetic
   exist, but no physical velocity endpoint follows from them.
@@ -263,9 +333,10 @@ is unavailable; no third form is introduced.
   \(O(q^{-1/2})\) perturbation gives no extra \(\sqrt q\).
 - C184: degree-\(q\) stationary polynomial palettes pay an exponential
   off-line cost and cannot meet a polynomial reservoir budget.
-- C185/C189: C159 plus the abstract-level Shvydkoy spectral inclusion gives
+- C185/C189/C192: the certified C159 multiplier plus the abstract-level
+  Shvydkoy spectral inclusion gives
   the robust infinite-dimensional operator-norm estimate
-  \(\|G_{nT}\|_{L^2\to L^2}\ge e^{n/5}>(6/5)^n\).  The
+  \(\|G_{nT}\|_{L^2\to L^2}\ge3000^n>e^{8n}\).  The
   essential-spectral-radius form is citation-held until the paper-body
   Theorem 4.1 check lands.  C189 independently confirms C186 and C187 in
   full and C185 with precisely this split.
@@ -313,6 +384,13 @@ is unavailable; no third form is introduced.
   supplies no C125 relative-return cancellation.  Also, the
   C159/C185 returning growing covector lies in the broad passive-2D3C
   class, falsifying universal \(m\ne0\) secular no-return on that class.
+- C192: a 2048-cell outward Metzler product proves
+  \(Mw>3000w\), upgrades the allowed operator-norm floor to \(3000^r\),
+  and divides both C191 logarithmic action coefficients by forty.  The raw
+  action is below \((57/400)\log q+76/25\); consequently a first-order
+  \(q^{-1/2}\) finite-frequency remainder has the explicit nonempty power
+  window \(\Gamma<350/57\).  No such remainder bound or physical endpoint
+  is claimed.
 
 ## Open
 
@@ -325,6 +403,10 @@ is unavailable; no third form is introduced.
   with an \(m\ne0\) return or transported-frame Lyapunov growth.  It must
   carry the same-witness retained-band, viscosity, fixed-final-energy
   \(q^{3/8}\) concentration, C125, depletion, and wake estimates.
+- C192 finite-frequency bridge: the short clock is power-compatible, but
+  no explicit Leray/pressure remainder with \(\Gamma<350/57\), retained
+  viscous band, child-scale localization, or fixed-energy concentration
+  theorem has landed.
 - A complete state space and normalization for \(\mathcal R\), including the
   retained wake and normalized-viscosity coordinate, have not been fixed.
 - No normalized convergence \(\mathcal R_{n,0}\to\mathcal R_{\infty,0}\)
@@ -362,6 +444,8 @@ These verdicts are fixed before the next computation.
    transported return/growth, and on the same witness a finite-frequency
    PDE estimate proving fixed-final-energy concentration by \(q^{3/8}\)
    after every explicit loss.
+   The periodic C159/C192 pump asset is subject to the same physical
+   endpoint rule even though it is not the incommensurate PPRG reservoir.
 3. **Fixed-time regular branch.** Any candidate satisfying C182's entrance
    hypotheses on only \(O(1)\) normalized time is rejected as a source of
    \(bq^{3/2}\) focus.
@@ -404,9 +488,10 @@ These verdicts are fixed before the next computation.
   pressure/wake terms, the local energy inequality, and critical-norm
   comparison remain attached to UVSR and may not be dropped at profile
   certification.
-- **C185 citation restriction from C189:** until the Shvydkoy Theorem 4.1
+- **C185/C192 citation restriction from C189:** until the Shvydkoy Theorem 4.1
   paper-body check lands, every downstream use cites only
-  \(\|G_{nT}\|_{L^2\to L^2}\ge e^{n/5}>(6/5)^n\).  The
+  operator norm.  C192's allowed strengthened form is
+  \(\|G_{nT}\|_{L^2\to L^2}\ge3000^n>e^{8n}\); the
   \(r_{\rm ess}\) form remains source-held and is not a premise.
 - **Completed by C190 for the chosen orbit:** the PPRG two-box/trace test
   landed as pre-registered outcome (b), with exact square-zero and trace
@@ -425,3 +510,8 @@ These verdicts are fixed before the next computation.
   returning growing member.  The incommensurate transported-frame witness
   is the only unresolved accepted form.  Failed search is not a class
   theorem, and no third formulation is permitted.
+- **C192 boundary:** the short clock removes the generic power mismatch but
+  does not prove its conditional remainder exponent, retained band,
+  viscosity, child-scale localization, concentration, or C125.  Do not
+  multiply its operator norm into C182's upper bound or treat a
+  \(q^{-1/4}\)-width Gaussian as a \(q^{-1}\)-width child.

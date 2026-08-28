@@ -39,7 +39,10 @@ class I:
     __radd__ = __add__
 
     def __neg__(self):
-        return I(-self.hi, -self.lo)
+        # Decimal unary minus uses the ambient context and can silently
+        # round a 70-digit endpoint to the default 28 digits.  Sign copying
+        # is exact and context-free.
+        return I(self.hi.copy_negate(), self.lo.copy_negate())
 
     def __sub__(self, other):
         return self + (-other)
@@ -81,7 +84,8 @@ class I:
         return I(min(lows), max(highs))
 
     def abs_upper(self):
-        return max(abs(self.lo), abs(self.hi))
+        # Decimal abs also uses the ambient context; copy_abs is exact.
+        return max(self.lo.copy_abs(), self.hi.copy_abs())
 
     def widen(self, radius):
         radius = radius if isinstance(radius, D) else D(radius)
@@ -113,7 +117,7 @@ class Ball:
     __radd__ = __add__
 
     def __neg__(self):
-        return Ball(-self.center, self.radius)
+        return Ball(self.center.copy_negate(), self.radius)
 
     def __sub__(self, other):
         return self + (-other)
@@ -126,8 +130,8 @@ class Ball:
         center = NEAR.multiply(self.center, other.center)
         radius = UP.add(
             UP.add(
-                UP.multiply(abs(self.center), other.radius),
-                UP.multiply(abs(other.center), self.radius),
+                UP.multiply(self.center.copy_abs(), other.radius),
+                UP.multiply(other.center.copy_abs(), self.radius),
             ),
             UP.multiply(self.radius, other.radius),
         )
@@ -137,7 +141,7 @@ class Ball:
     __rmul__ = __mul__
 
     def abs_upper(self):
-        return UP.add(abs(self.center), self.radius)
+        return UP.add(self.center.copy_abs(), self.radius)
 
 
 def as_ball(value):
