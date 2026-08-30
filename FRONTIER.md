@@ -1,7 +1,7 @@
 # Navier--Stokes frontier
 
 **Branch:** `agent/aug2-integrated-transition`
-**Registry frontier:** C194 (2026-08-28 checkpoint; C189 is the ingested
+**Registry frontier:** C196 (2026-08-30 checkpoint; C189 is the ingested
 auditor cross-audit)
 **Boot rule:** every research session starts from this file, `CLAIMS.md`, and
 the referenced artifacts on the branch. Chat history is not a premise.
@@ -42,6 +42,14 @@ scale return (UVSR)**:
 > included in the state.  In the equal-shape ledger
 > \(F=q^{3/2}\) and \(g=q^\gamma\); C188 records the explicit correction
 > for unequal normalized \(L^2\) shapes.
+
+UVSR is a demand-side property, not a unique implementation.  The phrase
+“one realistic path left” is withdrawn.  The active program now keeps four
+separately falsifiable mechanisms in parallel: the \(A_2\) same-witness
+cascade, a direct full-wake Navier--Stokes invariant graph, a
+nonaxisymmetric Euler-dominant Type-II relative profile, and an all-order
+terminally-flat forced construction.  Their exact first discriminators are
+recorded below; failure of one does not imply exhaustiveness of the others.
 
 C188 replaces the hard-coded C127 net exponent \(\gamma=5/4\).  If the
 bounded-profile C176 worst-case upper envelope
@@ -347,44 +355,121 @@ expansion/stable transport, an integer periodic phase, reality completion,
 initial or endpoint band retention, the C193 concentration endpoint for
 the same exact solution, viscosity, or nonlinear closure.
 
-## Current positive target
+## C195 finite-horizon dominated-cone verdict
 
-1. **Quantitative off-ray hyperbolic bundle.** Extend C193's central
-   stable/unstable lines to the genuinely three-dimensional
-   \(q^{-1/4}\)-width base/covector packet needed by its localized profile.
-   Certify a uniform expanding multiplier, the covariant contracting
-   ballast, projector derivatives, and continuous within-period energy
-   with explicit constants through \(R_{\rm filt}\) returns.  Central-ray
-   continuity without an explicit packet radius receives no credit.
-2. **Periodic same-witness completion.** Put C193's two-profile filter and
-   C194's pressure-resolved beam into one real, exactly divergence-free
-   periodic solution.  Prove integer-carrier/reality completion and
-   transported endpoint-band retention, using the correct
-   \((57/400)\log q+152/25\) clock.  The endpoint must retain the exact
-   fixed-final-energy \(q^{3/8}\) concentration for that same solution.
-3. **Same-witness viscous conversion.** Prove packet heat retention,
-   band projection, and normalization as explicit factors.  The existing
-   \(\mathfrak d,\mathfrak b,\mathfrak n\ge99/100\) and
-   \(\varepsilon_{\rm ff}\le1/100\) audit remains necessary, now applied to
-   the C193/C194 composite rather than to an unrestricted operator norm.
-4. **Final accepted PPRG witness form.** Produce one non-fixed-point base
-   trajectory with genuinely incommensurate frequencies and either a
-   certified \(m\ne0\) covector return or certified Lyapunov growth in the
-   physically transported frame.  The same witness must retain the stage
-   band and prove coherent fixed-final-energy concentration by at least
-   \(q^{3/8}\), with explicit window, viscosity, finite-frequency,
-   active-retention, depletion, and wake constants.  A failed search is
-   reported as a failed search, not converted into a class no-go or a new
-   gate.
-5. **UVSR profile search.** Only after the same-witness physical endpoint,
-   specify the complete
-   Banach state, modulation slice, and viscosity coordinate for
-   \({\cal R}_{n,\mu}\), then search for one approximate nonautonomous
-   trapping orbit by minimizing the norm of the full stage residual (not
-   selected leak projections).  An inviscid-face fixed-point search is
-   permitted only after certifying a normalized autonomous limit.  Use C188's
-   \(7/6<\gamma<3/2\) bounded-profile legacy-envelope specification unless
-   the full residual itself certifies removal of that collar comparison.
+C195 closes the finite-horizon \(C^0\) off-ray dominated-cone problem
+requested after C194.  The repaired off-level Kelvin block retains the skew term
+\[
+              \frac{m(t\cdot Sp-p\cdot St)}{QD}
+              =\frac{2\sqrt3\,mf}{Q},
+\]
+and carries \(|f|\le10^{-11}\).  On the fat 2048-cell tube, both the forward
+and reflected-inverse coefficient cones gain by more than \(3000\).  Their
+complete slope images lie respectively in
+\[
+ [0.1405737,0.1898012],\qquad[0.1402257,0.1903237],
+\]
+any forward-cone line and sign-reflected backward-cone line have physical
+angle sine at least \(520/569\), their two-line oblique projector norms are
+at most \(569/520\), and each block's projective slope contraction is below
+\(1/4{,}500{,}000\).  Continuous one-block physical propagation is below
+\(3^{55}\).
+
+On a common Euclidean lift of the initial torus neighborhood, set
+\(r=\max\{\|\delta X_0\|_2,\|\delta k_0\|_2\}\). The honest finite-horizon
+closeness condition is
+\[
+ r(1+TR_{\rm filt})^3\le1/(8.7\cdot10^{13}).
+\]
+For \(q=n^8\), it certifies \(r=q^{-1/4}\) at \(n\ge10^{10}\),
+\(r=q^{-1/12}\) at \(n\ge10^{39}\), and \(r=q^{-1/3}\) at
+\(n\ge10^8\); hence the combined \((q^{-1/12},q^{-1/3})\) two-width box is
+certified at \(n\ge10^{39}\).  Cone-field and selected-line first derivatives were removed
+after audit and remain open.  No invariant or canonical stable/unstable
+bundle, closed phase, finite-frequency packet, viscosity, or nonlinear
+return follows.
+
+## C196 endpoint phase-space verdict
+
+C196 gives an explicit real periodic exact-curl construction on
+\(q=m^{24}\).  Its carrier grid has
+\[
+ M\ge q^2/13824,\qquad p_{\min}\ge10q,
+\]
+and the two envelope widths \(q^{1/12}\), \(q^{1/3}\) give fixed-energy
+concentrations at least
+\[
+ c_*q^{9/8},\qquad c_*q^{3/2},\qquad
+ c_*=\frac{39}{10\sqrt{13824}(1+\sqrt3/10)}.
+\]
+This is exact periodic/reality/solenoidality kinematics, not a common
+Floquet/WKB solution.
+
+The support count is now dimensionally explicit.  A three-coordinate
+relative \(q^{-1/4}\) cube has ceiling \(q^{9/8}\); a genuinely projective
+angular tube with full annular radial width has ceiling \(q^{5/4}\);
+C193's one \(q^{-1/4}\) spatial envelope has concentration \(q^{3/8}\).
+C180's retained one-sided box obeys
+\[
+ \#\Sigma\le64\delta^3q^3/J^4,\qquad
+ {\cal C}(v)\le8\delta^{3/2}q^{3/2}/J^2,
+\]
+with at most a \(\sqrt2\) constant for a disjoint reality completion.
+
+C194 controls one compactly supported beam, whereas C196 uses
+\(M\ge q^2/13824\) global periodic carriers.  Its normalized triangle
+majorant contains \(\sqrt M\), hence a full power of \(q\), destroying the
+one-beam margins.  Thus a uniform
+multi-beam Fourier-integral almost-orthogonality theorem plus spatial
+localization and endpoint band/tail retention is load-bearing.  C196
+records the single-beam powers only conditionally and makes no composition
+claim.
+
+## Active research portfolio
+
+No item below is described as the globally “last path.”
+
+1. **\(A_2\) same-witness discriminator.**  Prove either a uniform
+   multi-beam FIO/band theorem on a fixed aperture or an honest
+   \(J^{-2}\)-taxed return at child volume \(J^4q^{-3}\).  Credit requires
+   one exact periodic linearized-Euler solution with an absolute point
+   lower bound after the C194 error, followed by explicit viscous,
+   normalization, depletion, and wake factors.  Another central-ray
+   multiplier or a relative concentration quotient alone receives no
+   credit.
+2. **Direct full-wake Navier--Stokes graph.**  Search
+   \[
+   {\cal C}S_{T(\mu)}^\mu X(\mu)-X((q/g)\mu)=0
+   \]
+   in axisymmetric-with-swirl free-space variables with the entire endpoint
+   retained.  First run: \(q=6/5\), \(7/6<\log g/\log q<1.48\), three
+   consecutive returns, \(128\times256\) then \(192\times384\), and
+   12--20 restarts.  Candidate thresholds are relative full residual
+   \(<10^{-5}\), independent replay \(<10^{-4}\), and top-third/outer-collar
+   fractions each \(<10^{-7}\).  Boundary-hitting and one-component
+   collapse are failed searches.
+3. **Euler-dominant Type-II relative profile.**  At
+   \((\alpha,\beta)=(11/20,9/20)\), search a genuinely nonaxisymmetric,
+   non-outgoing rotating inner profile with a \(|y|^{-11/9}\)
+   logarithmically twisted large-similarity-radius law.  Weighted residual
+   \(<10^{-10}\), centered-ball flux ratio \(1/8\) at three radii, a stable
+   tail law, and a resolution-stable finite bad spectrum qualify only as an
+   inner-profile discovery candidate.  Promotion requires a certified
+   time-dependent finite-energy cutoff/outer matching, the complete induced
+   matching defect, and explicit pressure/Biot--Savart coupling to the outer
+   flow.  For the unforced route that defect must be cancelled dynamically,
+   not declared as forcing.  CIV/Chae--Wolf guardrails are source-scoped;
+   Pineau--Vicol is methodological context only.
+4. **All-order forced route.**  Test finite sections of the full
+   retained-wake endpoint derivative before any profile search.
+   Backward-heat singular values \(e^{cK^2}\) or a persistent adjoint
+   compatibility kill this tested formulation.  A uniform
+   \(C^M(M!)^2\)-type inverse growth bound warrants a Nash--Moser/Borel
+   continuation.  The final defect must be Clay-admissible and terminally
+   flat.
+
+The detailed equations and failure criteria are in
+research/2026-08-30-counterfactual-success-portfolio.md.
 
 ## Proved frontier
 
@@ -474,6 +559,21 @@ the same exact solution, viscosity, or nonlinear closure.
   and \(q^{-1/50}\) at width \(q^{-1/2}\), relative to a hypothetical
   same-packet signal.  Periodicity, off-ray growth, band, and endpoint
   concentration are not included.
+- C195: an explicit fat off-ray finite-horizon tube carries strictly mapped
+  forward and sign-reflected inverse coefficient cones.  Both cone gains
+  exceed \(3000\); every forward/backward cone-line pair has two-line
+  oblique projector norms at most \(569/520\); each block's slope contraction
+  is below \(1/4{,}500{,}000\); and the exact initial-radius criterion is
+  \(r(1+TR_{\rm filt})^3\le1/(8.7\cdot10^{13})\).  This is a finite-horizon
+  \(C^0\) dominated-cone field, not an invariant or canonical bundle;
+  cone-field derivatives and finite-frequency realization remain open.
+- C196: exact real periodic divergence-free fixed-aperture profiles attain
+  explicit fixed-energy concentration lower bounds \(c_*q^{9/8}\) and
+  \(c_*q^{3/2}\).  Endpoint support in C180's retained box imposes the exact
+  upper tax \(8\delta^{3/2}q^{3/2}/J^2\) one-sided.  A projective angular
+  \(q^{-1/4}\) tube has ceiling \(q^{5/4}\), while a three-coordinate tube
+  has ceiling \(q^{9/8}\).  C194 is one-beam only; no uniform multi-beam
+  composition or dynamic endpoint follows.
 
 ## Open
 
@@ -481,15 +581,18 @@ the same exact solution, viscosity, or nonlinear closure.
   with physical velocity focus is known.
 - PPRG realization: the broad landed passive-2D3C class contains both
   C190's secular orbit and C159/C185's exact returning growing orbit, so a
-  universal secular-lock theorem is false there.  The sole unresolved
-  accepted witness form is one genuinely incommensurate non-fixed orbit
+  universal secular-lock theorem is false there.  The only unresolved
+  accepted witness form **within the PPRG line** is one genuinely
+  incommensurate non-fixed orbit
   with an \(m\ne0\) return or transported-frame Lyapunov growth.  It must
   carry the same-witness retained-band, viscosity, fixed-final-energy
   \(q^{3/8}\) concentration, C125, depletion, and wake estimates.
 - C193/C194 same-witness bridge: the principal fixed-energy filter and the
-  local pressure-resolved upper-error estimate have landed separately.
-  No quantitative three-dimensional off-ray bundle, real periodic
-  composite, retained viscous band, child-scale conversion, or
+  local pressure-resolved upper-error estimate have landed separately;
+  C195 adds a finite-horizon \(C^0\) off-ray dominated-cone field and C196
+  adds exact periodic endpoint kinematics.  No invariant or canonical
+  splitting, \(C^1\) cone field, uniform multi-beam FIO estimate, real
+  common dynamic composite, retained viscous band, child-scale return, or
   fixed-energy concentration theorem for one exact solution has landed.
 - A complete state space and normalization for \(\mathcal R\), including the
   retained wake and normalized-viscosity coordinate, have not been fixed.
@@ -537,14 +640,35 @@ These verdicts are fixed before the next computation.
    coefficient forces super-polynomial collateral norm, as in C184, is
    rejected unless the collateral modes are explicitly part of the useful
    endpoint state.
-5. **No sixth gate.** If the sole remaining accepted witness search fails,
-   record a failed search.  Do not rename the residue, narrow the class ad
-   hoc, or create another gate; the architecture trigger remains unfired.
+5. **No sixth PPRG gate.** If the remaining accepted PPRG witness search
+   fails, record a failed search.  Do not rename that residue, narrow its
+   class ad hoc, or create another PPRG gate; this says nothing exhaustive
+   about the three independent portfolio routes above.
 6. **Anti-formalism checkpoint rule.** A checkpoint must deliver an
    explicit-constant estimate, a strict corridor narrowing, or a completed
    dichotomy branch. State-space/operator definitions alone are not a
    checkpoint. Numerical residual minima count only with a full interval
    certificate.
+7. **Phase-space honesty.**  Count distinct endpoint Fourier modes, not
+   carrier--envelope labels.  Promotion of the current \(A_2\) route needs
+   either a fixed-aperture retained block or the explicit \(J^{-2}\)-taxed
+   child.  A one-beam C194 estimate cannot be triangle-summed over
+   \(q^2\) carriers; a uniform square-function/FIO theorem is required.
+8. **Direct full-wake candidate.**  The thresholds in Active research
+   portfolio item 2 are fixed.  Selected-shell recurrence, \(T\to0\),
+   cutoff/collar pile-up, or vanishing swirl/poloidal energy is a failed
+   search, not a weakened residual target.
+9. **Type-II candidate.**  The inner-discovery thresholds in item 3 are
+   fixed.  Axisymmetric or locally outgoing profiles, missing
+   \(|y|^{-11/9}\) inner tail/twist, failure of the \(1/8\) flux identity, or
+   proliferating unstable eigenvalues are failed searches.  Passing those
+   tests does not advance a Clay claim without certified finite-energy outer
+   matching, matching-annulus defect control, pressure/nonlocal coupling,
+   and the standing terminal singular-center obligations.
+10. **Forced tame inverse.**  Exponential backward-heat growth or a stable
+    adjoint compatibility kills the tested retained-wake formulation.
+    Only an interval-certified finite block plus analytic tail can promote
+    it.
 
 ## Audit obligations
 
@@ -605,3 +729,27 @@ These verdicts are fixed before the next computation.
   local-beam upper bound.  Neither may be quoted as the real periodic
   off-ray same-witness endpoint.  Composite uses pay the extra-return fixed
   factor \(e^{912/25}\), not C194's raw-clock \(e^{456/25}\).
+- **C195 boundary:** only a \(C^0\) finite-horizon forward/reflected-inverse
+  dominated-cone field is certified.  The separation and oblique-projector
+  bounds hold for arbitrary lines chosen from the two cones; they do not
+  select persistent \(E^u,E^s\).  The draft cone/projector-derivative claim
+  was removed after audit.  Do not promote C195 to an invariant or canonical
+  bundle, a closed phase, a uniform FIO propagator, or a viscous packet.
+- **C196 boundary:** the exact periodic profiles are kinematic endpoints,
+  not C194 solutions.  A projective angular tube has two narrowed
+  directions, not three.  Every phase-space ceiling is conditional on
+  actual endpoint support, and C194's block powers remain conditional on a
+  missing uniform multi-beam almost-orthogonality theorem.
+- **Type-II promotion boundary:** the \(|y|^{-11/9}\) law belongs only to the
+  inner similarity-profile discovery problem and gives a global
+  infinite-energy profile.  A weighted residual, flux identity, and finite
+  bad spectrum do not by themselves produce finite-energy data or a Clay
+  solution.  Promotion requires a certified time-dependent cutoff/outer
+  match, its full induced defect, explicit pressure/Biot--Savart coupling,
+  and dynamic cancellation of the defect in the unforced equation.
+- **Portfolio engine portability:** engines/return_map_opt.py now retains
+  the seed-dependent time in autograd, uses vector-speed diagnostics, and
+  snapshots score/state/shift atomically.  PyTorch is absent in the current
+  container, so this patch is syntax-checked only and supplies no numerical
+  candidate.  The historical independent QP audit remains unchanged for
+  provenance.

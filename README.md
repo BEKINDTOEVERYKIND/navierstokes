@@ -12,11 +12,42 @@ time.  We impose the stronger convenient design that, after subtracting a
 fixed smooth terminal background, the shrinking-scale tail is flat there;
 it can then be extended with rapid future decay.
 
-## Current outcome
+## 2026-08-30 frontier correction
 
-The work has reduced the constructive route to a short linked chain of
-local analytic estimates.  Several objects that were previously only formal
-are now exact.
+The repository no longer describes any implementation as “the one realistic
+path left.”  C195 certifies strictly mapped forward and sign-reflected inverse
+coefficient cones on an explicit finite-horizon \(C^0\) off-ray tube, with
+gain above \(3000\) in both directions.  It does not construct an invariant
+or canonical stable/unstable bundle.  C196 then identifies the actual
+endpoint discriminator:
+
+* exact real periodic divergence-free profiles with fixed-energy
+  \(q^{3/2}\) concentration exist kinematically on a fixed aperture;
+* C180's retained band supports at most
+  \(8\delta^{3/2}q^{3/2}/J^2\) concentration one-sided; and
+* C194 controls one beam, so a \(q^2\)-carrier endpoint needs a new uniform
+  Fourier-integral almost-orthogonality and band-retention theorem.
+
+The active portfolio now tests four distinct mechanisms: the \(A_2\)
+same-witness cascade, a direct full-wake nonautonomous Navier--Stokes
+invariant graph, a nonaxisymmetric Euler-dominant Type-II inner-profile
+discovery that still requires certified finite-energy outer matching, and
+an all-order terminally-flat forced construction.  Their fixed failure
+criteria are in [FRONTIER.md](FRONTIER.md), and the counterfactual success
+logic is in
+[research/2026-08-30-counterfactual-success-portfolio.md](research/2026-08-30-counterfactual-success-portfolio.md).
+None is a claimed singular solution.
+
+## Historical modular-route chronology (C1--C194)
+
+The numbered body below is retained as a provenance record of the earlier
+module-by-module program.  Its phrases such as “remaining,” “next,” and
+“the route” describe the local frontier at the checkpoint where each
+paragraph was written; they are not the current architecture verdict and do
+not assert that any module was globally last or unique.  The authoritative
+current state is the 2026-08-30 correction above together with
+[FRONTIER.md](FRONTIER.md).  Within that historical program, several objects
+that were previously only formal became exact.
 
 1. The affine Kelvin solution realizes the required amplification law
    \(a\sim\ell^{-\gamma}\), and all scalar constraints meet in the sharp
@@ -278,8 +309,9 @@ The exact finite-dimensional and scalar-ledger layer now contains:
    \]
    on which the recorded scalar budgets are summable.
 
-The remaining package is **backward-weighted active-focus leakage
-(BAFL)**. Put \(n=j+1\). The one-cell trajectory must realize the unforced
+At that checkpoint, the modular program grouped its unresolved package
+under **backward-weighted active-focus leakage (BAFL)**. Put \(n=j+1\). The
+one-cell trajectory was required to realize the unforced
 depletion/gain blocks, route the dormant seed before activation, actively
 concentrate its energy by \(q_j^{3/2}\), and satisfy the two-channel response
 bound
@@ -604,10 +636,11 @@ C191 also catches a class-scope inconsistency.  The C152/C159/C185
 background is itself passive 2D3C and supplies an \(m\ne0\) exact return
 with growth, so universal secular no-return is false on C179/C183's broad
 class.  It is periodic/resonant, however, and therefore does not satisfy
-the accepted non-resonant witness form.  No third form is introduced; the
-sole unresolved accepted target is one genuinely incommensurate non-fixed
-orbit with transported return or growth and the same-witness physical
-endpoint estimate.  Failure of a search is not promoted to a class no-go.
+the accepted non-resonant PPRG witness form.  No third PPRG form is
+introduced; its unresolved accepted target is one genuinely incommensurate
+non-fixed orbit with transported return or growth and the same-witness
+physical endpoint estimate.  This is not the only program route.  Failure
+of a search is not promoted to a class no-go.
 
 The same-curl reservoir is preloaded and has no autonomous heat switch, so
 its possible action through a logarithmic C159 window is not covered by
@@ -667,10 +700,15 @@ equation, and the full local linearized-Euler error is bounded by
 \]
 At \(\hbar=q^{-1}\), the \(q^{-1/4}\) concentration width has conditional
 relative margin \(q^{-27/100}\) against a hypothetical same-packet signal;
-the \(q^{-1/2}\) stress test retains \(q^{-1/50}\).  The remaining single
-bridge problem is now exact: certify the off-ray expanding/stable bundle,
-periodic reality and retained band, and combine both results on the same
-solution.  C193's extra return pays the fixed factor \(e^{912/25}\).
+the \(q^{-1/2}\) stress test retains \(q^{-1/50}\).  At the C194 checkpoint,
+the local same-witness composition problem was to certify off-ray
+forward/backward cone transport, periodic reality and retained band, and
+combine the results on one solution.  C195 and C196 later separated this
+into a proved finite-horizon \(C^0\) dominated-cone field, exact kinematic
+endpoints, and an unproved uniform
+multi-beam/band-retention theorem; these are distinct obligations rather
+than one bridge.
+C193's extra return pays the fixed factor \(e^{912/25}\).
 
 There is an exact coherent packet with \(q^3\) conjugate pairs
 (\(2q^3\) nonzero Fourier wavevectors) on the existing
@@ -902,6 +940,10 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Hyperbolic fixed-energy polarization filter (C193)](research/2026-08-28-hyperbolic-polarization-filter-c193.md)
 - [Pressure-resolved local curl/WKB bridge (C194)](research/2026-08-28-a2-curl-wkb-bridge-c194.md)
 - [Adversarial audit of C193--C194](audit/AUDIT-2026-08-28-c193-c194.md)
+- [Quantitative off-ray \(A_2\) finite-horizon dominated cones (C195)](research/2026-08-30-a2-offray-hyperbolic-bundle-c195.md)
+- [Periodic endpoint construction and phase-space ceiling (C196)](research/2026-08-30-periodic-endpoint-phase-space-c196.md)
+- [Adversarial audit of C195--C196 and the success portfolio](audit/AUDIT-2026-08-30-c195-c196.md)
+- [Counterfactual success portfolio](research/2026-08-30-counterfactual-success-portfolio.md)
 - [Independent audit of reconstructed C107–C136](audit/AUDIT-2026-08-05-c107-c136-reconstruction.md)
 - [Exact Gavrilov wake and packed carrier](research/2026-07-29-gavrilov-dss-wake-construction.md)
 - [Localized Gavrilov transition ledger](research/2026-07-29-gavrilov-active-transition-ledger.md)

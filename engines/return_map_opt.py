@@ -163,18 +163,28 @@ def qp_ratio(u0h, uth, pw):
     def Q(uh, sh):
         proj = uh * sh.to(rdt)
         u = ifftv(proj)
-        speed = torch.sqrt((u**2).sum(0) + 1e-300)
+        speed2 = (u**2).sum(0)
         E = E_of(proj); C = C_sh(proj, sh); N = C/(E + 1e-300)
-        lp = (speed**pw).mean()**(1.0/pw)
+        # Work from |u|^2.  Adding 1e-300 before sqrt underflows in the
+        # float32 GPU mode and leaves a singular derivative at exact zeros.
+        lp = (speed2**(pw/2.0)).mean()**(1.0/pw)
         return lp / N**(1.0 - 3.0/pw)
     return Q(uth, S1) / (Q(u0h, S0) + 1e-300)
 
 def anticheat(u0h):
     u = ifftv(u0h)
-    urms = torch.sqrt((u**2).mean())
-    conc = u.abs().max()/urms
-    i4 = (u**4).mean()/urms**4
-    pen = torch.relu(conc - 22.5)**2 + torch.relu(i4 - 137.0)**2
+    # Physical concentration diagnostics use the Euclidean vector speed,
+    # not the largest scalar component.  The older componentwise version
+    # was inconsistent with qp_ratio() and the engine's replay ledger.
+    speed2 = (u**2).sum(0)
+    urms = torch.sqrt(speed2.mean())
+    conc = torch.sqrt(speed2.max())/urms
+    i4 = (speed2**2).mean()/urms**4
+    # Conservative translation of the historic componentwise caps:
+    # C_old <= sqrt(3) C_vector and K_old <= 3 K_vector.  A field with zero
+    # penalty from these two terms also satisfies both historic caps.
+    pen = (torch.relu(conc - 22.5/math.sqrt(3.0))**2
+           + torch.relu(i4 - 137.0/3.0)**2)
     subs = []
     for lo in (4,5,6,7):
         sb = (Kmag >= lo) & (Kmag < lo+1)
@@ -185,8 +195,15 @@ def anticheat(u0h):
 
 def rollout(uh, steps, dt, want_hist=False):
     hist = []
+    if torch.is_tensor(dt):
+        dt_arg = dt
+    else:
+        dt_arg = torch.tensor(dt, dtype=rdt, device=dev)
     for n in range(steps):
-        uh = cp.checkpoint(rk4, uh, torch.tensor(dt), use_reentrant=False) if uh.requires_grad else rk4(uh, dt)
+        # Keep dt in the autograd graph.  In optimization mode dt depends
+        # on the seed through N0; converting it with .item() silently
+        # removed that contribution from every reported gradient.
+        uh = cp.checkpoint(rk4, uh, dt_arg, use_reentrant=False) if uh.requires_grad else rk4(uh, dt_arg)
         if want_hist and (n % 4 == 0): hist.append((n+1, C_sh(uh, S0).item(), C_sh(uh, S1).item(), C_sh(uh, S2).item()))
     return uh, hist
 
@@ -205,12 +222,14 @@ def ledger(u0h, N0):
             if c1 > best[1]: best = ((n+1)*args.dtau, c1, uh.clone())
     tau_pk, c1pk, upk = best
     u1 = ifftv(upk * S1.to(rdt)); u0 = ifftv(u0h)
+    speed2_1 = (u1**2).sum(0)
+    speed2_0 = (u0**2).sum(0)
     E1 = E_of(upk*S1.to(rdt)).item(); N1 = C_sh(upk,S1).item()/max(E1,1e-300)
     out = {
       "M": M, "r0": args.r0, "C1_over_C0": c1pk/C0, "tau_peak": tau_pk,
       "q1_over_q0": math.sqrt(c1pk/C0), "C2_over_C0": C_sh(upk, S2).item()/C0,
-      "L3_ratio": (((u1.abs()**3).mean()**(1/3)) / ((u0.abs()**3).mean()**(1/3))).item(),
-      "rho_inf": ((u1.abs().max()/(nu*N1)) / (u0.abs().max()/(nu*N0))).item(),
+      "L3_ratio": ((speed2_1.pow(1.5).mean().pow(1/3)) / (speed2_0.pow(1.5).mean().pow(1/3))).item(),
+      "rho_inf": ((torch.sqrt(speed2_1.max())/(nu*N1)) / (torch.sqrt(speed2_0.max())/(nu*N0))).item(),
       "fidelity_id_shift": fidelity(u0h, upk, torch.zeros(3, device=dev)).item(),
       "fidelity_shiftopt": fidelity_best(u0h, upk),
       "even_sublattice_share_C1": (( Kmag*(upk.abs()**2).sum(0))[S1 & EVEN].sum() /
@@ -257,7 +276,7 @@ for rs in range(args.restarts):
         u0h, N0 = make_seed(wraw)
         t_nl = 1.0/(nu*N0*N0*args.r0)
         steps = int(round(args.tau/args.dtau))
-        uth, _ = rollout(u0h, steps, (args.dtau*t_nl).item() if torch.is_tensor(t_nl) else args.dtau*t_nl)
+        uth, _ = rollout(u0h, steps, args.dtau*t_nl)
         C0 = C_sh(u0h, S0); C1 = C_sh(uth, S1)
         pen, conc, i4 = anticheat(u0h)
         if args.obj == 'c1':
@@ -269,22 +288,31 @@ for rs in range(args.restarts):
             objv = qp_ratio(u0h, uth, args.p)
             if args.match_conc > 0:
                 u0r = ifftv(u0h); u1r = ifftv(uth * S1.to(rdt))
-                c0 = u0r.abs().max()/torch.sqrt((u0r**2).mean())
-                c1x = u1r.abs().max()/torch.sqrt((u1r**2).mean())
+                s20 = (u0r**2).sum(0)
+                s21 = (u1r**2).sum(0)
+                c0 = torch.sqrt(s20.max()/s20.mean())
+                c1x = torch.sqrt(s21.max()/s21.mean())
                 objv = objv - args.match_conc * (torch.log(c1x/c0))**2
         loss = -objv + pen
-        loss.backward()
-        opt.step()
+        # Snapshot one internally consistent pre-step state.  The previous
+        # code compared a stale pre-step score with a post-step field, kept
+        # only the final iterate, and saved the shift from the last restart
+        # even when an earlier restart won.
+        selection_score = (objv - pen).item()
+        if best_global is None or selection_score > best_global[0]:
+            best_global = (
+                selection_score,
+                objv.item(),
+                u0h.detach().clone(),
+                N0.item(),
+                shift.detach().clone(),
+            )
         if it % 10 == 0 or it == args.iters-1:
             F_ = fidelity(u0h, uth, shift).item()
             print(f"[rs{rs} it{it:4d}] obj={objv.item():.6f}  C1/C0={(C1/C0).item():.6f}  F={F_:.4f}  conc={conc.item():.1f}  pen={pen.item():.2e}")
-    with torch.no_grad():
-        u0h, N0 = make_seed(wraw)
-        score = objv.item()
-        if best_global is None or score > best_global[0]:
-            best_global = (score, u0h.detach().clone(), N0.item())
-
-score, u0h, N0 = best_global
+        loss.backward()
+        opt.step()
+selection_score, raw_objective, u0h, N0, best_shift = best_global
 # save at native 32^3 band (all energy in |k|<8): unit-energy coefficient array
 u32 = np.zeros((3, 32, 32, 32), complex)
 ks32 = np.fft.fftfreq(32, d=1/32).astype(int)
@@ -296,6 +324,12 @@ for a in range(32):
             ka, kb, kc = ks32[a], ks32[b], ks32[c]
             if abs(ka) < 16 and abs(kb) < 16 and abs(kc) < 16:
                 u32[:, a, b, c] = uh_np[:, ka % M, kb % M, kc % M]
-np.savez(args.out, u0_hat=u32.astype(np.complex64), r0=args.r0, obj=args.obj, score=score, shift=shift.detach().cpu().numpy())
-print(json.dumps({"saved": args.out, "objective": args.obj, "score": score,
+np.savez(args.out, u0_hat=u32.astype(np.complex64), r0=args.r0, obj=args.obj,
+         score=selection_score, raw_objective=raw_objective,
+         selection_score=selection_score,
+         shift=best_shift.cpu().numpy())
+print(json.dumps({"saved": args.out, "objective": args.obj,
+                  "score": selection_score,
+                  "raw_objective": raw_objective,
+                  "selection_score": selection_score,
                   "final_ledger": ledger(u0h, torch.tensor(N0))}, indent=1))
