@@ -1,7 +1,7 @@
 # Navier--Stokes frontier
 
 **Branch:** `agent/aug2-integrated-transition`
-**Registry frontier:** C196 (2026-08-30 checkpoint; C189 is the ingested
+**Registry frontier:** C199 (2026-09-06 checkpoint; C189 is the ingested
 auditor cross-audit)
 **Boot rule:** every research session starts from this file, `CLAIMS.md`, and
 the referenced artifacts on the branch. Chat history is not a premise.
@@ -425,12 +425,103 @@ localization and endpoint band/tail retention is load-bearing.  C196
 records the single-beam powers only conditionally and makes no composition
 claim.
 
+C197 below now resolves the compact common-lattice upper-error sum. The
+global periodic endpoint and its dynamical lower bounds remain open.
+
+## C197 uniform compact multi-beam upper-error verdict
+
+C197 removes the carrier-count loss for C194-type compact beams with a
+common envelope and carriers in one separated lattice. The ambient Kelvin
+generator is \((-I+2kk^T/|k|^2)DU\), so its operator norm is at most \(6\).
+Four covector derivatives and the required mixed spatial derivatives cost
+explicit polynomial factors in time and retain the exponent \(6\).
+Parameter Fourier synthesis costs \(45\); the compact-envelope Bessel bound
+costs \(27\), independently of the number of carriers.
+
+With a real unit-ball-supported envelope \(\chi\), \(0<\varepsilon\le1/40\),
+an initial zero-level center, \(d\varepsilon\ge1\), and normalized covectors
+in the stated fixed cube, the exact \(\mathbb R^3\) linearized-Euler
+solution with the same curl initial datum satisfies
+\[
+ \|u-u_{\rm app}\|_2\le\hbar e^{6t}\|a\|_{\ell^2}
+ \left[10^{94}(1+t)^{37}\|\chi\|_\infty+
+ 10^{80}\varepsilon^{-1}(1+t)^{31}\|\nabla\chi\|_\infty\right].
+\]
+The constants are conservative and explicit; no \(\sqrt M\) is present.
+Reality completion costs at most \(2\) relative to the positive-box
+coefficient norm. This proves the compact multi-beam upper-error estimate.
+On the stated C193 clock and the two C196 envelope/scaling choices, the
+real error divided by the declared profile/coefficient scale is bounded by
+\[
+ 4\cdot10^{112}(\log q)^{37}q^{-37/600}<1/100
+ \quad\text{for }q\ge10^{10000}.
+\]
+This is a sufficient finite-scale budget, not physical-energy or signal
+normalization.
+It does not prove a common expanding aperture, compare coefficient norm
+to the physical entrance norm from below, realize C196's global periodic
+endpoint, retain the output band, or control viscosity.
+
+## C198 full-wake energy and circulation verdict
+
+For exact full-state returns under the already proposed free-space chart
+and smooth unforced stages,
+write \(E_n=\|X_n\|_2^2\), \(k=q^3/g^2>1\), and
+\(D_n=2\mu_n\int_0^{T_n}\|\nabla u_n\|_2^2dt\). C198 proves
+\[
+ E_{n+1}=k(E_n-D_n),\qquad
+ D_n\le\sqrt{\mu_n}\int_0^{T_n}
+                  \|u_n(t)\|_{\mathcal X_{\mu_n}}^2dt.
+\]
+Full energies bounded above and away from zero cannot coexist with vanishing dissipation.
+In particular, bounded stage durations and uniformly bounded full-trajectory
+\(\mathcal X_\mu\) norms cannot produce this trapping graph as \(\mu\to0\).
+Endpoint-only bounds and singular graphs remain open. A nonzero regular
+finite-energy Euler fixed face is also excluded by energy conservation.
+
+The three-return search has not been run or ruled out: finite-stage
+normalized energy growth is permitted. C198 provides exact measured-energy
+and residual enclosures for its replay. Only for equally normalized \(L^2\)
+stages with relative \(L^2\) residual at most \(10^{-5}\), each stage must
+dissipate more than \(69/10000\) of its energy. The axisymmetric circulation
+contracts by at most \(971/1000\) per exact return, hence by at most
+\(915498611/10^9\) over three returns; weighted residual corrections are
+explicit.
+
+## C199 full linearized-PDE inverse-tail verdict
+
+For the full linearized Navier--Stokes evolution \(S\) on the mean-zero
+periodic \(L^2\) space, with viscosity \(\mu>0\), velocity bound \(M_0\),
+and symmetric-gradient bound \(M_1\),
+\[
+ \|SQ_K\|\le\frac{e^{M_1T}}K
+       \sqrt{\frac1{\mu T}+\frac{4M_0^2}{\mu^2}}.
+\]
+This positive PDE tail estimate follows by retaining weighted
+\(H^{-1}\) dissipation. For a bounded same-space chart \(C\), put
+\[
+ M=\|C\|e^{M_1T},\quad
+ \delta_K=\frac M K\sqrt{\frac1{\mu T}+\frac{4M_0^2}{\mu^2}},
+ \quad \Lambda=1+M/s.
+\]
+A certified \(s>0\) for the smallest singular value of the full compression
+\(P_K(I-CS)P_K\), with \(\delta_K\Lambda<1\), gives
+\[
+ \|(I-CS)^{-1}\|\le\frac{\Lambda}{1-\delta_K\Lambda}.
+\]
+The full-mode example \(\|(I-3e^\Delta)^{-1}\|_{H^r\to H^r}\le11\)
+shows why backward heat alone does not reject this return derivative.
+It is an example with an artificial chart, not a nonzero stage candidate.
+No actual stage finite block, viscosity-uniform inverse, nonlinear \(L^2\)
+endpoint map, or nonautonomous graph inverse is certified.
+
 ## Active research portfolio
 
 No item below is described as the globally “last path.”
 
-1. **\(A_2\) same-witness discriminator.**  Prove either a uniform
-   multi-beam FIO/band theorem on a fixed aperture or an honest
+1. **\(A_2\) same-witness discriminator.** C197 proves compact multi-beam
+   upper-error control. Complete its common periodic lower-growth and
+   retained-band witness on a fixed aperture, or prove an honest
    \(J^{-2}\)-taxed return at child volume \(J^4q^{-3}\).  Credit requires
    one exact periodic linearized-Euler solution with an absolute point
    lower bound after the C194 error, followed by explicit viscous,
@@ -447,7 +538,12 @@ No item below is described as the globally “last path.”
    12--20 restarts.  Candidate thresholds are relative full residual
    \(<10^{-5}\), independent replay \(<10^{-4}\), and top-third/outer-collar
    fractions each \(<10^{-7}\).  Boundary-hitting and one-component
-   collapse are failed searches.
+   collapse are failed searches. C198 requires measured full-energy and
+   circulation residual ledgers on each replay. A bounded-time trapping
+   tube with uniformly bounded full-trajectory \(\mathcal X_\mu\) norm and
+   \(L^2\) energy bounded above and away from zero is excluded as \(\mu\to0\). The finite
+   three-return test remains meaningful, but an infinite graph must resolve
+   the required transient norm growth or increasing stage durations.
 3. **Euler-dominant Type-II relative profile.**  At
    \((\alpha,\beta)=(11/20,9/20)\), search a genuinely nonaxisymmetric,
    non-outgoing rotating inner profile with a \(|y|^{-11/9}\)
@@ -462,8 +558,12 @@ No item below is described as the globally “last path.”
    Pineau--Vicol is methodological context only.
 4. **All-order forced route.**  Test finite sections of the full
    retained-wake endpoint derivative before any profile search.
-   Backward-heat singular values \(e^{cK^2}\) or a persistent adjoint
-   compatibility kill this tested formulation.  A uniform
+   C199 proves an explicit analytic high-frequency tail for the full
+   linearized PDE and a finite-block inverse criterion for \(I-CS\).
+   Backward-heat growth of \(S^{-1}\) alone does not decide that return
+   derivative. Any singular-value rejection must use the actual derivative
+   of the prescribed-endpoint, same-space return, or nonautonomous graph
+   equation being tested. A uniform
    \(C^M(M!)^2\)-type inverse growth bound warrants a Nash--Moser/Borel
    continuation.  The final defect must be Clay-admissible and terminally
    flat.
@@ -574,11 +674,34 @@ research/2026-08-30-counterfactual-success-portfolio.md.
   \(q^{-1/4}\) tube has ceiling \(q^{5/4}\), while a three-coordinate tube
   has ceiling \(q^{9/8}\).  C194 is one-beam only; no uniform multi-beam
   composition or dynamic endpoint follows.
+- C197: the compact common-lattice multi-beam curl/WKB upper error has
+  explicit constants \(10^{94},10^{80}\), time powers \(37,31\), and
+  exponential rate \(6\), independently of carrier count. It is measured
+  against coefficient \(\ell^2\), with envelope and separation hypotheses;
+  no lower-growth, periodic endpoint, or physical normalization is proved.
+- C198: full-state energy and circulation identities yield exact
+  approximate-return enclosures. The constant-one estimate
+  \(D_n\le\sqrt{\mu_n}\int\|u_n\|_{\mathcal X_{\mu_n}}^2dt\)
+  excludes uniformly bounded full trajectories with bounded times and
+  energies bounded above and away from zero. Endpoint-only singular graphs remain open.
+- C199: the full linearized Navier--Stokes operator has an explicit
+  polynomial high-frequency tail at fixed positive viscosity. A validated
+  finite compression can certify its same-space return inverse by the
+  displayed criterion; the full-mode example has inverse norm at most
+  \(11\). The actual stage compression is not certified.
 
 ## Open
 
 - UVSR: no exact or rigorously trapped unforced viscous scale-return profile
   with physical velocity focus is known.
+- C198 excludes the bounded-time, uniformly full-trajectory
+  \(\mathcal X_\mu\)-bounded full-energy graph with energy bounded above
+  and away from zero. Endpoint-only graphs require resolved transient
+  norms or longer stages; neither has been constructed.
+- C199 supplies a fixed-positive-viscosity tail test, but the actual
+  full-stage finite compression and its singular-value enclosure remain
+  open. Its same-space inverse theorem is not a theorem about the
+  viscosity-shifting graph.
 - PPRG realization: the broad landed passive-2D3C class contains both
   C190's secular orbit and C159/C185's exact returning growing orbit, so a
   universal secular-lock theorem is false there.  The only unresolved
@@ -591,8 +714,9 @@ research/2026-08-30-counterfactual-success-portfolio.md.
   local pressure-resolved upper-error estimate have landed separately;
   C195 adds a finite-horizon \(C^0\) off-ray dominated-cone field and C196
   adds exact periodic endpoint kinematics.  No invariant or canonical
-  splitting, \(C^1\) cone field, uniform multi-beam FIO estimate, real
-  common dynamic composite, retained viscous band, child-scale return, or
+  splitting or \(C^1\) cone field has been proved. C197 adds a uniform
+  compact multi-beam upper-error theorem, but no real periodic common
+  dynamic composite, retained viscous band, child-scale return, or
   fixed-energy concentration theorem for one exact solution has landed.
 - A complete state space and normalization for \(\mathcal R\), including the
   retained wake and normalized-viscosity coordinate, have not been fixed.
@@ -652,12 +776,17 @@ These verdicts are fixed before the next computation.
 7. **Phase-space honesty.**  Count distinct endpoint Fourier modes, not
    carrier--envelope labels.  Promotion of the current \(A_2\) route needs
    either a fixed-aperture retained block or the explicit \(J^{-2}\)-taxed
-   child.  A one-beam C194 estimate cannot be triangle-summed over
-   \(q^2\) carriers; a uniform square-function/FIO theorem is required.
+   child. C197 supplies uniform compact synthesis under a common-envelope
+   lattice hypothesis. Its coefficient norm must not be silently identified
+   with physical entrance \(L^2\), and its upper estimate supplies no
+   expanding fixed-aperture or retained-band lower bound.
 8. **Direct full-wake candidate.**  The thresholds in Active research
    portfolio item 2 are fixed.  Selected-shell recurrence, \(T\to0\),
    cutoff/collar pile-up, or vanishing swirl/poloidal energy is a failed
-   search, not a weakened residual target.
+   search, not a weakened residual target. The measured norm ratio must
+   appear in C198's energy enclosure; the \(69/10000\) loss floor applies
+   only to its stated equal-\(L^2\) corollary. Circulation cannot be reset to
+   one at each stage.
 9. **Type-II candidate.**  The inner-discovery thresholds in item 3 are
    fixed.  Axisymmetric or locally outgoing profiles, missing
    \(|y|^{-11/9}\) inner tail/twist, failure of the \(1/8\) flux identity, or
@@ -665,10 +794,12 @@ These verdicts are fixed before the next computation.
    tests does not advance a Clay claim without certified finite-energy outer
    matching, matching-annulus defect control, pressure/nonlocal coupling,
    and the standing terminal singular-center obligations.
-10. **Forced tame inverse.**  Exponential backward-heat growth or a stable
-    adjoint compatibility kills the tested retained-wake formulation.
-    Only an interval-certified finite block plus analytic tail can promote
-    it.
+10. **Forced tame inverse.** Test the derivative of the actual residual.
+    Exponential inverse growth or a stable adjoint compatibility for that
+    derivative kills the tested formulation. C199's same-space
+    \(I-CS\) criterion cannot be substituted for a viscosity-shifting graph
+    operator. Only a validated finite compression of the full evolution
+    plus its analytic tail can promote the same-space inverse.
 
 ## Audit obligations
 
@@ -739,7 +870,9 @@ These verdicts are fixed before the next computation.
   not C194 solutions.  A projective angular tube has two narrowed
   directions, not three.  Every phase-space ceiling is conditional on
   actual endpoint support, and C194's block powers remain conditional on a
-  missing uniform multi-beam almost-orthogonality theorem.
+  uniform multi-beam theorem missing at that checkpoint. C197 subsequently
+  proves the compact common-lattice upper estimate with distinct envelope
+  hypotheses; it does not complete the periodic dynamic composition.
 - **Type-II promotion boundary:** the \(|y|^{-11/9}\) law belongs only to the
   inner similarity-profile discovery problem and gives a global
   infinite-energy profile.  A weighted residual, flux identity, and finite
@@ -753,3 +886,19 @@ These verdicts are fixed before the next computation.
   container, so this patch is syntax-checked only and supplies no numerical
   candidate.  The historical independent QP audit remains unchanged for
   provenance.
+- **C198 boundary:** use complete energies and actual norm ratios in the
+  residual ledger. Endpoint \(\mathcal X_\mu\) bounds alone do not bound
+  intermediate norms. The \(69/10000\) floor is an equal-\(L^2\) corollary;
+  circulation needs its own weighted supremum residual. No general
+  axisymmetric or Navier--Stokes singularity exclusion is claimed.
+- **C197 boundary:** the upper-error theorem uses compact
+  \(\mathbb R^3\) beams, a common lattice with \(d\varepsilon\ge1\), and
+  coefficient \(\ell^2\) normalization. It does not combine C195's
+  shrinking cone with C196's fixed aperture, nor turn a bandlimited global
+  envelope into an annulus-supported one. The retained-band absolute
+  endpoint and all viscous losses remain open.
+- **C199 boundary:** \(S\) is the bounded \(L^2\) extension of a linearized
+  PDE operator, not a proved nonlinear endpoint map on an open \(L^2\)
+  ball. A finite block must compress the full evolution with validated
+  tail error. Neither a global torus dilation nor a same-fiber replacement
+  of \(h(\mu')\) is permitted.

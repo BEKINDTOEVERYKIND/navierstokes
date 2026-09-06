@@ -12,7 +12,7 @@ time.  We impose the stronger convenient design that, after subtracting a
 fixed smooth terminal background, the shrinking-scale tail is flat there;
 it can then be extended with rapid future decay.
 
-## 2026-08-30 frontier correction
+## 2026-09-06 frontier
 
 The repository no longer describes any implementation as “the one realistic
 path left.”  C195 certifies strictly mapped forward and sign-reflected inverse
@@ -25,8 +25,19 @@ endpoint discriminator:
   \(q^{3/2}\) concentration exist kinematically on a fixed aperture;
 * C180's retained band supports at most
   \(8\delta^{3/2}q^{3/2}/J^2\) concentration one-sided; and
-* C194 controls one beam, so a \(q^2\)-carrier endpoint needs a new uniform
-  Fourier-integral almost-orthogonality and band-retention theorem.
+* C197 now proves the uniform compact multi-beam upper-error estimate,
+  retaining \(e^{6t}\) with explicit constants \(10^{94},10^{80}\) and
+  no carrier-count factor. A common periodic lower-growth and retained-band
+  endpoint remains open.
+
+The other portfolio tests have also advanced. C198 proves that a full-state
+return with energy bounded above and away from zero cannot have both bounded stage times
+and uniformly bounded full-trajectory \(\mathcal X_\mu\) norm as normalized viscosity tends
+to zero. The proposed finite three-return search remains possible, with
+exact energy/circulation measurements now required. C199 gives an explicit
+analytic tail for the full linearized Navier--Stokes return operator;
+backward-heat inversion alone does not reject \(I-CS\). Its actual stage
+finite block has not been certified.
 
 The active portfolio now tests four distinct mechanisms: the \(A_2\)
 same-witness cascade, a direct full-wake nonautonomous Navier--Stokes
@@ -45,7 +56,7 @@ module-by-module program.  Its phrases such as “remaining,” “next,” and
 “the route” describe the local frontier at the checkpoint where each
 paragraph was written; they are not the current architecture verdict and do
 not assert that any module was globally last or unique.  The authoritative
-current state is the 2026-08-30 correction above together with
+current state is the 2026-09-06 frontier above together with
 [FRONTIER.md](FRONTIER.md).  Within that historical program, several objects
 that were previously only formal became exact.
 
@@ -941,6 +952,10 @@ unforced Navier–Stokes stage map, cascade theorem, or Millennium conclusion.
 - [Pressure-resolved local curl/WKB bridge (C194)](research/2026-08-28-a2-curl-wkb-bridge-c194.md)
 - [Adversarial audit of C193--C194](audit/AUDIT-2026-08-28-c193-c194.md)
 - [Quantitative off-ray \(A_2\) finite-horizon dominated cones (C195)](research/2026-08-30-a2-offray-hyperbolic-bundle-c195.md)
+- [Uniform compact multi-beam upper error (C197)](research/2026-09-06-a2-covector-jet-synthesis-c197.md)
+- [Full-wake energy and circulation demands (C198)](research/2026-09-06-full-wake-energy-circulation-c198.md)
+- [Full linearized-PDE inverse tail (C199)](research/2026-09-06-retained-wake-endpoint-inverse-tail-c199.md)
+- [C197--C199 independent audit](audit/AUDIT-2026-09-06-c197-c199.md)
 - [Periodic endpoint construction and phase-space ceiling (C196)](research/2026-08-30-periodic-endpoint-phase-space-c196.md)
 - [Adversarial audit of C195--C196 and the success portfolio](audit/AUDIT-2026-08-30-c195-c196.md)
 - [Counterfactual success portfolio](research/2026-08-30-counterfactual-success-portfolio.md)

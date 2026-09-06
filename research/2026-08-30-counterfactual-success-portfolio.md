@@ -2,6 +2,9 @@
 
 **Date:** 2026-08-30
 
+**Updated:** 2026-09-06 after C197--C199; the numerical candidate
+thresholds are unchanged.
+
 **Status:** strategy and pre-registered computational discriminators, grounded
 in C188 and C192--C196 and the landed Stage-5 data; not a theorem or a
 claimed numerical candidate
@@ -28,8 +31,8 @@ snap together after enough additional local estimates.
 ## 1. Route A: the \(A_2\) same-witness cascade
 
 C192--C195 make the operator mechanism real: the exact \(A_2\) orbit has a
-large hyperbolic polarization cocycle and a quantitative shrinking-tube
-bundle. C193 supplies the fixed-energy polarization swap, C194 supplies a
+large hyperbolic polarization cocycle and finite-horizon dominated cones
+on a quantitative shrinking tube. C193 supplies the fixed-energy polarization swap, C194 supplies a
 pressure-resolved first-order local bridge, and C196 supplies exact real
 periodic solenoidal endpoint profiles.
 
@@ -49,6 +52,14 @@ creditable escape mechanisms are:
 * a terminal nonlinear converter that genuinely creates the missing band.
 
 Another central-ray gain estimate does not address this discriminator.
+
+C197 now proves the compact common-lattice upper-error estimate with
+explicit constants \(10^{94},10^{80}\), polynomial time powers \(37,31\),
+and the same \(e^{6t}\) rate. It removes the carrier-count loss under its
+common-envelope, \(d\varepsilon\ge1\), and coefficient-normalization
+hypotheses. This is a completed positive subproblem. It does not establish
+a common expanding aperture, a physical entrance-norm lower bound, or
+C196's global periodic endpoint and transported output band.
 
 The next creditable \(A_2\) computation is one complete exact periodic
 linearized-Euler witness with a full endpoint band and an **absolute** point
@@ -129,6 +140,31 @@ spectral and outer-collar residual fractions are each below \(10^{-7}\),
 all parameters stay in the interiors of their boxes, and both swirl and
 poloidal energies stay nonzero. Boundary-hitting, \(T\to0\), cutoff pile-up,
 or a one-component collapse is a failed search.
+
+C198 now supplies mandatory conservation-law diagnostics for this same
+experiment. With \(E_n=\|X_n\|_2^2\), \(D_n=2\mu_n\int\|\nabla
+u_n\|_2^2dt\), and \(k=q^3/g^2>1\), an exact full-state return obeys
+\[
+ E_{n+1}=k(E_n-D_n),\qquad
+ D_n\le\sqrt{\mu_n}\int_0^{T_n}\|u_n(t)\|_{\mathcal X_{\mu_n}}^2dt.
+\]
+Thus bounded stage durations, uniformly bounded full-trajectory
+\(\mathcal X_\mu\) norm, and full \(L^2\) energy bounded above and away from zero cannot
+all persist down the viscosity sequence. Endpoint-only bounds do not
+exclude intermediate norm growth. A nonzero regular finite-energy Euler
+fixed face is excluded independently by energy conservation. The proposed
+finite three-return search remains unexecuted and is not excluded by
+these statements.
+
+Each replay must therefore report full energies, integrated dissipation,
+the actual relative \(L^2\) residual, peak intermediate
+\(\mathcal X_\mu\) norm, and full-tail bounds. For equally normalized
+\(L^2\) stages and relative \(L^2\) residual at most \(10^{-5}\), C198
+forces energy loss above \(69/10000\) per return; unequal-energy graphs
+must use its full measured-ratio enclosure. The axisymmetric circulation
+satisfies \(\|G_3\|_\infty\le0.915498611\|G_0\|_\infty\) over three exact
+returns, with explicit weighted residual corrections for approximate
+ones. Its normalization cannot be reset between stages.
 
 The landed data justify exactly one such run. Seed B gives a resolved
 one-step \(Q_3^{\rm oct}>1\). At the \(N=320\) \(Q_3\) peak, \(56.23\%\)
@@ -263,13 +299,27 @@ be arranged. One concrete version worth testing retains the complete
 charged and zero-charge wake and solves one all-order Gevrey endpoint
 equation; the old finite-ladder shortcut does not do this.
 
-The bounded discriminator is not a new module. Form increasing finite
-sections of the full retained-wake endpoint derivative, enclose their
-smallest singular values, and prove an analytic tail. Backward-heat growth
-\(e^{cK^2}\) or a persistent adjoint compatibility kills the route.
-Factorial/Gevrey growth compatible with \(C^M(M!)^2\) warrants a
-Nash--Moser/Borel attack. No GPU profile search should precede this
-singular-value test.
+The bounded discriminator must use the derivative of the actual residual.
+C199 distinguishes prescribed-terminal inversion \(S^{-1}\) from the
+same-space return derivative \(I-CS\); the latter need not inherit the
+backward-heat inverse. For a smooth periodic reference flow, it proves
+\[
+ \|SQ_K\|\le\frac{e^{M_1T}}K
+ \sqrt{\frac1{\mu T}+\frac{4M_0^2}{\mu^2}},
+\]
+where \(M_0\) bounds velocity and \(M_1\) the symmetric velocity gradient.
+Together with a validated smallest singular value of the full compressed
+return derivative, this gives an explicit infinite-dimensional inverse
+bound. The finite compression must include errors from every discarded
+mode; a truncated evolution by itself does not certify it.
+
+No actual stage compression has passed this test. Moreover a nonautonomous
+graph includes \(h(\mu')\), and the free-space dilation does not define a
+global torus chart. C199 does not replace either problem by its simpler
+same-space example. Exponential inverse growth or adjoint compatibility
+of the actual residual derivative rejects that tested formulation.
+Factorial/Gevrey bounds compatible with \(C^M(M!)^2\) would warrant the
+pre-registered continuation.
 
 ## 5. Portfolio verdict
 
