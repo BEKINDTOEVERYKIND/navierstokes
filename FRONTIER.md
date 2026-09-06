@@ -1,7 +1,7 @@
 # Navier--Stokes frontier
 
 **Branch:** `agent/aug2-integrated-transition`
-**Registry frontier:** C199 (2026-09-06 checkpoint; C189 is the ingested
+**Registry frontier:** C204 (2026-09-06 checkpoint; C189 is the ingested
 auditor cross-audit)
 **Boot rule:** every research session starts from this file, `CLAIMS.md`, and
 the referenced artifacts on the branch. Chat history is not a premise.
@@ -515,19 +515,72 @@ It is an example with an artificial chart, not a nonzero stage candidate.
 No actual stage finite block, viscosity-uniform inverse, nonlinear \(L^2\)
 endpoint map, or nonautonomous graph inverse is certified.
 
+## C200--C204 same-solution viscous endpoint verdict
+
+C204 completes the finite-frequency linear concentration discriminator on
+the periodic A2 pump. For
+\[
+ n\ge\max(10^{12500},\nu),\quad q=n^8,\quad
+ \mu=\nu((n-1)!)^{-3/2},\quad
+ R=\lceil(3/64)\log q\rceil+1,\quad L=1+RT,
+\]
+there is one smooth real mean-zero divergence-free solution of the actual
+linearized Navier--Stokes equation around the unforced heat-decaying A2
+pump, at its actual action-return time \(S\), with
+\[
+ \|v(0)\|_2=\|v(S)\|_2=b,\qquad
+ \|P_{\mathcal B_{\mathbb R}}v(S)\|_\infty
+ \ge10^{-157}b\,q^{3/2}/L^2,
+\]
+\[
+ \frac{\|v(S)\|_\infty/\|v(S)\|_2}
+      {\|v(0)\|_\infty/\|v(0)\|_2}
+ >\frac{25}{24}q^{3/8}.
+\]
+The same absolute endpoint bound holds without projection. The retained
+band has explicit half-widths \(8\cdot10^{-100}q/L\),
+\(8\cdot10^{-100}q/L\), \(8\cdot10^{-100}q/L^2\), centered at a nearest
+integer to the C159 reference covector times \(q\). Its compatibility
+with C180's particular center, frame, splitter, and exit chart is open.
+
+The proof uses C200's smooth finite-horizon growing/contracting selectors,
+C201's rank-one-shear-adapted integer lattice and physical Riesz bounds,
+C202's periodic general-symbol viscous bridge, and C203's finite Fourier
+test. The full parameter/support tube is verified together; all curl,
+viscous, reality, stable-ballast and physical-normalization losses are
+charged on the same solution. C185's supremal operator norm is not
+multiplied into a packet bound.
+
+The linear perturbation's budgets are also explicit:
+\[
+ \|v(0)\|_\infty\le20000bq^{9/8},\quad
+ \sup_s\|v(s)\|_2<10^{16}b,\quad
+ \int_0^S\|v(s)\|_2^2ds<4\cdot10^{33}b^2,\quad
+ \mu\int_0^S\|\nabla v(s)\|_2^2ds<2\cdot10^{34}b^2.
+\]
+The constants and sufficient scale are intentionally conservative and
+have not been numerically instantiated.
+
+**Current A2 target:** evaluate and control the full nonlinear defect
+\(P(v\cdot\nabla v)\), the pump response and retained wake, and the actual
+exit-chart return for this constructed family. This is the existing
+nonlinear UVSR obligation, not another PPRG gate. C204 proves a linear
+concentration endpoint and a genuine same-energy gain; it does not prove
+a nonlinear stage, a repeated return, or C182's stronger entrance
+\(\|v(0)\|_\infty\le bq\). No independent passive reservoir is used in
+the proved linear concentration step.
+
 ## Active research portfolio
 
 No item below is described as the globally “last path.”
 
-1. **\(A_2\) same-witness discriminator.** C197 proves compact multi-beam
-   upper-error control. Complete its common periodic lower-growth and
-   retained-band witness on a fixed aperture, or prove an honest
-   \(J^{-2}\)-taxed return at child volume \(J^4q^{-3}\).  Credit requires
-   one exact periodic linearized-Euler solution with an absolute point
-   lower bound after the C194 error, followed by explicit viscous,
-   normalization, depletion, and wake factors.  Another central-ray
-   multiplier or a relative concentration quotient alone receives no
-   credit.
+1. **\(A_2\) same-witness cascade.** C204 has now proved the real periodic
+   viscous linear endpoint, physical energy equality and \(L^{-2}\)-taxed
+   retained concentration for one solution, with its actual clock and
+   full linear trajectory charged. Attack its full nonlinear defect and
+   pump/wake response at the stage amplitude, then test the actual exit
+   chart. The constructed frequency center must be matched explicitly;
+   no automatic C180 seed/splitter compatibility is credited.
 2. **Direct full-wake Navier--Stokes graph.**  Search
    \[
    {\cal C}S_{T(\mu)}^\mu X(\mu)-X((q/g)\mu)=0
@@ -572,6 +625,14 @@ The detailed equations and failure criteria are in
 research/2026-08-30-counterfactual-success-portfolio.md.
 
 ## Proved frontier
+
+- C200--C204: smooth finite-horizon selectors and compact periodic
+  synthesis now compose into an actual linearized-Navier--Stokes
+  retained endpoint with equal physical endpoint norms, absolute
+  \(10^{-157}bq^{3/2}/L^2\) concentration and concentration gain
+  \(>(25/24)q^{3/8}\), under the displayed finite-scale threshold.
+  Explicit linear trajectory/action/dissipation budgets are proved;
+  the nonlinear defect and return remain open.
 
 - C121: the homochiral \(A_2\) pump is an exact unforced heat-decaying
   Navier--Stokes background.
@@ -710,14 +771,12 @@ research/2026-08-30-counterfactual-success-portfolio.md.
   with an \(m\ne0\) return or transported-frame Lyapunov growth.  It must
   carry the same-witness retained-band, viscosity, fixed-final-energy
   \(q^{3/8}\) concentration, C125, depletion, and wake estimates.
-- C193/C194 same-witness bridge: the principal fixed-energy filter and the
-  local pressure-resolved upper-error estimate have landed separately;
-  C195 adds a finite-horizon \(C^0\) off-ray dominated-cone field and C196
-  adds exact periodic endpoint kinematics.  No invariant or canonical
-  splitting or \(C^1\) cone field has been proved. C197 adds a uniform
-  compact multi-beam upper-error theorem, but no real periodic common
-  dynamic composite, retained viscous band, child-scale return, or
-  fixed-energy concentration theorem for one exact solution has landed.
+- C204 completes the C193/C194 linear same-witness bridge with finite
+  carrier scale, reality, periodicity, retained band, viscosity and
+  physical energy normalization. Its quadratic nonlinear defect,
+  pump depletion, retained wake and repeating exit-chart return are
+  open. C200's smooth finite-horizon selected lines do not constitute
+  an invariant or canonical infinite-time splitting.
 - A complete state space and normalization for \(\mathcal R\), including the
   retained wake and normalized-viscosity coordinate, have not been fixed.
 - No normalized convergence \(\mathcal R_{n,0}\to\mathcal R_{\infty,0}\)
@@ -773,13 +832,13 @@ These verdicts are fixed before the next computation.
    dichotomy branch. State-space/operator definitions alone are not a
    checkpoint. Numerical residual minima count only with a full interval
    certificate.
-7. **Phase-space honesty.**  Count distinct endpoint Fourier modes, not
-   carrier--envelope labels.  Promotion of the current \(A_2\) route needs
-   either a fixed-aperture retained block or the explicit \(J^{-2}\)-taxed
-   child. C197 supplies uniform compact synthesis under a common-envelope
-   lattice hypothesis. Its coefficient norm must not be silently identified
-   with physical entrance \(L^2\), and its upper estimate supplies no
-   expanding fixed-aperture or retained-band lower bound.
+7. **Phase-space honesty.** Count distinct endpoint Fourier modes, not
+   carrier--envelope labels. C204 meets the logarithmically taxed linear
+   endpoint specification using C201's physical norm comparison and
+   C203's actual Fourier projection. Its explicit band must not be
+   identified with C180's prescribed center/chart without a proof.
+   Neither the compact envelopes nor the full exact solution are
+   assumed bandlimited.
 8. **Direct full-wake candidate.**  The thresholds in Active research
    portfolio item 2 are fixed.  Selected-shell recurrence, \(T\to0\),
    cutoff/collar pile-up, or vanishing swirl/poloidal energy is a failed
@@ -902,3 +961,11 @@ These verdicts are fixed before the next computation.
   ball. A finite block must compress the full evolution with validated
   tail error. Neither a global torus dilation nor a same-fiber replacement
   of \(h(\mu')\) is permitted.
+- **C204 boundary:** equal perturbation endpoint energies, a retained
+  linear concentration gain and bounded linear trajectory costs do not
+  control \(P(v\cdot\nabla v)\), the nonlinear pressure/pump/wake
+  response, or a repeated scale return. The sufficient amplitude
+  bound is \(\|v(0)\|_\infty\le20000bq^{9/8}\), not C182's \(bq\)
+  premise. C180 center/frame/seed/splitter compatibility and the standing
+  terminal singular-center obligations remain open. No external
+  cross-audit or numerical nonlinear residual certificate is asserted.

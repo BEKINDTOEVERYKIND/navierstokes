@@ -2,7 +2,7 @@
 
 **Date:** 2026-08-30
 
-**Updated:** 2026-09-06 after C197--C199; the numerical candidate
+**Updated:** 2026-09-06 after C200--C204; the numerical candidate
 thresholds are unchanged.
 
 **Status:** strategy and pre-registered computational discriminators, grounded
@@ -53,7 +53,7 @@ creditable escape mechanisms are:
 
 Another central-ray gain estimate does not address this discriminator.
 
-C197 now proves the compact common-lattice upper-error estimate with
+C197 proves the compact common-lattice upper-error estimate with
 explicit constants \(10^{94},10^{80}\), polynomial time powers \(37,31\),
 and the same \(e^{6t}\) rate. It removes the carrier-count loss under its
 common-envelope, \(d\varepsilon\ge1\), and coefficient-normalization
@@ -61,10 +61,23 @@ hypotheses. This is a completed positive subproblem. It does not establish
 a common expanding aperture, a physical entrance-norm lower bound, or
 C196's global periodic endpoint and transported output band.
 
-The next creditable \(A_2\) computation is one complete exact periodic
-linearized-Euler witness with a full endpoint band and an **absolute** point
-lower bound after subtracting C194. A relative concentration quotient alone
-receives no stage credit.
+C200--C204 now complete that linear discriminator. There is one actual
+periodic linearized-Navier--Stokes solution on the factorial scales with
+equal physical endpoint norms \(b\), an absolute retained lower bound
+\(10^{-157}bq^{3/2}/(1+RT)^2\), and same-energy concentration gain
+\(>(25/24)q^{3/8}\). The initial packet, all symbol derivatives, the
+viscous clock, Fourier test, and physical energy balancing belong to the
+same construction. Its full linear trajectory has explicit
+scale-independent energy/action/dissipation constants. The sufficient
+threshold \(q\ge10^{100000}\) is analytic, not a numerical candidate.
+
+The next actual problem on this route is the quadratic defect
+\(P(v\cdot\nabla v)\) of that constructed family, the pump and wake
+response, and the exit-chart return. The new band has the required
+logarithmic width orders; its alignment with C180's particular carrier
+center and splitter is unproved. C182's stronger entrance bound is also
+not supplied. Neither the linear endpoint nor its energy equality
+constitutes nonlinear trapping or a repeated UVSR profile.
 
 ## 2. Route B: a direct nonautonomous Navier--Stokes invariant graph
 

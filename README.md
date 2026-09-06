@@ -25,10 +25,28 @@ endpoint discriminator:
   \(q^{3/2}\) concentration exist kinematically on a fixed aperture;
 * C180's retained band supports at most
   \(8\delta^{3/2}q^{3/2}/J^2\) concentration one-sided; and
-* C197 now proves the uniform compact multi-beam upper-error estimate,
+* C197 proves the uniform compact multi-beam upper-error estimate,
   retaining \(e^{6t}\) with explicit constants \(10^{94},10^{80}\) and
-  no carrier-count factor. A common periodic lower-growth and retained-band
-  endpoint remains open.
+  no carrier-count factor; and
+* C200--C204 now compose the smooth filters, actual periodic viscous
+  evolution, physical normalization and retained Fourier test for one
+  solution. On the stated factorial stage scales,
+  \[
+  \|v(0)\|_2=\|v(S)\|_2=b,\qquad
+  \|P_{\mathcal B_{\mathbb R}}v(S)\|_\infty
+  \ge10^{-157}bq^{3/2}/(1+RT)^2,
+  \]
+  with same-energy concentration gain \(>(25/24)q^{3/8}\).
+  The explicit sufficient threshold is \(q\ge10^{100000}\).
+  The full linear trajectory, action and dissipation are bounded with
+  explicit constants.
+
+This is an actual **linearized** Navier--Stokes result. The next A2 work
+is its full quadratic defect and pump/wake response, followed by the
+actual exit-chart return. Neither C182's stronger entrance hypothesis
+nor C180's particular center/splitter compatibility follows automatically.
+The main artifact is
+[C204](research/2026-09-06-a2-physical-viscous-retained-endpoint-c204.md).
 
 The other portfolio tests have also advanced. C198 proves that a full-state
 return with energy bounded above and away from zero cannot have both bounded stage times
